@@ -1,0 +1,2835 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/clockgusto/build/clockgusto.elf /home/ms/Documents/clockgusto/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ 0x400592FE�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bc30h ( 48176) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001bc58 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001bc7c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e2b8 vaddr=40080000 size=01d60h (  7520) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=178fch ( 96508) map[0m
+[0;32mI (156) esp_image: segment 5: paddr=00037924 vaddr=40081d60 size=0d014h ( 53268) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (211) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (216) app_init: ELF file SHA256:  91cc0d0ee...[0m
+[0;32mI (220) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (226) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (238) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (244) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FFB3068 len 0002CF98 (179 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (265) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (272) spi_flash: detected chip: generic[0m
+[0;32mI (274) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (289) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Teste SDA=GPIO0, SCL=GPIO2... [0m
+[0;32mI (330) clock gusto: Teste SDA=GPIO0, SCL=GPIO4... [0m
+[1;31mE (330) i2c: i2c driver install error[0m
+[1;31mE (330) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (340) clock gusto: Erfolgreich 0, 4![0m
+
+[0;32mI (340) clock gusto: Teste SDA=GPIO0, SCL=GPIO5... [0m
+[1;31mE (350) i2c: i2c driver install error[0m
+[1;31mE (350) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (350) clock gusto: Erfolgreich 0, 5![0m
+
+[0;32mI (360) clock gusto: Teste SDA=GPIO0, SCL=GPIO12... [0m
+[1;31mE (360) i2c: i2c driver install error[0m
+[1;31mE (360) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (370) clock gusto: Erfolgreich 0, 12![0m
+
+[0;32mI (370) clock gusto: Teste SDA=GPIO0, SCL=GPIO13... [0m
+[1;31mE (380) i2c: i2c driver install error[0m
+[1;31mE (380) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (380) clock gusto: Erfolgreich 0, 13![0m
+
+[0;32mI (390) clock gusto: Teste SDA=GPIO0, SCL=GPIO14... [0m
+[1;31mE (390) i2c: i2c driver install error[0m
+[1;31mE (400) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (400) clock gusto: Erfolgreich 0, 14![0m
+
+[0;32mI (400) clock gusto: Teste SDA=GPIO0, SCL=GPIO15... [0m
+[1;31mE (410) i2c: i2c driver install error[0m
+[1;31mE (410) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (420) clock gusto: Erfolgreich 0, 15![0m
+
+[0;32mI (420) clock gusto: Teste SDA=GPIO0, SCL=GPIO16... [0m
+[1;31mE (430) i2c: i2c driver install error[0m
+[1;31mE (430) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (430) clock gusto: Erfolgreich 0, 16![0m
+
+[0;32mI (440) clock gusto: Teste SDA=GPIO0, SCL=GPIO17... [0m
+[1;31mE (440) i2c: i2c driver install error[0m
+[1;31mE (440) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (450) clock gusto: Erfolgreich 0, 17![0m
+
+[0;32mI (450) clock gusto: Teste SDA=GPIO0, SCL=GPIO18... [0m
+[1;31mE (460) i2c: i2c driver install error[0m
+[1;31mE (460) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (470) clock gusto: Erfolgreich 0, 18![0m
+
+[0;32mI (470) clock gusto: Teste SDA=GPIO0, SCL=GPIO19... [0m
+[1;31mE (470) i2c: i2c driver install error[0m
+[1;31mE (480) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (480) clock gusto: Erfolgreich 0, 19![0m
+
+[0;32mI (480) clock gusto: Teste SDA=GPIO0, SCL=GPIO21... [0m
+[1;31mE (490) i2c: i2c driver install error[0m
+[1;31mE (490) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (500) clock gusto: Erfolgreich 0, 21![0m
+
+[0;32mI (500) clock gusto: Teste SDA=GPIO0, SCL=GPIO22... [0m
+[1;31mE (510) i2c: i2c driver install error[0m
+[1;31mE (510) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (510) clock gusto: Erfolgreich 0, 22![0m
+
+[0;32mI (520) clock gusto: Teste SDA=GPIO0, SCL=GPIO23... [0m
+[1;31mE (520) i2c: i2c driver install error[0m
+[1;31mE (530) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (530) clock gusto: Erfolgreich 0, 23![0m
+
+[0;32mI (530) clock gusto: Teste SDA=GPIO0, SCL=GPIO25... [0m
+[1;31mE (540) i2c: i2c driver install error[0m
+[1;31mE (540) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (550) clock gusto: Erfolgreich 0, 25![0m
+
+[0;32mI (550) clock gusto: Teste SDA=GPIO0, SCL=GPIO26... [0m
+[1;31mE (550) i2c: i2c driver install error[0m
+[1;31mE (560) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (560) clock gusto: Erfolgreich 0, 26![0m
+
+[0;32mI (570) clock gusto: Teste SDA=GPIO0, SCL=GPIO27... [0m
+[1;31mE (570) i2c: i2c driver install error[0m
+[1;31mE (570) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (580) clock gusto: Erfolgreich 0, 27![0m
+
+[0;32mI (580) clock gusto: Teste SDA=GPIO2, SCL=GPIO0... [0m
+[1;31mE (590) i2c: i2c driver install error[0m
+[1;31mE (590) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (590) clock gusto: Erfolgreich 2, 0![0m
+
+[0;32mI (600) clock gusto: Teste SDA=GPIO2, SCL=GPIO4... [0m
+[1;31mE (600) i2c: i2c driver install error[0m
+[1;31mE (610) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (610) clock gusto: Erfolgreich 2, 4![0m
+
+[0;32mI (610) clock gusto: Teste SDA=GPIO2, SCL=GPIO5... [0m
+[1;31mE (620) i2c: i2c driver install error[0m
+[1;31mE (620) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (630) clock gusto: Erfolgreich 2, 5![0m
+
+[0;32mI (630) clock gusto: Teste SDA=GPIO2, SCL=GPIO12... [0m
+[1;31mE (630) i2c: i2c driver install error[0m
+[1;31mE (640) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (640) clock gusto: Erfolgreich 2, 12![0m
+
+[0;32mI (650) clock gusto: Teste SDA=GPIO2, SCL=GPIO13... [0m
+[1;31mE (650) i2c: i2c driver install error[0m
+[1;31mE (650) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (660) clock gusto: Erfolgreich 2, 13![0m
+
+[0;32mI (660) clock gusto: Teste SDA=GPIO2, SCL=GPIO14... [0m
+[1;31mE (670) i2c: i2c driver install error[0m
+[1;31mE (670) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (670) clock gusto: Erfolgreich 2, 14![0m
+
+[0;32mI (680) clock gusto: Teste SDA=GPIO2, SCL=GPIO15... [0m
+[1;31mE (680) i2c: i2c driver install error[0m
+[1;31mE (690) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (690) clock gusto: Erfolgreich 2, 15![0m
+
+[0;32mI (690) clock gusto: Teste SDA=GPIO2, SCL=GPIO16... [0m
+[1;31mE (700) i2c: i2c driver install error[0m
+[1;31mE (700) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (710) clock gusto: Erfolgreich 2, 16![0m
+
+[0;32mI (710) clock gusto: Teste SDA=GPIO2, SCL=GPIO17... [0m
+[1;31mE (710) i2c: i2c driver install error[0m
+[1;31mE (720) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (720) clock gusto: Erfolgreich 2, 17![0m
+
+[0;32mI (730) clock gusto: Teste SDA=GPIO2, SCL=GPIO18... [0m
+[1;31mE (730) i2c: i2c driver install error[0m
+[1;31mE (730) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (740) clock gusto: Erfolgreich 2, 18![0m
+
+[0;32mI (740) clock gusto: Teste SDA=GPIO2, SCL=GPIO19... [0m
+[1;31mE (750) i2c: i2c driver install error[0m
+[1;31mE (750) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (750) clock gusto: Erfolgreich 2, 19![0m
+
+[0;32mI (760) clock gusto: Teste SDA=GPIO2, SCL=GPIO21... [0m
+[1;31mE (760) i2c: i2c driver install error[0m
+[1;31mE (770) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (770) clock gusto: Erfolgreich 2, 21![0m
+
+[0;32mI (770) clock gusto: Teste SDA=GPIO2, SCL=GPIO22... [0m
+[1;31mE (780) i2c: i2c driver install error[0m
+[1;31mE (780) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (790) clock gusto: Erfolgreich 2, 22![0m
+
+[0;32mI (790) clock gusto: Teste SDA=GPIO2, SCL=GPIO23... [0m
+[1;31mE (790) i2c: i2c driver install error[0m
+[1;31mE (800) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (800) clock gusto: Erfolgreich 2, 23![0m
+
+[0;32mI (810) clock gusto: Teste SDA=GPIO2, SCL=GPIO25... [0m
+[1;31mE (810) i2c: i2c driver install error[0m
+[1;31mE (810) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (820) clock gusto: Erfolgreich 2, 25![0m
+
+[0;32mI (820) clock gusto: Teste SDA=GPIO2, SCL=GPIO26... [0m
+[1;31mE (830) i2c: i2c driver install error[0m
+[1;31mE (830) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (830) clock gusto: Erfolgreich 2, 26![0m
+
+[0;32mI (840) clock gusto: Teste SDA=GPIO2, SCL=GPIO27... [0m
+[1;31mE (840) i2c: i2c driver install error[0m
+[1;31mE (850) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (850) clock gusto: Erfolgreich 2, 27![0m
+
+[0;32mI (850) clock gusto: Teste SDA=GPIO4, SCL=GPIO0... [0m
+[1;31mE (860) i2c: i2c driver install error[0m
+[1;31mE (860) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (870) clock gusto: Erfolgreich 4, 0![0m
+
+[0;32mI (870) clock gusto: Teste SDA=GPIO4, SCL=GPIO2... [0m
+[1;31mE (870) i2c: i2c driver install error[0m
+[1;31mE (880) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (880) clock gusto: Erfolgreich 4, 2![0m
+
+[0;32mI (890) clock gusto: Teste SDA=GPIO4, SCL=GPIO5... [0m
+[1;31mE (890) i2c: i2c driver install error[0m
+[1;31mE (890) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (900) clock gusto: Erfolgreich 4, 5![0m
+
+[0;32mI (900) clock gusto: Teste SDA=GPIO4, SCL=GPIO12... [0m
+[1;31mE (910) i2c: i2c driver install error[0m
+[1;31mE (910) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (910) clock gusto: Erfolgreich 4, 12![0m
+
+[0;32mI (920) clock gusto: Teste SDA=GPIO4, SCL=GPIO13... [0m
+[1;31mE (920) i2c: i2c driver install error[0m
+[1;31mE (930) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (930) clock gusto: Erfolgreich 4, 13![0m
+
+[0;32mI (930) clock gusto: Teste SDA=GPIO4, SCL=GPIO14... [0m
+[1;31mE (940) i2c: i2c driver install error[0m
+[1;31mE (940) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (950) clock gusto: Erfolgreich 4, 14![0m
+
+[0;32mI (950) clock gusto: Teste SDA=GPIO4, SCL=GPIO15... [0m
+[1;31mE (950) i2c: i2c driver install error[0m
+[1;31mE (960) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (960) clock gusto: Erfolgreich 4, 15![0m
+
+[0;32mI (970) clock gusto: Teste SDA=GPIO4, SCL=GPIO16... [0m
+[1;31mE (970) i2c: i2c driver install error[0m
+[1;31mE (970) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (980) clock gusto: Erfolgreich 4, 16![0m
+
+[0;32mI (980) clock gusto: Teste SDA=GPIO4, SCL=GPIO17... [0m
+[1;31mE (990) i2c: i2c driver install error[0m
+[1;31mE (990) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (990) clock gusto: Erfolgreich 4, 17![0m
+
+[0;32mI (1000) clock gusto: Teste SDA=GPIO4, SCL=GPIO18... [0m
+[1;31mE (1000) i2c: i2c driver install error[0m
+[1;31mE (1010) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1010) clock gusto: Erfolgreich 4, 18![0m
+
+[0;32mI (1010) clock gusto: Teste SDA=GPIO4, SCL=GPIO19... [0m
+[1;31mE (1020) i2c: i2c driver install error[0m
+[1;31mE (1020) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1030) clock gusto: Erfolgreich 4, 19![0m
+
+[0;32mI (1030) clock gusto: Teste SDA=GPIO4, SCL=GPIO21... [0m
+[1;31mE (1040) i2c: i2c driver install error[0m
+[1;31mE (1040) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1040) clock gusto: Erfolgreich 4, 21![0m
+
+[0;32mI (1050) clock gusto: Teste SDA=GPIO4, SCL=GPIO22... [0m
+[1;31mE (1050) i2c: i2c driver install error[0m
+[1;31mE (1060) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1060) clock gusto: Erfolgreich 4, 22![0m
+
+[0;32mI (1060) clock gusto: Teste SDA=GPIO4, SCL=GPIO23... [0m
+[1;31mE (1070) i2c: i2c driver install error[0m
+[1;31mE (1070) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1080) clock gusto: Erfolgreich 4, 23![0m
+
+[0;32mI (1080) clock gusto: Teste SDA=GPIO4, SCL=GPIO25... [0m
+[1;31mE (1080) i2c: i2c driver install error[0m
+[1;31mE (1090) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1090) clock gusto: Erfolgreich 4, 25![0m
+
+[0;32mI (1100) clock gusto: Teste SDA=GPIO4, SCL=GPIO26... [0m
+[1;31mE (1100) i2c: i2c driver install error[0m
+[1;31mE (1100) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1110) clock gusto: Erfolgreich 4, 26![0m
+
+[0;32mI (1110) clock gusto: Teste SDA=GPIO4, SCL=GPIO27... [0m
+[1;31mE (1120) i2c: i2c driver install error[0m
+[1;31mE (1120) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1130) clock gusto: Erfolgreich 4, 27![0m
+
+[0;32mI (1130) clock gusto: Teste SDA=GPIO5, SCL=GPIO0... [0m
+[1;31mE (1130) i2c: i2c driver install error[0m
+[1;31mE (1140) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1140) clock gusto: Erfolgreich 5, 0![0m
+
+[0;32mI (1150) clock gusto: Teste SDA=GPIO5, SCL=GPIO2... [0m
+[1;31mE (1150) i2c: i2c driver install error[0m
+[1;31mE (1150) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1160) clock gusto: Erfolgreich 5, 2![0m
+
+[0;32mI (1160) clock gusto: Teste SDA=GPIO5, SCL=GPIO4... [0m
+[1;31mE (1170) i2c: i2c driver install error[0m
+[1;31mE (1170) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1170) clock gusto: Erfolgreich 5, 4![0m
+
+[0;32mI (1180) clock gusto: Teste SDA=GPIO5, SCL=GPIO12... [0m
+[1;31mE (1180) i2c: i2c driver install error[0m
+[1;31mE (1190) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1190) clock gusto: Erfolgreich 5, 12![0m
+
+[0;32mI (1190) clock gusto: Teste SDA=GPIO5, SCL=GPIO13... [0m
+[1;31mE (1200) i2c: i2c driver install error[0m
+[1;31mE (1200) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1210) clock gusto: Erfolgreich 5, 13![0m
+
+[0;32mI (1210) clock gusto: Teste SDA=GPIO5, SCL=GPIO14... [0m
+[1;31mE (1220) i2c: i2c driver install error[0m
+[1;31mE (1220) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1220) clock gusto: Erfolgreich 5, 14![0m
+
+[0;32mI (1230) clock gusto: Teste SDA=GPIO5, SCL=GPIO15... [0m
+[1;31mE (1230) i2c: i2c driver install error[0m
+[1;31mE (1240) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1240) clock gusto: Erfolgreich 5, 15![0m
+
+[0;32mI (1240) clock gusto: Teste SDA=GPIO5, SCL=GPIO16... [0m
+[1;31mE (1250) i2c: i2c driver install error[0m
+[1;31mE (1250) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1260) clock gusto: Erfolgreich 5, 16![0m
+
+[0;32mI (1260) clock gusto: Teste SDA=GPIO5, SCL=GPIO17... [0m
+[1;31mE (1260) i2c: i2c driver install error[0m
+[1;31mE (1270) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1270) clock gusto: Erfolgreich 5, 17![0m
+
+[0;32mI (1280) clock gusto: Teste SDA=GPIO5, SCL=GPIO18... [0m
+[1;31mE (1280) i2c: i2c driver install error[0m
+[1;31mE (1280) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1290) clock gusto: Erfolgreich 5, 18![0m
+
+[0;32mI (1290) clock gusto: Teste SDA=GPIO5, SCL=GPIO19... [0m
+[1;31mE (1300) i2c: i2c driver install error[0m
+[1;31mE (1300) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1310) clock gusto: Erfolgreich 5, 19![0m
+
+[0;32mI (1310) clock gusto: Teste SDA=GPIO5, SCL=GPIO21... [0m
+[1;31mE (1310) i2c: i2c driver install error[0m
+[1;31mE (1320) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1320) clock gusto: Erfolgreich 5, 21![0m
+
+[0;32mI (1330) clock gusto: Teste SDA=GPIO5, SCL=GPIO22... [0m
+[1;31mE (1330) i2c: i2c driver install error[0m
+[1;31mE (1330) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1340) clock gusto: Erfolgreich 5, 22![0m
+
+[0;32mI (1340) clock gusto: Teste SDA=GPIO5, SCL=GPIO23... [0m
+[1;31mE (1350) i2c: i2c driver install error[0m
+[1;31mE (1350) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1350) clock gusto: Erfolgreich 5, 23![0m
+
+[0;32mI (1360) clock gusto: Teste SDA=GPIO5, SCL=GPIO25... [0m
+[1;31mE (1360) i2c: i2c driver install error[0m
+[1;31mE (1370) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1370) clock gusto: Erfolgreich 5, 25![0m
+
+[0;32mI (1370) clock gusto: Teste SDA=GPIO5, SCL=GPIO26... [0m
+[1;31mE (1380) i2c: i2c driver install error[0m
+[1;31mE (1380) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1390) clock gusto: Erfolgreich 5, 26![0m
+
+[0;32mI (1390) clock gusto: Teste SDA=GPIO5, SCL=GPIO27... [0m
+[1;31mE (1400) i2c: i2c driver install error[0m
+[1;31mE (1400) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1400) clock gusto: Erfolgreich 5, 27![0m
+
+[0;32mI (1410) clock gusto: Teste SDA=GPIO12, SCL=GPIO0... [0m
+[1;31mE (1410) i2c: i2c driver install error[0m
+[1;31mE (1420) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1420) clock gusto: Erfolgreich 12, 0![0m
+
+[0;32mI (1420) clock gusto: Teste SDA=GPIO12, SCL=GPIO2... [0m
+[1;31mE (1430) i2c: i2c driver install error[0m
+[1;31mE (1430) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1440) clock gusto: Erfolgreich 12, 2![0m
+
+[0;32mI (1440) clock gusto: Teste SDA=GPIO12, SCL=GPIO4... [0m
+[1;31mE (1450) i2c: i2c driver install error[0m
+[1;31mE (1450) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1450) clock gusto: Erfolgreich 12, 4![0m
+
+[0;32mI (1460) clock gusto: Teste SDA=GPIO12, SCL=GPIO5... [0m
+[1;31mE (1460) i2c: i2c driver install error[0m
+[1;31mE (1460) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1470) clock gusto: Erfolgreich 12, 5![0m
+
+[0;32mI (1470) clock gusto: Teste SDA=GPIO12, SCL=GPIO13... [0m
+[1;31mE (1480) i2c: i2c driver install error[0m
+[1;31mE (1480) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1490) clock gusto: Erfolgreich 12, 13![0m
+
+[0;32mI (1490) clock gusto: Teste SDA=GPIO12, SCL=GPIO14... [0m
+[1;31mE (1490) i2c: i2c driver install error[0m
+[1;31mE (1500) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1500) clock gusto: Erfolgreich 12, 14![0m
+
+[0;32mI (1510) clock gusto: Teste SDA=GPIO12, SCL=GPIO15... [0m
+[1;31mE (1510) i2c: i2c driver install error[0m
+[1;31mE (1510) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1520) clock gusto: Erfolgreich 12, 15![0m
+
+[0;32mI (1520) clock gusto: Teste SDA=GPIO12, SCL=GPIO16... [0m
+[1;31mE (1530) i2c: i2c driver install error[0m
+[1;31mE (1530) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1540) clock gusto: Erfolgreich 12, 16![0m
+
+[0;32mI (1540) clock gusto: Teste SDA=GPIO12, SCL=GPIO17... [0m
+[1;31mE (1540) i2c: i2c driver install error[0m
+[1;31mE (1550) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1550) clock gusto: Erfolgreich 12, 17![0m
+
+[0;32mI (1560) clock gusto: Teste SDA=GPIO12, SCL=GPIO18... [0m
+[1;31mE (1560) i2c: i2c driver install error[0m
+[1;31mE (1560) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1570) clock gusto: Erfolgreich 12, 18![0m
+
+[0;32mI (1570) clock gusto: Teste SDA=GPIO12, SCL=GPIO19... [0m
+[1;31mE (1580) i2c: i2c driver install error[0m
+[1;31mE (1580) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1590) clock gusto: Erfolgreich 12, 19![0m
+
+[0;32mI (1590) clock gusto: Teste SDA=GPIO12, SCL=GPIO21... [0m
+[1;31mE (1590) i2c: i2c driver install error[0m
+[1;31mE (1600) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1600) clock gusto: Erfolgreich 12, 21![0m
+
+[0;32mI (1610) clock gusto: Teste SDA=GPIO12, SCL=GPIO22... [0m
+[1;31mE (1610) i2c: i2c driver install error[0m
+[1;31mE (1610) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1620) clock gusto: Erfolgreich 12, 22![0m
+
+[0;32mI (1620) clock gusto: Teste SDA=GPIO12, SCL=GPIO23... [0m
+[1;31mE (1630) i2c: i2c driver install error[0m
+[1;31mE (1630) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1630) clock gusto: Erfolgreich 12, 23![0m
+
+[0;32mI (1640) clock gusto: Teste SDA=GPIO12, SCL=GPIO25... [0m
+[1;31mE (1640) i2c: i2c driver install error[0m
+[1;31mE (1650) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1650) clock gusto: Erfolgreich 12, 25![0m
+
+[0;32mI (1660) clock gusto: Teste SDA=GPIO12, SCL=GPIO26... [0m
+[1;31mE (1660) i2c: i2c driver install error[0m
+[1;31mE (1660) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1670) clock gusto: Erfolgreich 12, 26![0m
+
+[0;32mI (1670) clock gusto: Teste SDA=GPIO12, SCL=GPIO27... [0m
+[1;31mE (1680) i2c: i2c driver install error[0m
+[1;31mE (1680) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1680) clock gusto: Erfolgreich 12, 27![0m
+
+[0;32mI (1690) clock gusto: Teste SDA=GPIO13, SCL=GPIO0... [0m
+[1;31mE (1690) i2c: i2c driver install error[0m
+[1;31mE (1700) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1700) clock gusto: Erfolgreich 13, 0![0m
+
+[0;32mI (1710) clock gusto: Teste SDA=GPIO13, SCL=GPIO2... [0m
+[1;31mE (1710) i2c: i2c driver install error[0m
+[1;31mE (1710) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1720) clock gusto: Erfolgreich 13, 2![0m
+
+[0;32mI (1720) clock gusto: Teste SDA=GPIO13, SCL=GPIO4... [0m
+[1;31mE (1730) i2c: i2c driver install error[0m
+[1;31mE (1730) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1730) clock gusto: Erfolgreich 13, 4![0m
+
+[0;32mI (1740) clock gusto: Teste SDA=GPIO13, SCL=GPIO5... [0m
+[1;31mE (1740) i2c: i2c driver install error[0m
+[1;31mE (1750) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1750) clock gusto: Erfolgreich 13, 5![0m
+
+[0;32mI (1750) clock gusto: Teste SDA=GPIO13, SCL=GPIO12... [0m
+[1;31mE (1760) i2c: i2c driver install error[0m
+[1;31mE (1760) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1770) clock gusto: Erfolgreich 13, 12![0m
+
+[0;32mI (1770) clock gusto: Teste SDA=GPIO13, SCL=GPIO14... [0m
+[1;31mE (1780) i2c: i2c driver install error[0m
+[1;31mE (1780) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1780) clock gusto: Erfolgreich 13, 14![0m
+
+[0;32mI (1790) clock gusto: Teste SDA=GPIO13, SCL=GPIO15... [0m
+[1;31mE (1790) i2c: i2c driver install error[0m
+[1;31mE (1800) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1800) clock gusto: Erfolgreich 13, 15![0m
+
+[0;32mI (1800) clock gusto: Teste SDA=GPIO13, SCL=GPIO16... [0m
+[1;31mE (1810) i2c: i2c driver install error[0m
+[1;31mE (1810) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1820) clock gusto: Erfolgreich 13, 16![0m
+
+[0;32mI (1820) clock gusto: Teste SDA=GPIO13, SCL=GPIO17... [0m
+[1;31mE (1830) i2c: i2c driver install error[0m
+[1;31mE (1830) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1830) clock gusto: Erfolgreich 13, 17![0m
+
+[0;32mI (1840) clock gusto: Teste SDA=GPIO13, SCL=GPIO18... [0m
+[1;31mE (1840) i2c: i2c driver install error[0m
+[1;31mE (1850) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1850) clock gusto: Erfolgreich 13, 18![0m
+
+[0;32mI (1850) clock gusto: Teste SDA=GPIO13, SCL=GPIO19... [0m
+[1;31mE (1860) i2c: i2c driver install error[0m
+[1;31mE (1860) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1870) clock gusto: Erfolgreich 13, 19![0m
+
+[0;32mI (1870) clock gusto: Teste SDA=GPIO13, SCL=GPIO21... [0m
+[1;31mE (1880) i2c: i2c driver install error[0m
+[1;31mE (1880) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1880) clock gusto: Erfolgreich 13, 21![0m
+
+[0;32mI (1890) clock gusto: Teste SDA=GPIO13, SCL=GPIO22... [0m
+[1;31mE (1890) i2c: i2c driver install error[0m
+[1;31mE (1900) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1900) clock gusto: Erfolgreich 13, 22![0m
+
+[0;32mI (1900) clock gusto: Teste SDA=GPIO13, SCL=GPIO23... [0m
+[1;31mE (1910) i2c: i2c driver install error[0m
+[1;31mE (1910) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1920) clock gusto: Erfolgreich 13, 23![0m
+
+[0;32mI (1920) clock gusto: Teste SDA=GPIO13, SCL=GPIO25... [0m
+[1;31mE (1920) i2c: i2c driver install error[0m
+[1;31mE (1930) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1930) clock gusto: Erfolgreich 13, 25![0m
+
+[0;32mI (1940) clock gusto: Teste SDA=GPIO13, SCL=GPIO26... [0m
+[1;31mE (1940) i2c: i2c driver install error[0m
+[1;31mE (1940) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1950) clock gusto: Erfolgreich 13, 26![0m
+
+[0;32mI (1950) clock gusto: Teste SDA=GPIO13, SCL=GPIO27... [0m
+[1;31mE (1960) i2c: i2c driver install error[0m
+[1;31mE (1960) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1970) clock gusto: Erfolgreich 13, 27![0m
+
+[0;32mI (1970) clock gusto: Teste SDA=GPIO14, SCL=GPIO0... [0m
+[1;31mE (1970) i2c: i2c driver install error[0m
+[1;31mE (1980) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1980) clock gusto: Erfolgreich 14, 0![0m
+
+[0;32mI (1990) clock gusto: Teste SDA=GPIO14, SCL=GPIO2... [0m
+[1;31mE (1990) i2c: i2c driver install error[0m
+[1;31mE (1990) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2000) clock gusto: Erfolgreich 14, 2![0m
+
+[0;32mI (2000) clock gusto: Teste SDA=GPIO14, SCL=GPIO4... [0m
+[1;31mE (2010) i2c: i2c driver install error[0m
+[1;31mE (2010) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2020) clock gusto: Erfolgreich 14, 4![0m
+
+[0;32mI (2020) clock gusto: Teste SDA=GPIO14, SCL=GPIO5... [0m
+[1;31mE (2020) i2c: i2c driver install error[0m
+[1;31mE (2030) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2030) clock gusto: Erfolgreich 14, 5![0m
+
+[0;32mI (2040) clock gusto: Teste SDA=GPIO14, SCL=GPIO12... [0m
+[1;31mE (2040) i2c: i2c driver install error[0m
+[1;31mE (2040) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2050) clock gusto: Erfolgreich 14, 12![0m
+
+[0;32mI (2050) clock gusto: Teste SDA=GPIO14, SCL=GPIO13... [0m
+[1;31mE (2060) i2c: i2c driver install error[0m
+[1;31mE (2060) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2060) clock gusto: Erfolgreich 14, 13![0m
+
+[0;32mI (2070) clock gusto: Teste SDA=GPIO14, SCL=GPIO15... [0m
+[1;31mE (2070) i2c: i2c driver install error[0m
+[1;31mE (2080) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2080) clock gusto: Erfolgreich 14, 15![0m
+
+[0;32mI (2090) clock gusto: Teste SDA=GPIO14, SCL=GPIO16... [0m
+[1;31mE (2090) i2c: i2c driver install error[0m
+[1;31mE (2090) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2100) clock gusto: Erfolgreich 14, 16![0m
+
+[0;32mI (2100) clock gusto: Teste SDA=GPIO14, SCL=GPIO17... [0m
+[1;31mE (2110) i2c: i2c driver install error[0m
+[1;31mE (2110) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2110) clock gusto: Erfolgreich 14, 17![0m
+
+[0;32mI (2120) clock gusto: Teste SDA=GPIO14, SCL=GPIO18... [0m
+[1;31mE (2120) i2c: i2c driver install error[0m
+[1;31mE (2130) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2130) clock gusto: Erfolgreich 14, 18![0m
+
+[0;32mI (2130) clock gusto: Teste SDA=GPIO14, SCL=GPIO19... [0m
+[1;31mE (2140) i2c: i2c driver install error[0m
+[1;31mE (2140) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2150) clock gusto: Erfolgreich 14, 19![0m
+
+[0;32mI (2150) clock gusto: Teste SDA=GPIO14, SCL=GPIO21... [0m
+[1;31mE (2160) i2c: i2c driver install error[0m
+[1;31mE (2160) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2160) clock gusto: Erfolgreich 14, 21![0m
+
+[0;32mI (2170) clock gusto: Teste SDA=GPIO14, SCL=GPIO22... [0m
+[1;31mE (2170) i2c: i2c driver install error[0m
+[1;31mE (2180) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2180) clock gusto: Erfolgreich 14, 22![0m
+
+[0;32mI (2180) clock gusto: Teste SDA=GPIO14, SCL=GPIO23... [0m
+[1;31mE (2190) i2c: i2c driver install error[0m
+[1;31mE (2190) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2200) clock gusto: Erfolgreich 14, 23![0m
+
+[0;32mI (2200) clock gusto: Teste SDA=GPIO14, SCL=GPIO25... [0m
+[1;31mE (2210) i2c: i2c driver install error[0m
+[1;31mE (2210) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2210) clock gusto: Erfolgreich 14, 25![0m
+
+[0;32mI (2220) clock gusto: Teste SDA=GPIO14, SCL=GPIO26... [0m
+[1;31mE (2220) i2c: i2c driver install error[0m
+[1;31mE (2230) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2230) clock gusto: Erfolgreich 14, 26![0m
+
+[0;32mI (2230) clock gusto: Teste SDA=GPIO14, SCL=GPIO27... [0m
+[1;31mE (2240) i2c: i2c driver install error[0m
+[1;31mE (2240) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2250) clock gusto: Erfolgreich 14, 27![0m
+
+[0;32mI (2250) clock gusto: Teste SDA=GPIO15, SCL=GPIO0... [0m
+[1;31mE (2260) i2c: i2c driver install error[0m
+[1;31mE (2260) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2260) clock gusto: Erfolgreich 15, 0![0m
+
+[0;32mI (2270) clock gusto: Teste SDA=GPIO15, SCL=GPIO2... [0m
+[1;31mE (2270) i2c: i2c driver install error[0m
+[1;31mE (2280) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2280) clock gusto: Erfolgreich 15, 2![0m
+
+[0;32mI (2280) clock gusto: Teste SDA=GPIO15, SCL=GPIO4... [0m
+[1;31mE (2290) i2c: i2c driver install error[0m
+[1;31mE (2290) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2300) clock gusto: Erfolgreich 15, 4![0m
+
+[0;32mI (2300) clock gusto: Teste SDA=GPIO15, SCL=GPIO5... [0m
+[1;31mE (2300) i2c: i2c driver install error[0m
+[1;31mE (2310) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2310) clock gusto: Erfolgreich 15, 5![0m
+
+[0;32mI (2320) clock gusto: Teste SDA=GPIO15, SCL=GPIO12... [0m
+[1;31mE (2320) i2c: i2c driver install error[0m
+[1;31mE (2320) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2330) clock gusto: Erfolgreich 15, 12![0m
+
+[0;32mI (2330) clock gusto: Teste SDA=GPIO15, SCL=GPIO13... [0m
+[1;31mE (2340) i2c: i2c driver install error[0m
+[1;31mE (2340) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2350) clock gusto: Erfolgreich 15, 13![0m
+
+[0;32mI (2350) clock gusto: Teste SDA=GPIO15, SCL=GPIO14... [0m
+[1;31mE (2350) i2c: i2c driver install error[0m
+[1;31mE (2360) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2360) clock gusto: Erfolgreich 15, 14![0m
+
+[0;32mI (2370) clock gusto: Teste SDA=GPIO15, SCL=GPIO16... [0m
+[1;31mE (2370) i2c: i2c driver install error[0m
+[1;31mE (2370) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2380) clock gusto: Erfolgreich 15, 16![0m
+
+[0;32mI (2380) clock gusto: Teste SDA=GPIO15, SCL=GPIO17... [0m
+[1;31mE (2390) i2c: i2c driver install error[0m
+[1;31mE (2390) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2400) clock gusto: Erfolgreich 15, 17![0m
+
+[0;32mI (2400) clock gusto: Teste SDA=GPIO15, SCL=GPIO18... [0m
+[1;31mE (2400) i2c: i2c driver install error[0m
+[1;31mE (2410) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2410) clock gusto: Erfolgreich 15, 18![0m
+
+[0;32mI (2420) clock gusto: Teste SDA=GPIO15, SCL=GPIO19... [0m
+[1;31mE (2420) i2c: i2c driver install error[0m
+[1;31mE (2420) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2430) clock gusto: Erfolgreich 15, 19![0m
+
+[0;32mI (2430) clock gusto: Teste SDA=GPIO15, SCL=GPIO21... [0m
+[1;31mE (2440) i2c: i2c driver install error[0m
+[1;31mE (2440) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2450) clock gusto: Erfolgreich 15, 21![0m
+
+[0;32mI (2450) clock gusto: Teste SDA=GPIO15, SCL=GPIO22... [0m
+[1;31mE (2450) i2c: i2c driver install error[0m
+[1;31mE (2460) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2460) clock gusto: Erfolgreich 15, 22![0m
+
+[0;32mI (2470) clock gusto: Teste SDA=GPIO15, SCL=GPIO23... [0m
+[1;31mE (2470) i2c: i2c driver install error[0m
+[1;31mE (2470) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2480) clock gusto: Erfolgreich 15, 23![0m
+
+[0;32mI (2480) clock gusto: Teste SDA=GPIO15, SCL=GPIO25... [0m
+[1;31mE (2490) i2c: i2c driver install error[0m
+[1;31mE (2490) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2500) clock gusto: Erfolgreich 15, 25![0m
+
+[0;32mI (2500) clock gusto: Teste SDA=GPIO15, SCL=GPIO26... [0m
+[1;31mE (2500) i2c: i2c driver install error[0m
+[1;31mE (2510) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2510) clock gusto: Erfolgreich 15, 26![0m
+
+[0;32mI (2520) clock gusto: Teste SDA=GPIO15, SCL=GPIO27... [0m
+[1;31mE (2520) i2c: i2c driver install error[0m
+[1;31mE (2520) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2530) clock gusto: Erfolgreich 15, 27![0m
+
+[0;32mI (2530) clock gusto: Teste SDA=GPIO16, SCL=GPIO0... [0m
+[1;31mE (2540) i2c: i2c driver install error[0m
+[1;31mE (2540) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2540) clock gusto: Erfolgreich 16, 0![0m
+
+[0;32mI (2550) clock gusto: Teste SDA=GPIO16, SCL=GPIO2... [0m
+[1;31mE (2550) i2c: i2c driver install error[0m
+[1;31mE (2560) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2560) clock gusto: Erfolgreich 16, 2![0m
+
+[0;32mI (2560) clock gusto: Teste SDA=GPIO16, SCL=GPIO4... [0m
+[1;31mE (2570) i2c: i2c driver install error[0m
+[1;31mE (2570) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2580) clock gusto: Erfolgreich 16, 4![0m
+
+[0;32mI (2580) clock gusto: Teste SDA=GPIO16, SCL=GPIO5... [0m
+[1;31mE (2590) i2c: i2c driver install error[0m
+[1;31mE (2590) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2590) clock gusto: Erfolgreich 16, 5![0m
+
+[0;32mI (2600) clock gusto: Teste SDA=GPIO16, SCL=GPIO12... [0m
+[1;31mE (2600) i2c: i2c driver install error[0m
+[1;31mE (2610) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2610) clock gusto: Erfolgreich 16, 12![0m
+
+[0;32mI (2610) clock gusto: Teste SDA=GPIO16, SCL=GPIO13... [0m
+[1;31mE (2620) i2c: i2c driver install error[0m
+[1;31mE (2620) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2630) clock gusto: Erfolgreich 16, 13![0m
+
+[0;32mI (2630) clock gusto: Teste SDA=GPIO16, SCL=GPIO14... [0m
+[1;31mE (2640) i2c: i2c driver install error[0m
+[1;31mE (2640) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2640) clock gusto: Erfolgreich 16, 14![0m
+
+[0;32mI (2650) clock gusto: Teste SDA=GPIO16, SCL=GPIO15... [0m
+[1;31mE (2650) i2c: i2c driver install error[0m
+[1;31mE (2660) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2660) clock gusto: Erfolgreich 16, 15![0m
+
+[0;32mI (2660) clock gusto: Teste SDA=GPIO16, SCL=GPIO17... [0m
+[1;31mE (2670) i2c: i2c driver install error[0m
+[1;31mE (2670) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2680) clock gusto: Erfolgreich 16, 17![0m
+
+[0;32mI (2680) clock gusto: Teste SDA=GPIO16, SCL=GPIO18... [0m
+[1;31mE (2690) i2c: i2c driver install error[0m
+[1;31mE (2690) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2690) clock gusto: Erfolgreich 16, 18![0m
+
+[0;32mI (2700) clock gusto: Teste SDA=GPIO16, SCL=GPIO19... [0m
+[1;31mE (2700) i2c: i2c driver install error[0m
+[1;31mE (2710) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2710) clock gusto: Erfolgreich 16, 19![0m
+
+[0;32mI (2710) clock gusto: Teste SDA=GPIO16, SCL=GPIO21... [0m
+[1;31mE (2720) i2c: i2c driver install error[0m
+[1;31mE (2720) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2730) clock gusto: Erfolgreich 16, 21![0m
+
+[0;32mI (2730) clock gusto: Teste SDA=GPIO16, SCL=GPIO22... [0m
+[1;31mE (2740) i2c: i2c driver install error[0m
+[1;31mE (2740) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2740) clock gusto: Erfolgreich 16, 22![0m
+
+[0;32mI (2750) clock gusto: Teste SDA=GPIO16, SCL=GPIO23... [0m
+[1;31mE (2750) i2c: i2c driver install error[0m
+[1;31mE (2760) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2760) clock gusto: Erfolgreich 16, 23![0m
+
+[0;32mI (2760) clock gusto: Teste SDA=GPIO16, SCL=GPIO25... [0m
+[1;31mE (2770) i2c: i2c driver install error[0m
+[1;31mE (2770) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2780) clock gusto: Erfolgreich 16, 25![0m
+
+[0;32mI (2780) clock gusto: Teste SDA=GPIO16, SCL=GPIO26... [0m
+[1;31mE (2790) i2c: i2c driver install error[0m
+[1;31mE (2790) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2790) clock gusto: Erfolgreich 16, 26![0m
+
+[0;32mI (2800) clock gusto: Teste SDA=GPIO16, SCL=GPIO27... [0m
+[1;31mE (2800) i2c: i2c driver install error[0m
+[1;31mE (2810) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2810) clock gusto: Erfolgreich 16, 27![0m
+
+[0;32mI (2810) clock gusto: Teste SDA=GPIO17, SCL=GPIO0... [0m
+[1;31mE (2820) i2c: i2c driver install error[0m
+[1;31mE (2820) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2830) clock gusto: Erfolgreich 17, 0![0m
+
+[0;32mI (2830) clock gusto: Teste SDA=GPIO17, SCL=GPIO2... [0m
+[1;31mE (2830) i2c: i2c driver install error[0m
+[1;31mE (2840) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2840) clock gusto: Erfolgreich 17, 2![0m
+
+[0;32mI (2850) clock gusto: Teste SDA=GPIO17, SCL=GPIO4... [0m
+[1;31mE (2850) i2c: i2c driver install error[0m
+[1;31mE (2850) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2860) clock gusto: Erfolgreich 17, 4![0m
+
+[0;32mI (2860) clock gusto: Teste SDA=GPIO17, SCL=GPIO5... [0m
+[1;31mE (2870) i2c: i2c driver install error[0m
+[1;31mE (2870) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2880) clock gusto: Erfolgreich 17, 5![0m
+
+[0;32mI (2880) clock gusto: Teste SDA=GPIO17, SCL=GPIO12... [0m
+[1;31mE (2880) i2c: i2c driver install error[0m
+[1;31mE (2890) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2890) clock gusto: Erfolgreich 17, 12![0m
+
+[0;32mI (2900) clock gusto: Teste SDA=GPIO17, SCL=GPIO13... [0m
+[1;31mE (2900) i2c: i2c driver install error[0m
+[1;31mE (2900) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2910) clock gusto: Erfolgreich 17, 13![0m
+
+[0;32mI (2910) clock gusto: Teste SDA=GPIO17, SCL=GPIO14... [0m
+[1;31mE (2920) i2c: i2c driver install error[0m
+[1;31mE (2920) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2920) clock gusto: Erfolgreich 17, 14![0m
+
+[0;32mI (2930) clock gusto: Teste SDA=GPIO17, SCL=GPIO15... [0m
+[1;31mE (2930) i2c: i2c driver install error[0m
+[1;31mE (2940) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2940) clock gusto: Erfolgreich 17, 15![0m
+
+[0;32mI (2950) clock gusto: Teste SDA=GPIO17, SCL=GPIO16... [0m
+[1;31mE (2950) i2c: i2c driver install error[0m
+[1;31mE (2950) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2960) clock gusto: Erfolgreich 17, 16![0m
+
+[0;32mI (2960) clock gusto: Teste SDA=GPIO17, SCL=GPIO18... [0m
+[1;31mE (2970) i2c: i2c driver install error[0m
+[1;31mE (2970) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2970) clock gusto: Erfolgreich 17, 18![0m
+
+[0;32mI (2980) clock gusto: Teste SDA=GPIO17, SCL=GPIO19... [0m
+[1;31mE (2980) i2c: i2c driver install error[0m
+[1;31mE (2990) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2990) clock gusto: Erfolgreich 17, 19![0m
+
+[0;32mI (2990) clock gusto: Teste SDA=GPIO17, SCL=GPIO21... [0m
+[1;31mE (3000) i2c: i2c driver install error[0m
+[1;31mE (3000) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3010) clock gusto: Erfolgreich 17, 21![0m
+
+[0;32mI (3010) clock gusto: Teste SDA=GPIO17, SCL=GPIO22... [0m
+[1;31mE (3020) i2c: i2c driver install error[0m
+[1;31mE (3020) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3020) clock gusto: Erfolgreich 17, 22![0m
+
+[0;32mI (3030) clock gusto: Teste SDA=GPIO17, SCL=GPIO23... [0m
+[1;31mE (3030) i2c: i2c driver install error[0m
+[1;31mE (3040) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3040) clock gusto: Erfolgreich 17, 23![0m
+
+[0;32mI (3040) clock gusto: Teste SDA=GPIO17, SCL=GPIO25... [0m
+[1;31mE (3050) i2c: i2c driver install error[0m
+[1;31mE (3050) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3060) clock gusto: Erfolgreich 17, 25![0m
+
+[0;32mI (3060) clock gusto: Teste SDA=GPIO17, SCL=GPIO26... [0m
+[1;31mE (3070) i2c: i2c driver install error[0m
+[1;31mE (3070) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3070) clock gusto: Erfolgreich 17, 26![0m
+
+[0;32mI (3080) clock gusto: Teste SDA=GPIO17, SCL=GPIO27... [0m
+[1;31mE (3080) i2c: i2c driver install error[0m
+[1;31mE (3090) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3090) clock gusto: Erfolgreich 17, 27![0m
+
+[0;32mI (3090) clock gusto: Teste SDA=GPIO18, SCL=GPIO0... [0m
+[1;31mE (3100) i2c: i2c driver install error[0m
+[1;31mE (3100) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3110) clock gusto: Erfolgreich 18, 0![0m
+
+[0;32mI (3110) clock gusto: Teste SDA=GPIO18, SCL=GPIO2... [0m
+[1;31mE (3120) i2c: i2c driver install error[0m
+[1;31mE (3120) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3120) clock gusto: Erfolgreich 18, 2![0m
+
+[0;32mI (3130) clock gusto: Teste SDA=GPIO18, SCL=GPIO4... [0m
+[1;31mE (3130) i2c: i2c driver install error[0m
+[1;31mE (3140) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3140) clock gusto: Erfolgreich 18, 4![0m
+
+[0;32mI (3140) clock gusto: Teste SDA=GPIO18, SCL=GPIO5... [0m
+[1;31mE (3150) i2c: i2c driver install error[0m
+[1;31mE (3150) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3160) clock gusto: Erfolgreich 18, 5![0m
+
+[0;32mI (3160) clock gusto: Teste SDA=GPIO18, SCL=GPIO12... [0m
+[1;31mE (3160) i2c: i2c driver install error[0m
+[1;31mE (3170) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3170) clock gusto: Erfolgreich 18, 12![0m
+
+[0;32mI (3180) clock gusto: Teste SDA=GPIO18, SCL=GPIO13... [0m
+[1;31mE (3180) i2c: i2c driver install error[0m
+[1;31mE (3180) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3190) clock gusto: Erfolgreich 18, 13![0m
+
+[0;32mI (3190) clock gusto: Teste SDA=GPIO18, SCL=GPIO14... [0m
+[1;31mE (3200) i2c: i2c driver install error[0m
+[1;31mE (3200) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3210) clock gusto: Erfolgreich 18, 14![0m
+
+[0;32mI (3210) clock gusto: Teste SDA=GPIO18, SCL=GPIO15... [0m
+[1;31mE (3210) i2c: i2c driver install error[0m
+[1;31mE (3220) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3220) clock gusto: Erfolgreich 18, 15![0m
+
+[0;32mI (3230) clock gusto: Teste SDA=GPIO18, SCL=GPIO16... [0m
+[1;31mE (3230) i2c: i2c driver install error[0m
+[1;31mE (3230) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3240) clock gusto: Erfolgreich 18, 16![0m
+
+[0;32mI (3240) clock gusto: Teste SDA=GPIO18, SCL=GPIO17... [0m
+[1;31mE (3250) i2c: i2c driver install error[0m
+[1;31mE (3250) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3260) clock gusto: Erfolgreich 18, 17![0m
+
+[0;32mI (3260) clock gusto: Teste SDA=GPIO18, SCL=GPIO19... [0m
+[1;31mE (3260) i2c: i2c driver install error[0m
+[1;31mE (3270) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3270) clock gusto: Erfolgreich 18, 19![0m
+
+[0;32mI (3280) clock gusto: Teste SDA=GPIO18, SCL=GPIO21... [0m
+[1;31mE (3280) i2c: i2c driver install error[0m
+[1;31mE (3280) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3290) clock gusto: Erfolgreich 18, 21![0m
+
+[0;32mI (3290) clock gusto: Teste SDA=GPIO18, SCL=GPIO22... [0m
+[1;31mE (3300) i2c: i2c driver install error[0m
+[1;31mE (3300) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3310) clock gusto: Erfolgreich 18, 22![0m
+
+[0;32mI (3310) clock gusto: Teste SDA=GPIO18, SCL=GPIO23... [0m
+[1;31mE (3310) i2c: i2c driver install error[0m
+[1;31mE (3320) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3320) clock gusto: Erfolgreich 18, 23![0m
+
+[0;32mI (3330) clock gusto: Teste SDA=GPIO18, SCL=GPIO25... [0m
+[1;31mE (3330) i2c: i2c driver install error[0m
+[1;31mE (3330) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3340) clock gusto: Erfolgreich 18, 25![0m
+
+[0;32mI (3340) clock gusto: Teste SDA=GPIO18, SCL=GPIO26... [0m
+[1;31mE (3350) i2c: i2c driver install error[0m
+[1;31mE (3350) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3360) clock gusto: Erfolgreich 18, 26![0m
+
+[0;32mI (3360) clock gusto: Teste SDA=GPIO18, SCL=GPIO27... [0m
+[1;31mE (3360) i2c: i2c driver install error[0m
+[1;31mE (3370) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3370) clock gusto: Erfolgreich 18, 27![0m
+
+[0;32mI (3380) clock gusto: Teste SDA=GPIO19, SCL=GPIO0... [0m
+[1;31mE (3380) i2c: i2c driver install error[0m
+[1;31mE (3380) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3390) clock gusto: Erfolgreich 19, 0![0m
+
+[0;32mI (3390) clock gusto: Teste SDA=GPIO19, SCL=GPIO2... [0m
+[1;31mE (3400) i2c: i2c driver install error[0m
+[1;31mE (3400) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3400) clock gusto: Erfolgreich 19, 2![0m
+
+[0;32mI (3410) clock gusto: Teste SDA=GPIO19, SCL=GPIO4... [0m
+[1;31mE (3410) i2c: i2c driver install error[0m
+[1;31mE (3420) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3420) clock gusto: Erfolgreich 19, 4![0m
+
+[0;32mI (3420) clock gusto: Teste SDA=GPIO19, SCL=GPIO5... [0m
+[1;31mE (3430) i2c: i2c driver install error[0m
+[1;31mE (3430) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3440) clock gusto: Erfolgreich 19, 5![0m
+
+[0;32mI (3440) clock gusto: Teste SDA=GPIO19, SCL=GPIO12... [0m
+[1;31mE (3450) i2c: i2c driver install error[0m
+[1;31mE (3450) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3450) clock gusto: Erfolgreich 19, 12![0m
+
+[0;32mI (3460) clock gusto: Teste SDA=GPIO19, SCL=GPIO13... [0m
+[1;31mE (3460) i2c: i2c driver install error[0m
+[1;31mE (3470) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3470) clock gusto: Erfolgreich 19, 13![0m
+
+[0;32mI (3470) clock gusto: Teste SDA=GPIO19, SCL=GPIO14... [0m
+[1;31mE (3480) i2c: i2c driver install error[0m
+[1;31mE (3480) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3490) clock gusto: Erfolgreich 19, 14![0m
+
+[0;32mI (3490) clock gusto: Teste SDA=GPIO19, SCL=GPIO15... [0m
+[1;31mE (3500) i2c: i2c driver install error[0m
+[1;31mE (3500) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3500) clock gusto: Erfolgreich 19, 15![0m
+
+[0;32mI (3510) clock gusto: Teste SDA=GPIO19, SCL=GPIO16... [0m
+[1;31mE (3510) i2c: i2c driver install error[0m
+[1;31mE (3520) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3520) clock gusto: Erfolgreich 19, 16![0m
+
+[0;32mI (3520) clock gusto: Teste SDA=GPIO19, SCL=GPIO17... [0m
+[1;31mE (3530) i2c: i2c driver install error[0m
+[1;31mE (3530) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3540) clock gusto: Erfolgreich 19, 17![0m
+
+[0;32mI (3540) clock gusto: Teste SDA=GPIO19, SCL=GPIO18... [0m
+[1;31mE (3550) i2c: i2c driver install error[0m
+[1;31mE (3550) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3550) clock gusto: Erfolgreich 19, 18![0m
+
+[0;32mI (3560) clock gusto: Teste SDA=GPIO19, SCL=GPIO21... [0m
+[1;31mE (3560) i2c: i2c driver install error[0m
+[1;31mE (3570) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3570) clock gusto: Erfolgreich 19, 21![0m
+
+[0;32mI (3570) clock gusto: Teste SDA=GPIO19, SCL=GPIO22... [0m
+[1;31mE (3580) i2c: i2c driver install error[0m
+[1;31mE (3580) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3590) clock gusto: Erfolgreich 19, 22![0m
+
+[0;32mI (3590) clock gusto: Teste SDA=GPIO19, SCL=GPIO23... [0m
+[1;31mE (3600) i2c: i2c driver install error[0m
+[1;31mE (3600) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3600) clock gusto: Erfolgreich 19, 23![0m
+
+[0;32mI (3610) clock gusto: Teste SDA=GPIO19, SCL=GPIO25... [0m
+[1;31mE (3610) i2c: i2c driver install error[0m
+[1;31mE (3620) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3620) clock gusto: Erfolgreich 19, 25![0m
+
+[0;32mI (3620) clock gusto: Teste SDA=GPIO19, SCL=GPIO26... [0m
+[1;31mE (3630) i2c: i2c driver install error[0m
+[1;31mE (3630) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3640) clock gusto: Erfolgreich 19, 26![0m
+
+[0;32mI (3640) clock gusto: Teste SDA=GPIO19, SCL=GPIO27... [0m
+[1;31mE (3650) i2c: i2c driver install error[0m
+[1;31mE (3650) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3650) clock gusto: Erfolgreich 19, 27![0m
+
+[0;32mI (3660) clock gusto: Teste SDA=GPIO21, SCL=GPIO0... [0m
+[1;31mE (3660) i2c: i2c driver install error[0m
+[1;31mE (3660) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3670) clock gusto: Erfolgreich 21, 0![0m
+
+[0;32mI (3670) clock gusto: Teste SDA=GPIO21, SCL=GPIO2... [0m
+[1;31mE (3680) i2c: i2c driver install error[0m
+[1;31mE (3680) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3690) clock gusto: Erfolgreich 21, 2![0m
+
+[0;32mI (3690) clock gusto: Teste SDA=GPIO21, SCL=GPIO4... [0m
+[1;31mE (3690) i2c: i2c driver install error[0m
+[1;31mE (3700) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3700) clock gusto: Erfolgreich 21, 4![0m
+
+[0;32mI (3710) clock gusto: Teste SDA=GPIO21, SCL=GPIO5... [0m
+[1;31mE (3710) i2c: i2c driver install error[0m
+[1;31mE (3710) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3720) clock gusto: Erfolgreich 21, 5![0m
+
+[0;32mI (3720) clock gusto: Teste SDA=GPIO21, SCL=GPIO12... [0m
+[1;31mE (3730) i2c: i2c driver install error[0m
+[1;31mE (3730) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3740) clock gusto: Erfolgreich 21, 12![0m
+
+[0;32mI (3740) clock gusto: Teste SDA=GPIO21, SCL=GPIO13... [0m
+[1;31mE (3740) i2c: i2c driver install error[0m
+[1;31mE (3750) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3750) clock gusto: Erfolgreich 21, 13![0m
+
+[0;32mI (3760) clock gusto: Teste SDA=GPIO21, SCL=GPIO14... [0m
+[1;31mE (3760) i2c: i2c driver install error[0m
+[1;31mE (3760) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3770) clock gusto: Erfolgreich 21, 14![0m
+
+[0;32mI (3770) clock gusto: Teste SDA=GPIO21, SCL=GPIO15... [0m
+[1;31mE (3780) i2c: i2c driver install error[0m
+[1;31mE (3780) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3780) clock gusto: Erfolgreich 21, 15![0m
+
+[0;32mI (3790) clock gusto: Teste SDA=GPIO21, SCL=GPIO16... [0m
+[1;31mE (3790) i2c: i2c driver install error[0m
+[1;31mE (3800) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3800) clock gusto: Erfolgreich 21, 16![0m
+
+[0;32mI (3810) clock gusto: Teste SDA=GPIO21, SCL=GPIO17... [0m
+[1;31mE (3810) i2c: i2c driver install error[0m
+[1;31mE (3810) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3820) clock gusto: Erfolgreich 21, 17![0m
+
+[0;32mI (3820) clock gusto: Teste SDA=GPIO21, SCL=GPIO18... [0m
+[1;31mE (3830) i2c: i2c driver install error[0m
+[1;31mE (3830) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3830) clock gusto: Erfolgreich 21, 18![0m
+
+[0;32mI (3840) clock gusto: Teste SDA=GPIO21, SCL=GPIO19... [0m
+[1;31mE (3840) i2c: i2c driver install error[0m
+[1;31mE (3850) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3850) clock gusto: Erfolgreich 21, 19![0m
+
+[0;32mI (3850) clock gusto: Teste SDA=GPIO21, SCL=GPIO22... [0m
+[1;31mE (3860) i2c: i2c driver install error[0m
+[1;31mE (3860) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3870) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3870) clock gusto: Teste SDA=GPIO21, SCL=GPIO23... [0m
+[1;31mE (3880) i2c: i2c driver install error[0m
+[1;31mE (3880) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3880) clock gusto: Erfolgreich 21, 23![0m
+
+[0;32mI (3890) clock gusto: Teste SDA=GPIO21, SCL=GPIO25... [0m
+[1;31mE (3890) i2c: i2c driver install error[0m
+[1;31mE (3900) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3900) clock gusto: Erfolgreich 21, 25![0m
+
+[0;32mI (3900) clock gusto: Teste SDA=GPIO21, SCL=GPIO26... [0m
+[1;31mE (3910) i2c: i2c driver install error[0m
+[1;31mE (3910) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3920) clock gusto: Erfolgreich 21, 26![0m
+
+[0;32mI (3920) clock gusto: Teste SDA=GPIO21, SCL=GPIO27... [0m
+[1;31mE (3930) i2c: i2c driver install error[0m
+[1;31mE (3930) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3930) clock gusto: Erfolgreich 21, 27![0m
+
+[0;32mI (3940) clock gusto: Teste SDA=GPIO22, SCL=GPIO0... [0m
+[1;31mE (3940) i2c: i2c driver install error[0m
+[1;31mE (3950) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3950) clock gusto: Erfolgreich 22, 0![0m
+
+[0;32mI (3950) clock gusto: Teste SDA=GPIO22, SCL=GPIO2... [0m
+[1;31mE (3960) i2c: i2c driver install error[0m
+[1;31mE (3960) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3970) clock gusto: Erfolgreich 22, 2![0m
+
+[0;32mI (3970) clock gusto: Teste SDA=GPIO22, SCL=GPIO4... [0m
+[1;31mE (3980) i2c: i2c driver install error[0m
+[1;31mE (3980) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (3980) clock gusto: Erfolgreich 22, 4![0m
+
+[0;32mI (3990) clock gusto: Teste SDA=GPIO22, SCL=GPIO5... [0m
+[1;31mE (3990) i2c: i2c driver install error[0m
+[1;31mE (4000) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4000) clock gusto: Erfolgreich 22, 5![0m
+
+[0;32mI (4000) clock gusto: Teste SDA=GPIO22, SCL=GPIO12... [0m
+[1;31mE (4010) i2c: i2c driver install error[0m
+[1;31mE (4010) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4020) clock gusto: Erfolgreich 22, 12![0m
+
+[0;32mI (4020) clock gusto: Teste SDA=GPIO22, SCL=GPIO13... [0m
+[1;31mE (4030) i2c: i2c driver install error[0m
+[1;31mE (4030) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4030) clock gusto: Erfolgreich 22, 13![0m
+
+[0;32mI (4040) clock gusto: Teste SDA=GPIO22, SCL=GPIO14... [0m
+[1;31mE (4040) i2c: i2c driver install error[0m
+[1;31mE (4050) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4050) clock gusto: Erfolgreich 22, 14![0m
+
+[0;32mI (4050) clock gusto: Teste SDA=GPIO22, SCL=GPIO15... [0m
+[1;31mE (4060) i2c: i2c driver install error[0m
+[1;31mE (4060) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4070) clock gusto: Erfolgreich 22, 15![0m
+
+[0;32mI (4070) clock gusto: Teste SDA=GPIO22, SCL=GPIO16... [0m
+[1;31mE (4070) i2c: i2c driver install error[0m
+[1;31mE (4080) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4080) clock gusto: Erfolgreich 22, 16![0m
+
+[0;32mI (4090) clock gusto: Teste SDA=GPIO22, SCL=GPIO17... [0m
+[1;31mE (4090) i2c: i2c driver install error[0m
+[1;31mE (4090) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4100) clock gusto: Erfolgreich 22, 17![0m
+
+[0;32mI (4100) clock gusto: Teste SDA=GPIO22, SCL=GPIO18... [0m
+[1;31mE (4110) i2c: i2c driver install error[0m
+[1;31mE (4110) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4120) clock gusto: Erfolgreich 22, 18![0m
+
+[0;32mI (4120) clock gusto: Teste SDA=GPIO22, SCL=GPIO19... [0m
+[1;31mE (4120) i2c: i2c driver install error[0m
+[1;31mE (4130) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4130) clock gusto: Erfolgreich 22, 19![0m
+
+[0;32mI (4140) clock gusto: Teste SDA=GPIO22, SCL=GPIO21... [0m
+[1;31mE (4140) i2c: i2c driver install error[0m
+[1;31mE (4140) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4150) clock gusto: Erfolgreich 22, 21![0m
+
+[0;32mI (4150) clock gusto: Teste SDA=GPIO22, SCL=GPIO23... [0m
+[1;31mE (4160) i2c: i2c driver install error[0m
+[1;31mE (4160) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4170) clock gusto: Erfolgreich 22, 23![0m
+
+[0;32mI (4170) clock gusto: Teste SDA=GPIO22, SCL=GPIO25... [0m
+[1;31mE (4170) i2c: i2c driver install error[0m
+[1;31mE (4180) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4180) clock gusto: Erfolgreich 22, 25![0m
+
+[0;32mI (4190) clock gusto: Teste SDA=GPIO22, SCL=GPIO26... [0m
+[1;31mE (4190) i2c: i2c driver install error[0m
+[1;31mE (4190) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4200) clock gusto: Erfolgreich 22, 26![0m
+
+[0;32mI (4200) clock gusto: Teste SDA=GPIO22, SCL=GPIO27... [0m
+[1;31mE (4210) i2c: i2c driver install error[0m
+[1;31mE (4210) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4220) clock gusto: Erfolgreich 22, 27![0m
+
+[0;32mI (4220) clock gusto: Teste SDA=GPIO23, SCL=GPIO0... [0m
+[1;31mE (4220) i2c: i2c driver install error[0m
+[1;31mE (4230) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4230) clock gusto: Erfolgreich 23, 0![0m
+
+[0;32mI (4240) clock gusto: Teste SDA=GPIO23, SCL=GPIO2... [0m
+[1;31mE (4240) i2c: i2c driver install error[0m
+[1;31mE (4240) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4250) clock gusto: Erfolgreich 23, 2![0m
+
+[0;32mI (4250) clock gusto: Teste SDA=GPIO23, SCL=GPIO4... [0m
+[1;31mE (4260) i2c: i2c driver install error[0m
+[1;31mE (4260) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4260) clock gusto: Erfolgreich 23, 4![0m
+
+[0;32mI (4270) clock gusto: Teste SDA=GPIO23, SCL=GPIO5... [0m
+[1;31mE (4270) i2c: i2c driver install error[0m
+[1;31mE (4280) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4280) clock gusto: Erfolgreich 23, 5![0m
+
+[0;32mI (4280) clock gusto: Teste SDA=GPIO23, SCL=GPIO12... [0m
+[1;31mE (4290) i2c: i2c driver install error[0m
+[1;31mE (4290) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4300) clock gusto: Erfolgreich 23, 12![0m
+
+[0;32mI (4300) clock gusto: Teste SDA=GPIO23, SCL=GPIO13... [0m
+[1;31mE (4310) i2c: i2c driver install error[0m
+[1;31mE (4310) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4310) clock gusto: Erfolgreich 23, 13![0m
+
+[0;32mI (4320) clock gusto: Teste SDA=GPIO23, SCL=GPIO14... [0m
+[1;31mE (4320) i2c: i2c driver install error[0m
+[1;31mE (4330) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4330) clock gusto: Erfolgreich 23, 14![0m
+
+[0;32mI (4330) clock gusto: Teste SDA=GPIO23, SCL=GPIO15... [0m
+[1;31mE (4340) i2c: i2c driver install error[0m
+[1;31mE (4340) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4350) clock gusto: Erfolgreich 23, 15![0m
+
+[0;32mI (4350) clock gusto: Teste SDA=GPIO23, SCL=GPIO16... [0m
+[1;31mE (4360) i2c: i2c driver install error[0m
+[1;31mE (4360) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4360) clock gusto: Erfolgreich 23, 16![0m
+
+[0;32mI (4370) clock gusto: Teste SDA=GPIO23, SCL=GPIO17... [0m
+[1;31mE (4370) i2c: i2c driver install error[0m
+[1;31mE (4380) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4380) clock gusto: Erfolgreich 23, 17![0m
+
+[0;32mI (4380) clock gusto: Teste SDA=GPIO23, SCL=GPIO18... [0m
+[1;31mE (4390) i2c: i2c driver install error[0m
+[1;31mE (4390) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4400) clock gusto: Erfolgreich 23, 18![0m
+
+[0;32mI (4400) clock gusto: Teste SDA=GPIO23, SCL=GPIO19... [0m
+[1;31mE (4410) i2c: i2c driver install error[0m
+[1;31mE (4410) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4410) clock gusto: Erfolgreich 23, 19![0m
+
+[0;32mI (4420) clock gusto: Teste SDA=GPIO23, SCL=GPIO21... [0m
+[1;31mE (4420) i2c: i2c driver install error[0m
+[1;31mE (4430) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4430) clock gusto: Erfolgreich 23, 21![0m
+
+[0;32mI (4430) clock gusto: Teste SDA=GPIO23, SCL=GPIO22... [0m
+[1;31mE (4440) i2c: i2c driver install error[0m
+[1;31mE (4440) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4450) clock gusto: Erfolgreich 23, 22![0m
+
+[0;32mI (4450) clock gusto: Teste SDA=GPIO23, SCL=GPIO25... [0m
+[1;31mE (4460) i2c: i2c driver install error[0m
+[1;31mE (4460) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4460) clock gusto: Erfolgreich 23, 25![0m
+
+[0;32mI (4470) clock gusto: Teste SDA=GPIO23, SCL=GPIO26... [0m
+[1;31mE (4470) i2c: i2c driver install error[0m
+[1;31mE (4480) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4480) clock gusto: Erfolgreich 23, 26![0m
+
+[0;32mI (4480) clock gusto: Teste SDA=GPIO23, SCL=GPIO27... [0m
+[1;31mE (4490) i2c: i2c driver install error[0m
+[1;31mE (4490) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4500) clock gusto: Erfolgreich 23, 27![0m
+
+[0;32mI (4500) clock gusto: Teste SDA=GPIO25, SCL=GPIO0... [0m
+[1;31mE (4510) i2c: i2c driver install error[0m
+[1;31mE (4510) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4510) clock gusto: Erfolgreich 25, 0![0m
+
+[0;32mI (4520) clock gusto: Teste SDA=GPIO25, SCL=GPIO2... [0m
+[1;31mE (4520) i2c: i2c driver install error[0m
+[1;31mE (4520) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4530) clock gusto: Erfolgreich 25, 2![0m
+
+[0;32mI (4530) clock gusto: Teste SDA=GPIO25, SCL=GPIO4... [0m
+[1;31mE (4540) i2c: i2c driver install error[0m
+[1;31mE (4540) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4550) clock gusto: Erfolgreich 25, 4![0m
+
+[0;32mI (4550) clock gusto: Teste SDA=GPIO25, SCL=GPIO5... [0m
+[1;31mE (4550) i2c: i2c driver install error[0m
+[1;31mE (4560) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4560) clock gusto: Erfolgreich 25, 5![0m
+
+[0;32mI (4570) clock gusto: Teste SDA=GPIO25, SCL=GPIO12... [0m
+[1;31mE (4570) i2c: i2c driver install error[0m
+[1;31mE (4570) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4580) clock gusto: Erfolgreich 25, 12![0m
+
+[0;32mI (4580) clock gusto: Teste SDA=GPIO25, SCL=GPIO13... [0m
+[1;31mE (4590) i2c: i2c driver install error[0m
+[1;31mE (4590) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4600) clock gusto: Erfolgreich 25, 13![0m
+
+[0;32mI (4600) clock gusto: Teste SDA=GPIO25, SCL=GPIO14... [0m
+[1;31mE (4600) i2c: i2c driver install error[0m
+[1;31mE (4610) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4610) clock gusto: Erfolgreich 25, 14![0m
+
+[0;32mI (4620) clock gusto: Teste SDA=GPIO25, SCL=GPIO15... [0m
+[1;31mE (4620) i2c: i2c driver install error[0m
+[1;31mE (4620) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4630) clock gusto: Erfolgreich 25, 15![0m
+
+[0;32mI (4630) clock gusto: Teste SDA=GPIO25, SCL=GPIO16... [0m
+[1;31mE (4640) i2c: i2c driver install error[0m
+[1;31mE (4640) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4640) clock gusto: Erfolgreich 25, 16![0m
+
+[0;32mI (4650) clock gusto: Teste SDA=GPIO25, SCL=GPIO17... [0m
+[1;31mE (4650) i2c: i2c driver install error[0m
+[1;31mE (4660) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4660) clock gusto: Erfolgreich 25, 17![0m
+
+[0;32mI (4670) clock gusto: Teste SDA=GPIO25, SCL=GPIO18... [0m
+[1;31mE (4670) i2c: i2c driver install error[0m
+[1;31mE (4670) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4680) clock gusto: Erfolgreich 25, 18![0m
+
+[0;32mI (4680) clock gusto: Teste SDA=GPIO25, SCL=GPIO19... [0m
+[1;31mE (4690) i2c: i2c driver install error[0m
+[1;31mE (4690) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4690) clock gusto: Erfolgreich 25, 19![0m
+
+[0;32mI (4700) clock gusto: Teste SDA=GPIO25, SCL=GPIO21... [0m
+[1;31mE (4700) i2c: i2c driver install error[0m
+[1;31mE (4710) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4710) clock gusto: Erfolgreich 25, 21![0m
+
+[0;32mI (4720) clock gusto: Teste SDA=GPIO25, SCL=GPIO22... [0m
+[1;31mE (4720) i2c: i2c driver install error[0m
+[1;31mE (4720) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4730) clock gusto: Erfolgreich 25, 22![0m
+
+[0;32mI (4730) clock gusto: Teste SDA=GPIO25, SCL=GPIO23... [0m
+[1;31mE (4740) i2c: i2c driver install error[0m
+[1;31mE (4740) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4740) clock gusto: Erfolgreich 25, 23![0m
+
+[0;32mI (4750) clock gusto: Teste SDA=GPIO25, SCL=GPIO26... [0m
+[1;31mE (4750) i2c: i2c driver install error[0m
+[1;31mE (4760) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4760) clock gusto: Erfolgreich 25, 26![0m
+
+[0;32mI (4760) clock gusto: Teste SDA=GPIO25, SCL=GPIO27... [0m
+[1;31mE (4770) i2c: i2c driver install error[0m
+[1;31mE (4770) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4780) clock gusto: Erfolgreich 25, 27![0m
+
+[0;32mI (4780) clock gusto: Teste SDA=GPIO26, SCL=GPIO0... [0m
+[1;31mE (4790) i2c: i2c driver install error[0m
+[1;31mE (4790) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4790) clock gusto: Erfolgreich 26, 0![0m
+
+[0;32mI (4800) clock gusto: Teste SDA=GPIO26, SCL=GPIO2... [0m
+[1;31mE (4800) i2c: i2c driver install error[0m
+[1;31mE (4810) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4810) clock gusto: Erfolgreich 26, 2![0m
+
+[0;32mI (4810) clock gusto: Teste SDA=GPIO26, SCL=GPIO4... [0m
+[1;31mE (4820) i2c: i2c driver install error[0m
+[1;31mE (4820) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4830) clock gusto: Erfolgreich 26, 4![0m
+
+[0;32mI (4830) clock gusto: Teste SDA=GPIO26, SCL=GPIO5... [0m
+[1;31mE (4840) i2c: i2c driver install error[0m
+[1;31mE (4840) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4840) clock gusto: Erfolgreich 26, 5![0m
+
+[0;32mI (4850) clock gusto: Teste SDA=GPIO26, SCL=GPIO12... [0m
+[1;31mE (4850) i2c: i2c driver install error[0m
+[1;31mE (4860) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4860) clock gusto: Erfolgreich 26, 12![0m
+
+[0;32mI (4860) clock gusto: Teste SDA=GPIO26, SCL=GPIO13... [0m
+[1;31mE (4870) i2c: i2c driver install error[0m
+[1;31mE (4870) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4880) clock gusto: Erfolgreich 26, 13![0m
+
+[0;32mI (4880) clock gusto: Teste SDA=GPIO26, SCL=GPIO14... [0m
+[1;31mE (4890) i2c: i2c driver install error[0m
+[1;31mE (4890) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4890) clock gusto: Erfolgreich 26, 14![0m
+
+[0;32mI (4900) clock gusto: Teste SDA=GPIO26, SCL=GPIO15... [0m
+[1;31mE (4900) i2c: i2c driver install error[0m
+[1;31mE (4910) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4910) clock gusto: Erfolgreich 26, 15![0m
+
+[0;32mI (4910) clock gusto: Teste SDA=GPIO26, SCL=GPIO16... [0m
+[1;31mE (4920) i2c: i2c driver install error[0m
+[1;31mE (4920) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4930) clock gusto: Erfolgreich 26, 16![0m
+
+[0;32mI (4930) clock gusto: Teste SDA=GPIO26, SCL=GPIO17... [0m
+[1;31mE (4930) i2c: i2c driver install error[0m
+[1;31mE (4940) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4940) clock gusto: Erfolgreich 26, 17![0m
+
+[0;32mI (4950) clock gusto: Teste SDA=GPIO26, SCL=GPIO18... [0m
+[1;31mE (4950) i2c: i2c driver install error[0m
+[1;31mE (4950) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4960) clock gusto: Erfolgreich 26, 18![0m
+
+[0;32mI (4960) clock gusto: Teste SDA=GPIO26, SCL=GPIO19... [0m
+[1;31mE (4970) i2c: i2c driver install error[0m
+[1;31mE (4970) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4980) clock gusto: Erfolgreich 26, 19![0m
+
+[0;32mI (4980) clock gusto: Teste SDA=GPIO26, SCL=GPIO21... [0m
+[1;31mE (4980) i2c: i2c driver install error[0m
+[1;31mE (4990) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (4990) clock gusto: Erfolgreich 26, 21![0m
+
+[0;32mI (5000) clock gusto: Teste SDA=GPIO26, SCL=GPIO22... [0m
+[1;31mE (5000) i2c: i2c driver install error[0m
+[1;31mE (5000) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5010) clock gusto: Erfolgreich 26, 22![0m
+
+[0;32mI (5010) clock gusto: Teste SDA=GPIO26, SCL=GPIO23... [0m
+[1;31mE (5020) i2c: i2c driver install error[0m
+[1;31mE (5020) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5030) clock gusto: Erfolgreich 26, 23![0m
+
+[0;32mI (5030) clock gusto: Teste SDA=GPIO26, SCL=GPIO25... [0m
+[1;31mE (5030) i2c: i2c driver install error[0m
+[1;31mE (5040) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5040) clock gusto: Erfolgreich 26, 25![0m
+
+[0;32mI (5050) clock gusto: Teste SDA=GPIO26, SCL=GPIO27... [0m
+[1;31mE (5050) i2c: i2c driver install error[0m
+[1;31mE (5050) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5060) clock gusto: Erfolgreich 26, 27![0m
+
+[0;32mI (5060) clock gusto: Teste SDA=GPIO27, SCL=GPIO0... [0m
+[1;31mE (5070) i2c: i2c driver install error[0m
+[1;31mE (5070) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5080) clock gusto: Erfolgreich 27, 0![0m
+
+[0;32mI (5080) clock gusto: Teste SDA=GPIO27, SCL=GPIO2... [0m
+[1;31mE (5080) i2c: i2c driver install error[0m
+[1;31mE (5090) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5090) clock gusto: Erfolgreich 27, 2![0m
+
+[0;32mI (5100) clock gusto: Teste SDA=GPIO27, SCL=GPIO4... [0m
+[1;31mE (5100) i2c: i2c driver install error[0m
+[1;31mE (5100) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5110) clock gusto: Erfolgreich 27, 4![0m
+
+[0;32mI (5110) clock gusto: Teste SDA=GPIO27, SCL=GPIO5... [0m
+[1;31mE (5120) i2c: i2c driver install error[0m
+[1;31mE (5120) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5120) clock gusto: Erfolgreich 27, 5![0m
+
+[0;32mI (5130) clock gusto: Teste SDA=GPIO27, SCL=GPIO12... [0m
+[1;31mE (5130) i2c: i2c driver install error[0m
+[1;31mE (5140) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5140) clock gusto: Erfolgreich 27, 12![0m
+
+[0;32mI (5140) clock gusto: Teste SDA=GPIO27, SCL=GPIO13... [0m
+[1;31mE (5150) i2c: i2c driver install error[0m
+[1;31mE (5150) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5160) clock gusto: Erfolgreich 27, 13![0m
+
+[0;32mI (5160) clock gusto: Teste SDA=GPIO27, SCL=GPIO14... [0m
+[1;31mE (5170) i2c: i2c driver install error[0m
+[1;31mE (5170) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5170) clock gusto: Erfolgreich 27, 14![0m
+
+[0;32mI (5180) clock gusto: Teste SDA=GPIO27, SCL=GPIO15... [0m
+[1;31mE (5180) i2c: i2c driver install error[0m
+[1;31mE (5190) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5190) clock gusto: Erfolgreich 27, 15![0m
+
+[0;32mI (5190) clock gusto: Teste SDA=GPIO27, SCL=GPIO16... [0m
+[1;31mE (5200) i2c: i2c driver install error[0m
+[1;31mE (5200) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5210) clock gusto: Erfolgreich 27, 16![0m
+
+[0;32mI (5210) clock gusto: Teste SDA=GPIO27, SCL=GPIO17... [0m
+[1;31mE (5220) i2c: i2c driver install error[0m
+[1;31mE (5220) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5220) clock gusto: Erfolgreich 27, 17![0m
+
+[0;32mI (5230) clock gusto: Teste SDA=GPIO27, SCL=GPIO18... [0m
+[1;31mE (5230) i2c: i2c driver install error[0m
+[1;31mE (5240) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5240) clock gusto: Erfolgreich 27, 18![0m
+
+[0;32mI (5240) clock gusto: Teste SDA=GPIO27, SCL=GPIO19... [0m
+[1;31mE (5250) i2c: i2c driver install error[0m
+[1;31mE (5250) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5260) clock gusto: Erfolgreich 27, 19![0m
+
+[0;32mI (5260) clock gusto: Teste SDA=GPIO27, SCL=GPIO21... [0m
+[1;31mE (5270) i2c: i2c driver install error[0m
+[1;31mE (5270) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5270) clock gusto: Erfolgreich 27, 21![0m
+
+[0;32mI (5280) clock gusto: Teste SDA=GPIO27, SCL=GPIO22... [0m
+[1;31mE (5280) i2c: i2c driver install error[0m
+[1;31mE (5290) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5290) clock gusto: Erfolgreich 27, 22![0m
+
+[0;32mI (5290) clock gusto: Teste SDA=GPIO27, SCL=GPIO23... [0m
+[1;31mE (5300) i2c: i2c driver install error[0m
+[1;31mE (5300) rtc ds3231: Failed to install driveE (5310) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[1;31mE (5310) task_wdt:  - IDLE0 (CPU 0)[0m
+[1;31mE (5310) task_wdt: Tasks currently running:[0m
+[1;31mE (5310) task_wdt: CPU 0: main[0m
+[1;31mE (5310) task_wdt: CPU 1: IDLE1[0m
+[1;31mE (5310) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D8F1A:0x3FFB1030 0x400D92DC:0x3FFB1050 0x40083029:0x3FFB1080 0x400D4A75:0x3FFB3CE0 0x400D5174:0x3FFB3D10 0x400D606A:0x3FFB3D40 0x4000BD83:0x3FFB3D60 0x4000182A:0x3FFB3D80 0x400D5A79:0x3FFB3DA0 0x400D606A:0x3FFB3DC0 0x4000BD83:0x3FFB3DE0 0x4000117D:0x3FFB3E00 0x400592FE:0x3FFB3E20 0x4005937A:0x3FFB3E40 0x400DBD7D:0x3FFB3E60 0x400DF953:0x3FFB3E90 0x400DF36A:0x3FFB3EB0 0x400DBE25:0x3FFB41D0 0x4008D441:0x3FFB4200 0x4008D40D:0x3FFB4230 0x400D71BF:0x3FFB4280 0x400D6CBD:0x3FFB42C0 0x400E7230:0x3FFB4360 0x40087D41:0x3FFB4390
+
+r.
+
+[0;32mI (5380) clock gusto: Erfolgreich 27, 23![0m
+
+[0;32mI (5390) clock gusto: Teste SDA=GPIO27, SCL=GPIO25... [0m
+[1;31mE (5390) i2c: i2c driver install error[0m
+[1;31mE (5390) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5400) clock gusto: Erfolgreich 27, 25![0m
+
+[0;32mI (5400) clock gusto: Teste SDA=GPIO27, SCL=GPIO26... [0m
+[1;31mE (5410) i2c: i2c driver install error[0m
+[1;31mE (5410) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (5410) clock gusto: Erfolgreich 27, 26![0m
+
+[1;31mE (5420) rtc ds3231: Failed to write seconds[0m
+
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d6d09
+file: "./main/clock_gusto.c" line 155
+func: app_main
+expression: rtc_ds3231_set_time(17, 52, 43)
+
+abort() was called at PC 0x40087337 on core 0
+
+
+Backtrace: 0x40081a31:0x3ffb41e0 0x40087341:0x3ffb4200 0x4008d4e5:0x3ffb4220 0x40087337:0x3ffb4290 0x400d6d09:0x3ffb42c0 0x400e7230:0x3ffb4360 0x40087d41:0x3ffb4390
+
+
+
+
+ELF file SHA256: 91cc0d0ee
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bc30h ( 48176) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001bc58 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001bc7c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e2b8 vaddr=40080000 size=01d60h (  7520) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=178fch ( 96508) map[0m
+[0;32mI (156) esp_image: segment 5: paddr=00037924 vaddr=40081d60 size=0d014h ( 53268) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (211) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (216) app_init: ELF file SHA256:  91cc0d0ee...[0m
+[0;32mI (220) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (226) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (238) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (244) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FFB3068 len 0002CF98 (179 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (265) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (272) spi_flash: detected chip: generic[0m
+[0;32mI (274) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (289) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (299) main_task: Started on CPU0[0m
+[0;32mI (309) main_task: Calling app_main()[0m
+[0;32mI (309) clock gusto: Create RMT TX channel[0m
+[0;32mI (309) clock gusto: Install led strip encoder[0m
+[0;32mI (309) clock gusto: Enable RMT TX channel[0m
+[0;32mI (309) clock gusto: Start LED rainbow chase[0m
+[0;32mI (319) clock gusto: Enable RTC DS3231[0m
+[0;32mI (319) clock gusto: Teste SDA=GPIO0, SCL=GPIO2... [0m
+[0;32mI (329) clock gusto: Teste SDA=GPIO0, SCL=GPIO4... [0m
+[1;31mE (329) i2c: i2c driver install error[0m
+[1;31mE (329) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (339) clock gusto: Erfolgreich 0, 4![0m
+
+[0;32mI (339) clock gusto: Teste SDA=GPIO0, SCL=GPIO5... [0m
+[1;31mE (349) i2c: i2c driver install error[0m
+[1;31mE (349) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (349) clock gusto: Erfolgreich 0, 5![0m
+
+[0;32mI (359) clock gusto: Teste SDA=GPIO0, SCL=GPIO12... [0m
+[1;31mE (359) i2c: i2c driver install error[0m
+[1;31mE (359) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (369) clock gusto: Erfolgreich 0, 12![0m
+
+[0;32mI (369) clock gusto: Teste SDA=GPIO0, SCL=GPIO13... [0m
+[1;31mE (379) i2c: i2c driver install error[0m
+[1;31mE (379) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (379) clock gusto: Erfolgreich 0, 13![0m
+
+[0;32mI (389) clock gusto: Teste SDA=GPIO0, SCL=GPIO14... [0m
+[1;31mE (389) i2c: i2c driver install error[0m
+[1;31mE (399) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (399) clock gusto: Erfolgreich 0, 14![0m
+
+[0;32mI (399) clock gusto: Teste SDA=GPIO0, SCL=GPIO15... [0m
+[1;31mE (409) i2c: i2c driver install error[0m
+[1;31mE (409) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (419) clock gusto: Erfolgreich 0, 15![0m
+
+[0;32mI (419) clock gusto: Teste SDA=GPIO0, SCL=GPIO16... [0m
+[1;31mE (429) i2c: i2c driver install error[0m
+[1;31mE (429) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (429) clock gusto: Erfolgreich 0, 16![0m
+
+[0;32mI (439) clock gusto: Teste SDA=GPIO0, SCL=GPIO17... [0m
+[1;31mE (439) i2c: i2c driver install error[0m
+[1;31mE (439) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (449) clock gusto: Erfolgreich 0, 17![0m
+
+[0;32mI (449) clock gusto: Teste SDA=GPIO0, SCL=GPIO18... [0m
+[1;31mE (459) i2c: i2c driver install error[0m
+[1;31mE (459) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (469) clock gusto: Erfolgreich 0, 18![0m
+
+[0;32mI (469) clock gusto: Teste SDA=GPIO0, SCL=GPIO19... [0m
+[1;31mE (469) i2c: i2c driver install error[0m
+[1;31mE (479) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (479) clock gusto: Erfolgreich 0, 19![0m
+
+[0;32mI (479) clock gusto: Teste SDA=GPIO0, SCL=GPIO21... [0m
+[1;31mE (489) i2c: i2c driver install error[0m
+[1;31mE (489) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (499) clock gusto: Erfolgreich 0, 21![0m
+
+[0;32mI (499) clock gusto: Teste SDA=GPIO0, SCL=GPIO22... [0m
+[1;31mE (509) i2c: i2c driver install error[0m
+[1;31mE (509) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (509) clock gusto: Erfolgreich 0, 22![0m
+
+[0;32mI (519) clock gusto: Teste SDA=GPIO0, SCL=GPIO23... [0m
+[1;31mE (519) i2c: i2c driver install error[0m
+[1;31mE (529) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (529) clock gusto: Erfolgreich 0, 23![0m
+
+[0;32mI (529) clock gusto: Teste SDA=GPIO0, SCL=GPIO25... [0m
+[1;31mE (539) i2c: i2c driver install error[0m
+[1;31mE (539) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (549) clock gusto: Erfolgreich 0, 25![0m
+
+[0;32mI (549) clock gusto: Teste SDA=GPIO0, SCL=GPIO26... [0m
+[1;31mE (549) i2c: i2c driver install error[0m
+[1;31mE (559) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (559) clock gusto: Erfolgreich 0, 26![0m
+
+[0;32mI (569) clock gusto: Teste SDA=GPIO0, SCL=GPIO27... [0m
+[1;31mE (569) i2c: i2c driver install error[0m
+[1;31mE (569) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (579) clock gusto: Erfolgreich 0, 27![0m
+
+[0;32mI (579) clock gusto: Teste SDA=GPIO2, SCL=GPIO0... [0m
+[1;31mE (589) i2c: i2c driver install error[0m
+[1;31mE (589) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (589) clock gusto: Erfolgreich 2, 0![0m
+
+[0;32mI (599) clock gusto: Teste SDA=GPIO2, SCL=GPIO4... [0m
+[1;31mE (599) i2c: i2c driver install error[0m
+[1;31mE (609) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (609) clock gusto: Erfolgreich 2, 4![0m
+
+[0;32mI (609) clock gusto: Teste SDA=GPIO2, SCL=GPIO5... [0m
+[1;31mE (619) i2c: i2c driver install error[0m
+[1;31mE (619) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (629) clock gusto: Erfolgreich 2, 5![0m
+
+[0;32mI (629) clock gusto: Teste SDA=GPIO2, SCL=GPIO12... [0m
+[1;31mE (629) i2c: i2c driver install error[0m
+[1;31mE (639) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (639) clock gusto: Erfolgreich 2, 12![0m
+
+[0;32mI (649) clock gusto: Teste SDA=GPIO2, SCL=GPIO13... [0m
+[1;31mE (649) i2c: i2c driver install error[0m
+[1;31mE (649) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (659) clock gusto: Erfolgreich 2, 13![0m
+
+[0;32mI (659) clock gusto: Teste SDA=GPIO2, SCL=GPIO14... [0m
+[1;31mE (669) i2c: i2c driver install error[0m
+[1;31mE (669) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (669) clock gusto: Erfolgreich 2, 14![0m
+
+[0;32mI (679) clock gusto: Teste SDA=GPIO2, SCL=GPIO15... [0m
+[1;31mE (679) i2c: i2c driver install error[0m
+[1;31mE (689) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (689) clock gusto: Erfolgreich 2, 15![0m
+
+[0;32mI (689) clock gusto: Teste SDA=GPIO2, SCL=GPIO16... [0m
+[1;31mE (699) i2c: i2c driver install error[0m
+[1;31mE (699) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (709) clock gusto: Erfolgreich 2, 16![0m
+
+[0;32mI (709) clock gusto: Teste SDA=GPIO2, SCL=GPIO17... [0m
+[1;31mE (709) i2c: i2c driver install error[0m
+[1;31mE (719) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (719) clock gusto: Erfolgreich 2, 17![0m
+
+[0;32mI (729) clock gusto: Teste SDA=GPIO2, SCL=GPIO18... [0m
+[1;31mE (729) i2c: i2c driver install error[0m
+[1;31mE (729) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (739) clock gusto: Erfolgreich 2, 18![0m
+
+[0;32mI (739) clock gusto: Teste SDA=GPIO2, SCL=GPIO19... [0m
+[1;31mE (749) i2c: i2c driver install error[0m
+[1;31mE (749) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (749) clock gusto: Erfolgreich 2, 19![0m
+
+[0;32mI (759) clock gusto: Teste SDA=GPIO2, SCL=GPIO21... [0m
+[1;31mE (759) i2c: i2c driver install error[0m
+[1;31mE (769) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (769) clock gusto: Erfolgreich 2, 21![0m
+
+[0;32mI (769) clock gusto: Teste SDA=GPIO2, SCL=GPIO22... [0m
+[1;31mE (779) i2c: i2c driver install error[0m
+[1;31mE (779) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (789) clock gusto: Erfolgreich 2, 22![0m
+
+[0;32mI (789) clock gusto: Teste SDA=GPIO2, SCL=GPIO23... [0m
+[1;31mE (789) i2c: i2c driver install error[0m
+[1;31mE (799) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (799) clock gusto: Erfolgreich 2, 23![0m
+
+[0;32mI (809) clock gusto: Teste SDA=GPIO2, SCL=GPIO25... [0m
+[1;31mE (809) i2c: i2c driver install error[0m
+[1;31mE (809) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (819) clock gusto: Erfolgreich 2, 25![0m
+
+[0;32mI (819) clock gusto: Teste SDA=GPIO2, SCL=GPIO26... [0m
+[1;31mE (829) i2c: i2c driver install error[0m
+[1;31mE (829) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (829) clock gusto: Erfolgreich 2, 26![0m
+
+[0;32mI (839) clock gusto: Teste SDA=GPIO2, SCL=GPIO27... [0m
+[1;31mE (839) i2c: i2c driver install error[0m
+[1;31mE (849) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (849) clock gusto: Erfolgreich 2, 27![0m
+
+[0;32mI (849) clock gusto: Teste SDA=GPIO4, SCL=GPIO0... [0m
+[1;31mE (859) i2c: i2c driver install error[0m
+[1;31mE (859) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (869) clock gusto: Erfolgreich 4, 0![0m
+
+[0;32mI (869) clock gusto: Teste SDA=GPIO4, SCL=GPIO2... [0m
+[1;31mE (869) i2c: i2c driver install error[0m
+[1;31mE (879) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (879) clock gusto: Erfolgreich 4, 2![0m
+
+[0;32mI (889) clock gusto: Teste SDA=GPIO4, SCL=GPIO5... [0m
+[1;31mE (889) i2c: i2c driver install error[0m
+[1;31mE (889) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (899) clock gusto: Erfolgreich 4, 5![0m
+
+[0;32mI (899) clock gusto: Teste SDA=GPIO4, SCL=GPIO12... [0m
+[1;31mE (909) i2c: i2c driver install error[0m
+[1;31mE (909) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (909) clock gusto: Erfolgreich 4, 12![0m
+
+[0;32mI (919) clock gusto: Teste SDA=GPIO4, SCL=GPIO13... [0m
+[1;31mE (919) i2c: i2c driver install error[0m
+[1;31mE (929) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (929) clock gusto: Erfolgreich 4, 13![0m
+
+[0;32mI (929) clock gusto: Teste SDA=GPIO4, SCL=GPIO14... [0m
+[1;31mE (939) i2c: i2c driver install error[0m
+[1;31mE (939) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (949) clock gusto: Erfolgreich 4, 14![0m
+
+[0;32mI (949) clock gusto: Teste SDA=GPIO4, SCL=GPIO15... [0m
+[1;31mE (949) i2c: i2c driver install error[0m
+[1;31mE (959) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (959) clock gusto: Erfolgreich 4, 15![0m
+
+[0;32mI (969) clock gusto: Teste SDA=GPIO4, SCL=GPIO16... [0m
+[1;31mE (969) i2c: i2c driver install error[0m
+[1;31mE (969) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (979) clock gusto: Erfolgreich 4, 16![0m
+
+[0;32mI (979) clock gusto: Teste SDA=GPIO4, SCL=GPIO17... [0m
+[1;31mE (989) i2c: i2c driver install error[0m
+[1;31mE (989) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (989) clock gusto: Erfolgreich 4, 17![0m
+
+[0;32mI (999) clock gusto: Teste SDA=GPIO4, SCL=GPIO18... [0m
+[1;31mE (999) i2c: i2c driver install error[0m
+[1;31mE (1009) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1009) clock gusto: Erfolgreich 4, 18![0m
+
+[0;32mI (1009) clock gusto: Teste SDA=GPIO4, SCL=GPIO19... [0m
+[1;31mE (1019) i2c: i2c driver install error[0m
+[1;31mE (1019) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1029) clock gusto: Erfolgreich 4, 19![0m
+
+[0;32mI (1029) clock gusto: Teste SDA=GPIO4, SCL=GPIO21... [0m
+[1;31mE (1039) i2c: i2c driver install error[0m
+[1;31mE (1039) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1039) clock gusto: Erfolgreich 4, 21![0m
+
+[0;32mI (1049) clock gusto: Teste SDA=GPIO4, SCL=GPIO22... [0m
+[1;31mE (1049) i2c: i2c driver install error[0m
+[1;31mE (1059) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1059) clock gusto: Erfolgreich 4, 22![0m
+
+[0;32mI (1059) clock gusto: Teste SDA=GPIO4, SCL=GPIO23... [0m
+[1;31mE (1069) i2c: i2c driver install error[0m
+[1;31mE (1069) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1079) clock gusto: Erfolgreich 4, 23![0m
+
+[0;32mI (1079) clock gusto: Teste SDA=GPIO4, SCL=GPIO25... [0m
+[1;31mE (1079) i2c: i2c driver install error[0m
+[1;31mE (1089) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1089) clock gusto: Erfolgreich 4, 25![0m
+
+[0;32mI (1099) clock gusto: Teste SDA=GPIO4, SCL=GPIO26... [0m
+[1;31mE (1099) i2c: i2c driver install error[0m
+[1;31mE (1099) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1109) clock gusto: Erfolgreich 4, 26![0m
+
+[0;32mI (1109) clock gusto: Teste SDA=GPIO4, SCL=GPIO27... [0m
+[1;31mE (1119) i2c: i2c driver install error[0m
+[1;31mE (1119) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1129) clock gusto: Erfolgreich 4, 27![0m
+
+[0;32mI (1129) clock gusto: Teste SDA=GPIO5, SCL=GPIO0... [0m
+[1;31mE (1129) i2c: i2c driver install error[0m
+[1;31mE (1139) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1139) clock gusto: Erfolgreich 5, 0![0m
+
+[0;32mI (1149) clock gusto: Teste SDA=GPIO5, SCL=GPIO2... [0m
+[1;31mE (1149) i2c: i2c driver install error[0m
+[1;31mE (1149) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1159) clock gusto: Erfolgreich 5, 2![0m
+
+[0;32mI (1159) clock gusto: Teste SDA=GPIO5, SCL=GPIO4... [0m
+[1;31mE (1169) i2c: i2c driver install error[0m
+[1;31mE (1169) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1169) clock gusto: Erfolgreich 5, 4![0m
+
+[0;32mI (1179) clock gusto: Teste SDA=GPIO5, SCL=GPIO12... [0m
+[1;31mE (1179) i2c: i2c driver install error[0m
+[1;31mE (1189) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1189) clock gusto: Erfolgreich 5, 12![0m
+
+[0;32mI (1189) clock gusto: Teste SDA=GPIO5, SCL=GPIO13... [0m
+[1;31mE (1199) i2c: i2c driver install error[0m
+[1;31mE (1199) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1209) clock gusto: Erfolgreich 5, 13![0m
+
+[0;32mI (1209) clock gusto: Teste SDA=GPIO5, SCL=GPIO14... [0m
+[1;31mE (1219) i2c: i2c driver install error[0m
+[1;31mE (1219) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1219) clock gusto: Erfolgreich 5, 14![0m
+
+[0;32mI (1229) clock gusto: Teste SDA=GPIO5, SCL=GPIO15... [0m
+[1;31mE (1229) i2c: i2c driver install error[0m
+[1;31mE (1239) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1239) clock gusto: Erfolgreich 5, 15![0m
+
+[0;32mI (1239) clock gusto: Teste SDA=GPIO5, SCL=GPIO16... [0m
+[1;31mE (1249) i2c: i2c driver install error[0m
+[1;31mE (1249) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1259) clock gusto: Erfolgreich 5, 16![0m
+
+[0;32mI (1259) clock gusto: Teste SDA=GPIO5, SCL=GPIO17... [0m
+[1;31mE (1259) i2c: i2c driver install error[0m
+[1;31mE (1269) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1269) clock gusto: Erfolgreich 5, 17![0m
+
+[0;32mI (1279) clock gusto: Teste SDA=GPIO5, SCL=GPIO18... [0m
+[1;31mE (1279) i2c: i2c driver install error[0m
+[1;31mE (1279) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1289) clock gusto: Erfolgreich 5, 18![0m
+
+[0;32mI (1289) clock gusto: Teste SDA=GPIO5, SCL=GPIO19... [0m
+[1;31mE (1299) i2c: i2c driver install error[0m
+[1;31mE (1299) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1309) clock gusto: Erfolgreich 5, 19![0m
+
+[0;32mI (1309) clock gusto: Teste SDA=GPIO5, SCL=GPIO21... [0m
+[1;31mE (1309) i2c: i2c driver install error[0m
+[1;31mE (1319) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1319) clock gusto: Erfolgreich 5, 21![0m
+
+[0;32mI (1329) clock gusto: Teste SDA=GPIO5, SCL=GPIO22... [0m
+[1;31mE (1329) i2c: i2c driver install error[0m
+[1;31mE (1329) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1339) clock gusto: Erfolgreich 5, 22![0m
+
+[0;32mI (1339) clock gusto: Teste SDA=GPIO5, SCL=GPIO23... [0m
+[1;31mE (1349) i2c: i2c driver install error[0m
+[1;31mE (1349) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1349) clock gusto: Erfolgreich 5, 23![0m
+
+[0;32mI (1359) clock gusto: Teste SDA=GPIO5, SCL=GPIO25... [0m
+[1;31mE (1359) i2c: i2c driver install error[0m
+[1;31mE (1369) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1369) clock gusto: Erfolgreich 5, 25![0m
+
+[0;32mI (1369) clock gusto: Teste SDA=GPIO5, SCL=GPIO26... [0m
+[1;31mE (1379) i2c: i2c driver install error[0m
+[1;31mE (1379) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1389) clock gusto: Erfolgreich 5, 26![0m
+
+[0;32mI (1389) clock gusto: Teste SDA=GPIO5, SCL=GPIO27... [0m
+[1;31mE (1399) i2c: i2c driver install error[0m
+[1;31mE (1399) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1399) clock gusto: Erfolgreich 5, 27![0m
+
+[0;32mI (1409) clock gusto: Teste SDA=GPIO12, SCL=GPIO0... [0m
+[1;31mE (1409) i2c: i2c driver install error[0m
+[1;31mE (1419) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1419) clock gusto: Erfolgreich 12, 0![0m
+
+[0;32mI (1419) clock gusto: Teste SDA=GPIO12, SCL=GPIO2... [0m
+[1;31mE (1429) i2c: i2c driver install error[0m
+[1;31mE (1429) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1439) clock gusto: Erfolgreich 12, 2![0m
+
+[0;32mI (1439) clock gusto: Teste SDA=GPIO12, SCL=GPIO4... [0m
+[1;31mE (1439) i2c: i2c driver install error[0m
+[1;31mE (1449) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1449) clock gusto: Erfolgreich 12, 4![0m
+
+[0;32mI (1459) clock gusto: Teste SDA=GPIO12, SCL=GPIO5... [0m
+[1;31mE (1459) i2c: i2c driver install error[0m
+[1;31mE (1459) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1469) clock gusto: Erfolgreich 12, 5![0m
+
+[0;32mI (1469) clock gusto: Teste SDA=GPIO12, SCL=GPIO13... [0m
+[1;31mE (1479) i2c: i2c driver install error[0m
+[1;31mE (1479) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1489) clock gusto: Erfolgreich 12, 13![0m
+
+[0;32mI (1489) clock gusto: Teste SDA=GPIO12, SCL=GPIO14... [0m
+[1;31mE (1489) i2c: i2c driver install error[0m
+[1;31mE (1499) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1499) clock gusto: Erfolgreich 12, 14![0m
+
+[0;32mI (1509) clock gusto: Teste SDA=GPIO12, SCL=GPIO15... [0m
+[1;31mE (1509) i2c: i2c driver install error[0m
+[1;31mE (1509) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1519) clock gusto: Erfolgreich 12, 15![0m
+
+[0;32mI (1519) clock gusto: Teste SDA=GPIO12, SCL=GPIO16... [0m
+[1;31mE (1529) i2c: i2c driver install error[0m
+[1;31mE (1529) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1539) clock gusto: Erfolgreich 12, 16![0m
+
+[0;32mI (1539) clock gusto: Teste SDA=GPIO12, SCL=GPIO17... [0m
+[1;31mE (1539) i2c: i2c driver install error[0m
+[1;31mE (1549) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1549) clock gusto: Erfolgreich 12, 17![0m
+
+[0;32mI (1559) clock gusto: Teste SDA=GPIO12, SCL=GPIO18... [0m
+[1;31mE (1559) i2c: i2c driver install error[0m
+[1;31mE (1559) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1569) clock gusto: Erfolgreich 12, 18![0m
+
+[0;32mI (1569) clock gusto: Teste SDA=GPIO12, SCL=GPIO19... [0m
+[1;31mE (1579) i2c: i2c driver install error[0m
+[1;31mE (1579) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1589) clock gusto: Erfolgreich 12, 19![0m
+
+[0;32mI (1589) clock gusto: Teste SDA=GPIO12, SCL=GPIO21... [0m
+[1;31mE (1589) i2c: i2c driver install error[0m
+[1;31mE (1599) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1599) clock gusto: Erfolgreich 12, 21![0m
+
+[0;32mI (1609) clock gusto: Teste SDA=GPIO12, SCL=GPIO22... [0m
+[1;31mE (1609) i2c: i2c driver install error[0m
+[1;31mE (1609) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1619) clock gusto: Erfolgreich 12, 22![0m
+
+[0;32mI (1619) clock gusto: Teste SDA=GPIO12, SCL=GPIO23... [0m
+[1;31mE (1629) i2c: i2c driver install error[0m
+[1;31mE (1629) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1629) clock gusto: Erfolgreich 12, 23![0m
+
+[0;32mI (1639) clock gusto: Teste SDA=GPIO12, SCL=GPIO25... [0m
+[1;31mE (1639) i2c: i2c driver install error[0m
+[1;31mE (1649) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1649) clock gusto: Erfolgreich 12, 25![0m
+
+[0;32mI (1659) clock gusto: Teste SDA=GPIO12, SCL=GPIO26... [0m
+[1;31mE (1659) i2c: i2c driver install error[0m
+[1;31mE (1659) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1669) clock gusto: Erfolgreich 12, 26![0m
+
+[0;32mI (1669) clock gusto: Teste SDA=GPIO12, SCL=GPIO27... [0m
+[1;31mE (1679) i2c: i2c driver install error[0m
+[1;31mE (1679) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1679) clock gusto: Erfolgreich 12, 27![0m
+
+[0;32mI (1689) clock gusto: Teste SDA=GPIO13, SCL=GPIO0... [0m
+[1;31mE (1689) i2c: i2c driver install error[0m
+[1;31mE (1699) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1699) clock gusto: Erfolgreich 13, 0![0m
+
+[0;32mI (1699) clock gusto: Teste SDA=GPIO13, SCL=GPIO2... [0m
+[1;31mE (1709) i2c: i2c driver install error[0m
+[1;31mE (1709) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1719) clock gusto: Erfolgreich 13, 2![0m
+
+[0;32mI (1719) clock gusto: Teste SDA=GPIO13, SCL=GPIO4... [0m
+[1;31mE (1729) i2c: i2c driver install error[0m
+[1;31mE (1729) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1729) clock gusto: Erfolgreich 13, 4![0m
+
+[0;32mI (1739) clock gusto: Teste SDA=GPIO13, SCL=GPIO5... [0m
+[1;31mE (1739) i2c: i2c driver install error[0m
+[1;31mE (1749) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1749) clock gusto: Erfolgreich 13, 5![0m
+
+[0;32mI (1749) clock gusto: Teste SDA=GPIO13, SCL=GPIO12... [0m
+[1;31mE (1759) i2c: i2c driver install error[0m
+[1;31mE (1759) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1769) clock gusto: Erfolgreich 13, 12![0m
+
+[0;32mI (1769) clock gusto: Teste SDA=GPIO13, SCL=GPIO14... [0m
+[1;31mE (1779) i2c: i2c driver install error[0m
+[1;31mE (1779) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1779) clock gusto: Erfolgreich 13, 14![0m
+
+[0;32mI (1789) clock gusto: Teste SDA=GPIO13, SCL=GPIO15... [0m
+[1;31mE (1789) i2c: i2c driver install error[0m
+[1;31mE (1799) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1799) clock gusto: Erfolgreich 13, 15![0m
+
+[0;32mI (1799) clock gusto: Teste SDA=GPIO13, SCL=GPIO16... [0m
+[1;31mE (1809) i2c: i2c driver install error[0m
+[1;31mE (1809) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1819) clock gusto: Erfolgreich 13, 16![0m
+
+[0;32mI (1819) clock gusto: Teste SDA=GPIO13, SCL=GPIO17... [0m
+[1;31mE (1829) i2c: i2c driver install error[0m
+[1;31mE (1829) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1829) clock gusto: Erfolgreich 13, 17![0m
+
+[0;32mI (1839) clock gusto: Teste SDA=GPIO13, SCL=GPIO18... [0m
+[1;31mE (1839) i2c: i2c driver install error[0m
+[1;31mE (1849) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1849) clock gusto: Erfolgreich 13, 18![0m
+
+[0;32mI (1849) clock gusto: Teste SDA=GPIO13, SCL=GPIO19... [0m
+[1;31mE (1859) i2c: i2c driver install error[0m
+[1;31mE (1859) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1869) clock gusto: Erfolgreich 13, 19![0m
+
+[0;32mI (1869) clock gusto: Teste SDA=GPIO13, SCL=GPIO21... [0m
+[1;31mE (1879) i2c: i2c driver install error[0m
+[1;31mE (1879) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1879) clock gusto: Erfolgreich 13, 21![0m
+
+[0;32mI (1889) clock gusto: Teste SDA=GPIO13, SCL=GPIO22... [0m
+[1;31mE (1889) i2c: i2c driver install error[0m
+[1;31mE (1899) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1899) clock gusto: Erfolgreich 13, 22![0m
+
+[0;32mI (1899) clock gusto: Teste SDA=GPIO13, SCL=GPIO23... [0m
+[1;31mE (1909) i2c: i2c driver install error[0m
+[1;31mE (1909) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1919) clock gusto: Erfolgreich 13, 23![0m
+
+[0;32mI (1919) clock gusto: Teste SDA=GPIO13, SCL=GPIO25... [0m
+[1;31mE (1919) i2c: i2c driver install error[0m
+[1;31mE (1929) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1929) clock gusto: Erfolgreich 13, 25![0m
+
+[0;32mI (1939) clock gusto: Teste SDA=GPIO13, SCL=GPIO26... [0m
+[1;31mE (1939) i2c: i2c driver install error[0m
+[1;31mE (1939) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1949) clock gusto: Erfolgreich 13, 26![0m
+
+[0;32mI (1949) clock gusto: Teste SDA=GPIO13, SCL=GPIO27... [0m
+[1;31mE (1959) i2c: i2c driver install error[0m
+[1;31mE (1959) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1969) clock gusto: Erfolgreich 13, 27![0m
+
+[0;32mI (1969) clock gusto: Teste SDA=GPIO14, SCL=GPIO0... [0m
+[1;31mE (1969) i2c: i2c driver install error[0m
+[1;31mE (1979) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1979) clock gusto: Erfolgreich 14, 0![0m
+
+[0;32mI (1989) clock gusto: Teste SDA=GPIO14, SCL=GPIO2... [0m
+[1;31mE (1989) i2c: i2c driver install error[0m
+[1;31mE (1989) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (1999) clock gusto: Erfolgreich 14, 2![0m
+
+[0;32mI (1999) clock gusto: Teste SDA=GPIO14, SCL=GPIO4... [0m
+[1;31mE (2009) i2c: i2c driver install error[0m
+[1;31mE (2009) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2009) clock gusto: Erfolgreich 14, 4![0m
+
+[0;32mI (2019) clock gusto: Teste SDA=GPIO14, SCL=GPIO5... [0m
+[1;31mE (2019) i2c: i2c driver install error[0m
+[1;31mE (2029) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2029) clock gusto: Erfolgreich 14, 5![0m
+
+[0;32mI (2039) clock gusto: Teste SDA=GPIO14, SCL=GPIO12... [0m
+[1;31mE (2039) i2c: i2c driver install error[0m
+[1;31mE (2039) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2049) clock gusto: Erfolgreich 14, 12![0m
+
+[0;32mI (2049) clock gusto: Teste SDA=GPIO14, SCL=GPIO13... [0m
+[1;31mE (2059) i2c: i2c driver install error[0m
+[1;31mE (2059) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2059) clock gusto: Erfolgreich 14, 13![0m
+
+[0;32mI (2069) clock gusto: Teste SDA=GPIO14, SCL=GPIO15... [0m
+[1;31mE (2069) i2c: i2c driver install error[0m
+[1;31mE (2079) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2079) clock gusto: Erfolgreich 14, 15![0m
+
+[0;32mI (2079) clock gusto: Teste SDA=GPIO14, SCL=GPIO16... [0m
+[1;31mE (2089) i2c: i2c driver install error[0m
+[1;31mE (2089) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2099) clock gusto: Erfolgreich 14, 16![0m
+
+[0;32mI (2099) clock gusto: Teste SDA=GPIO14, SCL=GPIO17... [0m
+[1;31mE (2109) i2c: i2c driver install error[0m
+[1;31mE (2109) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2109) clock gusto: Erfolgreich 14, 17![0m
+
+[0;32mI (2119) clock gusto: Teste SDA=GPIO14, SCL=GPIO18... [0m
+[1;31mE (2119) i2c: i2c driver install error[0m
+[1;31mE (2129) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2129) clock gusto: Erfolgreich 14, 18![0m
+
+[0;32mI (2129) clock gusto: Teste SDA=GPIO14, SCL=GPIO19... [0m
+[1;31mE (2139) i2c: i2c driver install error[0m
+[1;31mE (2139) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2149) clock gusto: Erfolgreich 14, 19![0m
+
+[0;32mI (2149) clock gusto: Teste SDA=GPIO14, SCL=GPIO21... [0m
+[1;31mE (2159) i2c: i2c driver install error[0m
+[1;31mE (2159) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2159) clock gusto: Erfolgreich 14, 21![0m
+
+[0;32mI (2169) clock gusto: Teste SDA=GPIO14, SCL=GPIO22... [0m
+[1;31mE (2169) i2c: i2c driver install error[0m
+[1;31mE (2179) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2179) clock gusto: Erfolgreich 14, 22![0m
+
+[0;32mI (2179) clock gusto: Teste SDA=GPIO14, SCL=GPIO23... [0m
+[1;31mE (2189) i2c: i2c driver install error[0m
+[1;31mE (2189) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2199) clock gusto: Erfolgreich 14, 23![0m
+
+[0;32mI (2199) clock gusto: Teste SDA=GPIO14, SCL=GPIO25... [0m
+[1;31mE (2209) i2c: i2c driver install error[0m
+[1;31mE (2209) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2209) clock gusto: Erfolgreich 14, 25![0m
+
+[0;32mI (2219) clock gusto: Teste SDA=GPIO14, SCL=GPIO26... [0m
+[1;31mE (2219) i2c: i2c driver install error[0m
+[1;31mE (2229) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2229) clock gusto: Erfolgreich 14, 26![0m
+
+[0;32mI (2229) clock gusto: Teste SDA=GPIO14, SCL=GPIO27... [0m
+[1;31mE (2239) i2c: i2c driver install error[0m
+[1;31mE (2239) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2249) clock gusto: Erfolgreich 14, 27![0m
+
+[0;32mI (2249) clock gusto: Teste SDA=GPIO15, SCL=GPIO0... [0m
+[1;31mE (2259) i2c: i2c driver install error[0m
+[1;31mE (2259) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2259) clock gusto: Erfolgreich 15, 0![0m
+
+[0;32mI (2269) clock gusto: Teste SDA=GPIO15, SCL=GPIO2... [0m
+[1;31mE (2269) i2c: i2c driver install error[0m
+[1;31mE (2279) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2279) clock gusto: Erfolgreich 15, 2![0m
+
+[0;32mI (2279) clock gusto: Teste SDA=GPIO15, SCL=GPIO4... [0m
+[1;31mE (2289) i2c: i2c driver install error[0m
+[1;31mE (2289) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2299) clock gusto: Erfolgreich 15, 4![0m
+
+[0;32mI (2299) clock gusto: Teste SDA=GPIO15, SCL=GPIO5... [0m
+[1;31mE (2299) i2c: i2c driver install error[0m
+[1;31mE (2309) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2309) clock gusto: Erfolgreich 15, 5![0m
+
+[0;32mI (2319) clock gusto: Teste SDA=GPIO15, SCL=GPIO12... [0m
+[1;31mE (2319) i2c: i2c driver install error[0m
+[1;31mE (2319) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2329) clock gusto: Erfolgreich 15, 12![0m
+
+[0;32mI (2329) clock gusto: Teste SDA=GPIO15, SCL=GPIO13... [0m
+[1;31mE (2339) i2c: i2c driver install error[0m
+[1;31mE (2339) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2349) clock gusto: Erfolgreich 15, 13![0m
+
+[0;32mI (2349) clock gusto: Teste SDA=GPIO15, SCL=GPIO14... [0m
+[1;31mE (2349) i2c: i2c driver install error[0m
+[1;31mE (2359) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2359) clock gusto: Erfolgreich 15, 14![0m
+
+[0;32mI (2369) clock gusto: Teste SDA=GPIO15, SCL=GPIO16... [0m
+[1;31mE (2369) i2c: i2c driver install error[0m
+[1;31mE (2369) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2379) clock gusto: Erfolgreich 15, 16![0m
+
+[0;32mI (2379) clock gusto: Teste SDA=GPIO15, SCL=GPIO17... [0m
+[1;31mE (2389) i2c: i2c driver install error[0m
+[1;31mE (2389) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2399) clock gusto: Erfolgreich 15, 17![0m
+
+[0;32mI (2399) clock gusto: Teste SDA=GPIO15, SCL=GPIO18... [0m
+[1;31mE (2399) i2c: i2c driver install error[0m
+[1;31mE (2409) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2409) clock gusto: Erfolgreich 15, 18![0m
+
+[0;32mI (2419) clock gusto: Teste SDA=GPIO15, SCL=GPIO19... [0m
+[1;31mE (2419) i2c: i2c driver install error[0m
+[1;31mE (2419) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2429) clock gusto: Erfolgreich 15, 19![0m
+
+[0;32mI (2429) clock gusto: Teste SDA=GPIO15, SCL=GPIO21... [0m
+[1;31mE (2439) i2c: i2c driver install error[0m
+[1;31mE (2439) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2449) clock gusto: Erfolgreich 15, 21![0m
+
+[0;32mI (2449) clock gusto: Teste SDA=GPIO15, SCL=GPIO22... [0m
+[1;31mE (2449) i2c: i2c driver install error[0m
+[1;31mE (2459) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2459) clock gusto: Erfolgreich 15, 22![0m
+
+[0;32mI (2469) clock gusto: Teste SDA=GPIO15, SCL=GPIO23... [0m
+[1;31mE (2469) i2c: i2c driver install error[0m
+[1;31mE (2469) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2479) clock gusto: Erfolgreich 15, 23![0m
+
+[0;32mI (2479) clock gusto: Teste SDA=GPIO15, SCL=GPIO25... [0m
+[1;31mE (2489) i2c: i2c driver install error[0m
+[1;31mE (2489) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2489) clock gusto: Erfolgreich 15, 25![0m
+
+[0;32mI (2499) clock gusto: Teste SDA=GPIO15, SCL=GPIO26... [0m
+[1;31mE (2499) i2c: i2c driver install error[0m
+[1;31mE (2509) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2509) clock gusto: Erfolgreich 15, 26![0m
+
+[0;32mI (2519) clock gusto: Teste SDA=GPIO15, SCL=GPIO27... [0m
+[1;31mE (2519) i2c: i2c driver install error[0m
+[1;31mE (2519) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2529) clock gusto: Erfolgreich 15, 27![0m
+
+[0;32mI (2529) clock gusto: Teste SDA=GPIO16, SCL=GPIO0... [0m
+[1;31mE (2539) i2c: i2c driver install error[0m
+[1;31mE (2539) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2539) clock gusto: Erfolgreich 16, 0![0m
+
+[0;32mI (2549) clock gusto: Teste SDA=GPIO16, SCL=GPIO2... [0m
+[1;31mE (2549) i2c: i2c driver install error[0m
+[1;31mE (2559) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2559) clock gusto: Erfolgreich 16, 2![0m
+
+[0;32mI (2559) clock gusto: Teste SDA=GPIO16, SCL=GPIO4... [0m
+[1;31mE (2569) i2c: i2c driver install error[0m
+[1;31mE (2569) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2579) clock gusto: Erfolgreich 16, 4![0m
+
+[0;32mI (2579) clock gusto: Teste SDA=GPIO16, SCL=GPIO5... [0m
+[1;31mE (2589) i2c: i2c driver install error[0m
+[1;31mE (2589) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2589) clock gusto: Erfolgreich 16, 5![0m
+
+[0;32mI (2599) clock gusto: Teste SDA=GPIO16, SCL=GPIO12... [0m
+[1;31mE (2599) i2c: i2c driver install error[0m
+[1;31mE (2609) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2609) clock gusto: Erfolgreich 16, 12![0m
+
+[0;32mI (2609) clock gusto: Teste SDA=GPIO16, SCL=GPIO13... [0m
+[1;31mE (2619) i2c: i2c driver install error[0m
+[1;31mE (2619) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2629) clock gusto: Erfolgreich 16, 13![0m
+
+[0;32mI (2629) clock gusto: Teste SDA=GPIO16, SCL=GPIO14... [0m
+[1;31mE (2639) i2c: i2c driver install error[0m
+[1;31mE (2639) rtc ds3231: Failed to install driver.[0m
+
+[0;32mI (2639) clock gusto: Erfolgreich 16, 14![0m
+

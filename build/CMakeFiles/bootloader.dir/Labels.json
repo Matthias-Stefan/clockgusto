@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/ms/Documents/clockgusto/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

@@ -1,0 +1,84 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/ms/Documents/clockgusto/build/bootloader/esp-idf/esptool_py && /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ms/Documents/clockgusto/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/clock_gusto.c.obj
+/home/ms/Documents/clockgusto/main/clock_gusto.c:447:52: warning: backslash and newline separated by space
+  447 | #define LOG_CLOCK_INFO(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:454:55: warning: backslash and newline separated by space
+  454 | #define LOG_CLOCK_SUCCESS(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:461:55: warning: backslash and newline separated by space
+  461 | #define LOG_CLOCK_WARNING(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:468:53: warning: backslash and newline separated by space
+  468 | #define LOG_CLOCK_ERROR(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:475:56: warning: backslash and newline separated by space
+  475 | #define LOG_CLOCK_CRITICAL(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:482:51: warning: backslash and newline separated by space
+  482 | #define LOG_WIFI_INFO(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:489:54: warning: backslash and newline separated by space
+  489 | #define LOG_WIFI_SUCCESS(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:496:54: warning: backslash and newline separated by space
+  496 | #define LOG_WIFI_WARNING(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:503:52: warning: backslash and newline separated by space
+  503 | #define LOG_WIFI_ERROR(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:510:55: warning: backslash and newline separated by space
+  510 | #define LOG_WIFI_CRITICAL(message)                    \
+/home/ms/Documents/clockgusto/main/clock_gusto.c:520:75: warning: backslash and newline separated by space
+  520 |     wifi_ap_record_t APInfo = {};                                         \
+In file included from /home/ms/Documents/clockgusto/main/clock_gusto.c:20:
+/home/ms/Documents/clockgusto/main/clock_gusto.h:36:14: warning: 'clock_word_str' defined but not used [-Wunused-variable]
+   36 | static char* clock_word_str[] = {
+      |              ^~~~~~~~~~~~~~
+[4/10] Completed 'bootloader'
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable clockgusto.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.9.dev3
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ms/Documents/clockgusto/build/clockgusto.bin
+[9/10] cd /home/ms/Documents/clockgusto/build/esp-idf/esptool_py && /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ms/Documents/clockgusto/build/partition_table/partition-table.bin /home/ms/Documents/clockgusto/build/clockgusto.bin
+clockgusto.bin binary size 0x34980 bytes. Smallest app partition is 0x100000 bytes. 0xcb680 bytes (79%) free.
+[9/10] cd /home/ms/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ms/esp/esp-idf -D "SERIAL_TOOL=/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python;;/home/ms/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ms/Documents/clockgusto/build -P /home/ms/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 clockgusto.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.dev3
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:7b:5c:35:f5:24
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00044fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26112 bytes to 16485...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007571... (100 %)
+Wrote 26112 bytes (16485 compressed) at 0x00001000 in 1.7 seconds (effective 122.5 kbit/s)...
+Hash of data verified.
+Compressed 215424 bytes to 117373...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001c440... (25 %)
+Writing at 0x000234ce... (37 %)
+Writing at 0x000294c0... (50 %)
+Writing at 0x00030524... (62 %)
+Writing at 0x0003777a... (75 %)
+Writing at 0x0003d356... (87 %)
+Writing at 0x000436d2... (100 %)
+Wrote 215424 bytes (117373 compressed) at 0x00010000 in 10.4 seconds (effective 166.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 556.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

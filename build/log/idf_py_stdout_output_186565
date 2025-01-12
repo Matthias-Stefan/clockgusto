@@ -1,0 +1,575 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/clockgusto/build/clockgusto.elf /home/ms/Documents/clockgusto/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bc20h ( 48160) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001bc48 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001bc6c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e2a8 vaddr=40080000 size=01d70h (  7536) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=178a0h ( 96416) map[0m
+[0;32mI (156) esp_image: segment 5: paddr=000378c8 vaddr=40081d70 size=0d004h ( 53252) load[0m
+[0;32mI (184) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (184) boot: Disabling RNG early entropy source...[0m
+[0;32mI (195) cpu_start: Multicore app[0m
+[0;32mI (203) cpu_start: Pro cpu start user code[0m
+[0;32mI (203) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (203) app_init: Application information:[0m
+[0;32mI (203) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (211) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (216) app_init: ELF file SHA256:  cdcc902b4...[0m
+[0;32mI (220) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (226) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (238) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (244) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (249) heap_init: At 3FFB3068 len 0002CF98 (179 KiB): DRAM[0m
+[0;32mI (254) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (259) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (265) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (272) spi_flash: detected chip: generic[0m
+[0;32mI (274) spi_flash: flash io: dio[0m
+[0;33mW (277) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (289) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (299) main_task: Started on CPU0[0m
+[0;32mI (309) main_task: Calling app_main()[0m
+[0;32mI (309) clock gusto: Create RMT TX channel[0m
+[0;32mI (309) clock gusto: Install led strip encoder[0m
+[0;32mI (309) clock gusto: Enable RMT TX channel[0m
+[0;32mI (309) clock gusto: Start LED rainbow chase[0m
+[0;32mI (319) clock gusto: Enable RTC DS3231[0m
+[0;32mI (319) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (329) clock gusto: 17, 52, 43[0m
+[0;32mI (389) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (389) clock gusto: 17, 52, 43[0m
+[0;32mI (449) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (449) clock gusto: 17, 52, 43[0m
+[0;32mI (509) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (509) clock gusto: 17, 52, 43[0m
+[0;32mI (569) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (569) clock gusto: 17, 52, 43[0m
+[0;32mI (629) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (629) clock gusto: 17, 52, 43[0m
+[0;32mI (689) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (689) clock gusto: 17, 52, 43[0m
+[0;32mI (749) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (749) clock gusto: 17, 52, 43[0m
+[0;32mI (809) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (809) clock gusto: 17, 52, 43[0m
+[0;32mI (869) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (869) clock gusto: 17, 52, 43[0m
+[0;32mI (929) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (929) clock gusto: 17, 52, 43[0m
+[0;32mI (989) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (989) clock gusto: 17, 52, 43[0m
+[0;32mI (1049) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1049) clock gusto: 17, 52, 43[0m
+[0;32mI (1109) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1109) clock gusto: 17, 52, 43[0m
+[0;32mI (1169) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1169) clock gusto: 17, 52, 43[0m
+[0;32mI (1229) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1229) clock gusto: 17, 52, 43[0m
+[0;32mI (1289) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1289) clock gusto: 17, 52, 43[0m
+[0;32mI (1349) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1349) clock gusto: 17, 52, 44[0m
+[0;32mI (1409) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1409) clock gusto: 17, 52, 44[0m
+[0;32mI (1469) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1469) clock gusto: 17, 52, 44[0m
+[0;32mI (1529) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1529) clock gusto: 17, 52, 44[0m
+[0;32mI (1589) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1589) clock gusto: 17, 52, 44[0m
+[0;32mI (1649) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1649) clock gusto: 17, 52, 44[0m
+[0;32mI (1709) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1709) clock gusto: 17, 52, 44[0m
+[0;32mI (1769) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1769) clock gusto: 17, 52, 44[0m
+[0;32mI (1829) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1829) clock gusto: 17, 52, 44[0m
+[0;32mI (1889) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1889) clock gusto: 17, 52, 44[0m
+[0;32mI (1949) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (1949) clock gusto: 17, 52, 44[0m
+[0;32mI (2009) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2009) clock gusto: 17, 52, 44[0m
+[0;32mI (2069) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2069) clock gusto: 17, 52, 44[0m
+[0;32mI (2129) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2129) clock gusto: 17, 52, 44[0m
+[0;32mI (2189) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2189) clock gusto: 17, 52, 44[0m
+[0;32mI (2249) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2249) clock gusto: 17, 52, 44[0m
+[0;32mI (2309) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2309) clock gusto: 17, 52, 44[0m
+[0;32mI (2369) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2369) clock gusto: 17, 52, 45[0m
+[0;32mI (2429) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2429) clock gusto: 17, 52, 45[0m
+[0;32mI (2489) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2489) clock gusto: 17, 52, 45[0m
+[0;32mI (2549) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2549) clock gusto: 17, 52, 45[0m
+[0;32mI (2609) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2609) clock gusto: 17, 52, 45[0m
+[0;32mI (2669) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2669) clock gusto: 17, 52, 45[0m
+[0;32mI (2729) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2729) clock gusto: 17, 52, 45[0m
+[0;32mI (2789) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2789) clock gusto: 17, 52, 45[0m
+[0;32mI (2849) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2849) clock gusto: 17, 52, 45[0m
+[0;32mI (2909) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2909) clock gusto: 17, 52, 45[0m
+[0;32mI (2969) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (2969) clock gusto: 17, 52, 45[0m
+[0;32mI (3029) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3029) clock gusto: 17, 52, 45[0m
+[0;32mI (3089) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3089) clock gusto: 17, 52, 45[0m
+[0;32mI (3149) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3149) clock gusto: 17, 52, 45[0m
+[0;32mI (3209) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3209) clock gusto: 17, 52, 45[0m
+[0;32mI (3269) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3269) clock gusto: 17, 52, 45[0m
+[0;32mI (3329) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3329) clock gusto: 17, 52, 46[0m
+[0;32mI (3389) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3389) clock gusto: 17, 52, 46[0m
+[0;32mI (3449) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3449) clock gusto: 17, 52, 46[0m
+[0;32mI (3509) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3509) clock gusto: 17, 52, 46[0m
+[0;32mI (3569) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3569) clock gusto: 17, 52, 46[0m
+[0;32mI (3629) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3629) clock gusto: 17, 52, 46[0m
+[0;32mI (3689) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3689) clock gusto: 17, 52, 46[0m
+[0;32mI (3749) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3749) clock gusto: 17, 52, 46[0m
+[0;32mI (3809) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3809) clock gusto: 17, 52, 46[0m
+[0;32mI (3869) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3869) clock gusto: 17, 52, 46[0m
+[0;32mI (3929) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3929) clock gusto: 17, 52, 46[0m
+[0;32mI (3989) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (3989) clock gusto: 17, 52, 46[0m
+[0;32mI (4049) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4049) clock gusto: 17, 52, 46[0m
+[0;32mI (4109) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4109) clock gusto: 17, 52, 46[0m
+[0;32mI (4169) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4169) clock gusto: 17, 52, 46[0m
+[0;32mI (4229) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4229) clock gusto: 17, 52, 46[0m
+[0;32mI (4289) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4289) clock gusto: 17, 52, 46[0m
+[0;32mI (4349) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4349) clock gusto: 17, 52, 47[0m
+[0;32mI (4409) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4409) clock gusto: 17, 52, 47[0m
+[0;32mI (4469) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4469) clock gusto: 17, 52, 47[0m
+[0;32mI (4529) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4529) clock gusto: 17, 52, 47[0m
+[0;32mI (4589) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4589) clock gusto: 17, 52, 47[0m
+[0;32mI (4649) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4649) clock gusto: 17, 52, 47[0m
+[0;32mI (4709) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4709) clock gusto: 17, 52, 47[0m
+[0;32mI (4769) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4769) clock gusto: 17, 52, 47[0m
+[0;32mI (4829) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4829) clock gusto: 17, 52, 47[0m
+[0;32mI (4889) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4889) clock gusto: 17, 52, 47[0m
+[0;32mI (4949) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (4949) clock gusto: 17, 52, 47[0m
+[0;32mI (5009) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5009) clock gusto: 17, 52, 47[0m
+[0;32mI (5069) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5069) clock gusto: 17, 52, 47[0m
+[0;32mI (5129) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5129) clock gusto: 17, 52, 47[0m
+[0;32mI (5189) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5189) clock gusto: 17, 52, 47[0m
+[0;32mI (5249) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5249) clock gusto: 17, 52, 47[0m
+[0;32mI (5309) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5309) clock gusto: 17, 52, 47[0m
+[0;32mI (5369) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5369) clock gusto: 17, 52, 48[0m
+[0;32mI (5429) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5429) clock gusto: 17, 52, 48[0m
+[0;32mI (5489) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5489) clock gusto: 17, 52, 48[0m
+[0;32mI (5549) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5549) clock gusto: 17, 52, 48[0m
+[0;32mI (5609) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5609) clock gusto: 17, 52, 48[0m
+[0;32mI (5669) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5669) clock gusto: 17, 52, 48[0m
+[0;32mI (5729) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5729) clock gusto: 17, 52, 48[0m
+[0;32mI (5789) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5789) clock gusto: 17, 52, 48[0m
+[0;32mI (5849) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5849) clock gusto: 17, 52, 48[0m
+[0;32mI (5909) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5909) clock gusto: 17, 52, 48[0m
+[0;32mI (5969) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (5969) clock gusto: 17, 52, 48[0m
+[0;32mI (6029) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6029) clock gusto: 17, 52, 48[0m
+[0;32mI (6089) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6089) clock gusto: 17, 52, 48[0m
+[0;32mI (6149) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6149) clock gusto: 17, 52, 48[0m
+[0;32mI (6209) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6209) clock gusto: 17, 52, 48[0m
+[0;32mI (6269) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6269) clock gusto: 17, 52, 48[0m
+[0;32mI (6329) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6329) clock gusto: 17, 52, 49[0m
+[0;32mI (6389) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6389) clock gusto: 17, 52, 49[0m
+[0;32mI (6449) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6449) clock gusto: 17, 52, 49[0m
+[0;32mI (6509) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6509) clock gusto: 17, 52, 49[0m
+[0;32mI (6569) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6569) clock gusto: 17, 52, 49[0m
+[0;32mI (6629) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6629) clock gusto: 17, 52, 49[0m
+[0;32mI (6689) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6689) clock gusto: 17, 52, 49[0m
+[0;32mI (6749) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6749) clock gusto: 17, 52, 49[0m
+[0;32mI (6809) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6809) clock gusto: 17, 52, 49[0m
+[0;32mI (6869) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6869) clock gusto: 17, 52, 49[0m
+[0;32mI (6929) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6929) clock gusto: 17, 52, 49[0m
+[0;32mI (6989) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (6989) clock gusto: 17, 52, 49[0m
+[0;32mI (7049) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7049) clock gusto: 17, 52, 49[0m
+[0;32mI (7109) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7109) clock gusto: 17, 52, 49[0m
+[0;32mI (7169) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7169) clock gusto: 17, 52, 49[0m
+[0;32mI (7229) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7229) clock gusto: 17, 52, 49[0m
+[0;32mI (7289) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7289) clock gusto: 17, 52, 49[0m
+[0;32mI (7349) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7349) clock gusto: 17, 52, 50[0m
+[0;32mI (7409) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7409) clock gusto: 17, 52, 50[0m
+[0;32mI (7469) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7469) clock gusto: 17, 52, 50[0m
+[0;32mI (7529) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7529) clock gusto: 17, 52, 50[0m
+[0;32mI (7589) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7589) clock gusto: 17, 52, 50[0m
+[0;32mI (7649) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7649) clock gusto: 17, 52, 50[0m
+[0;32mI (7709) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7709) clock gusto: 17, 52, 50[0m
+[0;32mI (7769) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7769) clock gusto: 17, 52, 50[0m
+[0;32mI (7829) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7829) clock gusto: 17, 52, 50[0m
+[0;32mI (7889) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7889) clock gusto: 17, 52, 50[0m
+[0;32mI (7949) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (7949) clock gusto: 17, 52, 50[0m
+[0;32mI (8009) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8009) clock gusto: 17, 52, 50[0m
+[0;32mI (8069) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8069) clock gusto: 17, 52, 50[0m
+[0;32mI (8129) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8129) clock gusto: 17, 52, 50[0m
+[0;32mI (8189) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8189) clock gusto: 17, 52, 50[0m
+[0;32mI (8249) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8249) clock gusto: 17, 52, 50[0m
+[0;32mI (8309) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8309) clock gusto: 17, 52, 50[0m
+[0;32mI (8369) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8369) clock gusto: 17, 52, 51[0m
+[0;32mI (8429) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8429) clock gusto: 17, 52, 51[0m
+[0;32mI (8489) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8489) clock gusto: 17, 52, 51[0m
+[0;32mI (8549) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8549) clock gusto: 17, 52, 51[0m
+[0;32mI (8609) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8609) clock gusto: 17, 52, 51[0m
+[0;32mI (8669) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8669) clock gusto: 17, 52, 51[0m
+[0;32mI (8729) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8729) clock gusto: 17, 52, 51[0m
+[0;32mI (8789) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8789) clock gusto: 17, 52, 51[0m
+[0;32mI (8849) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8849) clock gusto: 17, 52, 51[0m
+[0;32mI (8909) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8909) clock gusto: 17, 52, 51[0m
+[0;32mI (8969) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (8969) clock gusto: 17, 52, 51[0m
+[0;32mI (9029) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9029) clock gusto: 17, 52, 51[0m
+[0;32mI (9089) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9089) clock gusto: 17, 52, 51[0m
+[0;32mI (9149) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9149) clock gusto: 17, 52, 51[0m
+[0;32mI (9209) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9209) clock gusto: 17, 52, 51[0m
+[0;32mI (9269) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9269) clock gusto: 17, 52, 51[0m
+[0;32mI (9329) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9329) clock gusto: 17, 52, 52[0m
+[0;32mI (9389) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9389) clock gusto: 17, 52, 52[0m
+[0;32mI (9449) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9449) clock gusto: 17, 52, 52[0m
+[0;32mI (9509) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9509) clock gusto: 17, 52, 52[0m
+[0;32mI (9569) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9569) clock gusto: 17, 52, 52[0m
+[0;32mI (9629) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9629) clock gusto: 17, 52, 52[0m
+[0;32mI (9689) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9689) clock gusto: 17, 52, 52[0m
+[0;32mI (9749) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9749) clock gusto: 17, 52, 52[0m
+[0;32mI (9809) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9809) clock gusto: 17, 52, 52[0m
+[0;32mI (9869) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9869) clock gusto: 17, 52, 52[0m
+[0;32mI (9929) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9929) clock gusto: 17, 52, 52[0m
+[0;32mI (9989) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (9989) clock gusto: 17, 52, 52[0m
+[0;32mI (10049) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10049) clock gusto: 17, 52, 52[0m
+[0;32mI (10109) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10109) clock gusto: 17, 52, 52[0m
+[0;32mI (10169) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10169) clock gusto: 17, 52, 52[0m
+[0;32mI (10229) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10229) clock gusto: 17, 52, 52[0m
+[0;32mI (10289) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10289) clock gusto: 17, 52, 52[0m
+[0;32mI (10349) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10349) clock gusto: 17, 52, 53[0m
+[0;32mI (10409) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10409) clock gusto: 17, 52, 53[0m
+[0;32mI (10469) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10469) clock gusto: 17, 52, 53[0m
+[0;32mI (10529) clock gusto: Erfolgreich 21, 22![0m
+
+[0;32mI (10529) clock gusto: 17, 52, 53[0m
