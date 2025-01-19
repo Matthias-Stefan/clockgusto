@@ -1,3 +1,10 @@
+#pragma once
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#define CLOCKGUSTO_NUM_LEDS 114
+
 typedef enum _clock_word_t
 {
     CLOCK_WORD_ES,                  // 0b 00000000 00000000 00000000 00000001   
@@ -63,3 +70,43 @@ static char* clock_word_str[] = {
     "min3", 
     "min4" 
 };
+
+typedef struct _clock_word_boundary_t
+{
+    uint16_t index;
+    uint16_t size;  
+} clock_word_boundary_t;
+
+typedef struct _led_t
+{
+    bool on;
+    bool locked;
+} led_t;
+
+typedef struct _clock_board_t
+{
+    uint8_t hours;
+    uint8_t minutes;
+    uint8_t seconds;
+    uint32_t time_mask;
+    
+    clock_word_boundary_t clock_word_boundary_table[CLOCK_WORD_COUNT];
+    led_t leds[CLOCKGUSTO_NUM_LEDS];
+} clock_board_t;
+
+/** */
+void clockgusto_startup();
+
+/** */
+void clockgusto_update();
+
+/** */
+void clockgusto_show();
+
+/** */
+void clockgusto_reset();
+
+
+
+
+

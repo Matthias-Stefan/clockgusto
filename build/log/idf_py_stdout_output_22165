@@ -1,0 +1,1559 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/clockgusto/build/clockgusto.elf /home/ms/Documents/clockgusto/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ze=02634h �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (231) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (235) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be10h ( 48656) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0001be38 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001be5c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e498 vaddr=40080000 size=01b80h (  7040) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=17fd8h ( 98264) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038000 vaddr=40081b80 size=0d1f4h ( 53748) load[0m
+[0;32mI (185) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (185) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (204) app_init: Project name:     clockgusto[0m
+[0;32mI (208) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  ac77ac862...[0m
+[0;32mI (221) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (230) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (234) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E0 len 0002CE20 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (260) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (300) main_task: Started on CPU0[0m
+[0;32mI (310) main_task: Calling app_main()[0m
+[0;32mI (310) clock gusto: Create RMT TX channel[0m
+[0;32mI (310) clock gusto: Install led strip encoder[0m
+[0;32mI (310) clock gusto: Enable RMT TX channel[0m
+[0;32mI (310) clock gusto: Start LED rainbow chase[0m
+[0;32mI (320) clock gusto: Enable RTC DS3231[0m
+[0;32mI (320) clock gusto: Startup clockgusto[0m
+Guru Meditation Error: Core  0 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  0 register dump:
+PC      : 0x400d71b3  PS      : 0x00060a30  A0      : 0x800d7530  A1      : 0x3ffb4460  
+A2      : 0x00000000  A3      : 0x00000007  A4      : 0x00000003  A5      : 0x00000140  
+A6      : 0x3f403488  A7      : 0x00000000  A8      : 0x00000000  A9      : 0x00000000  
+A10     : 0x00000000  A11     : 0x00000000  A12     : 0x3ffb2d06  A13     : 0x0000000a  
+A14     : 0x00000057  A15     : 0x3ffb2d04  SAR     : 0x0000001b  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4000c2e0  LEND    : 0x4000c2f6  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x400d71b0:0x3ffb4460 0x400d752d:0x3ffb4490 0x400e790c:0x3ffb44d0 0x40087d41:0x3ffb4500
+
+
+
+
+ELF file SHA256: ac77ac862
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
