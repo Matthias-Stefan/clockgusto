@@ -1,0 +1,41 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/clockgusto/build/clockgusto.elf /home/ms/Documents/clockgusto/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is d1cd7e51c6c8ec39f215cdfcb151db84589cadd89253ba7c702a9cf983ec1cdd[0m
+[0;33m--- 0x400d71e1: clockgusto_update at /home/ms/Documents/clockgusto/main/clock_gusto.c:254
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d71de: clockgusto_update at /home/ms/Documents/clockgusto/main/clock_gusto.c:254
+0x400d7581: app_main at /home/ms/Documents/clockgusto/main/clock_gusto.c:93 (discriminator 1)
+0x400e7984: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:199 (discriminator 1)
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is d1cd7e51c6c8ec39f215cdfcb151db84589cadd89253ba7c702a9cf983ec1cdd[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is d1cd7e51c6c8ec39f215cdfcb151db84589cadd89253ba7c702a9cf983ec1cdd[0m
+[0;33m--- 0x400d71e1: clockgusto_update at /home/ms/Documents/clockgusto/main/clock_gusto.c:254
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x400d71de: clockgusto_update at /home/ms/Documents/clockgusto/main/clock_gusto.c:254
+0x400d7581: app_main at /home/ms/Documents/clockgusto/main/clock_gusto.c:93 (discriminator 1)
+0x400e7984: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:199 (discriminator 1)
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is d1cd7e51c6c8ec39f215cdfcb151db84589cadd89253ba7c702a9cf983ec1cdd[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is d1cd7e51c6c8ec39f215cdfcb151db84589cadd89253ba7c702a9cf983ec1cdd[0m
+[0m

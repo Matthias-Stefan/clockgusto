@@ -1,0 +1,127 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/clockgusto/build/clockgusto.elf /home/ms/Documents/clockgusto/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40087f80: spinlock_acquire at /home/ms/esp/esp-idf/components/esp_hw_support/include/spinlock.h:133
+ (inlined by) xPortEnterCriticalTimeout at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x40087f7d: spinlock_acquire at /home/ms/esp/esp-idf/components/esp_hw_support/include/spinlock.h:132
+ (inlined by) xPortEnterCriticalTimeout at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+0x4008bdd7: xPortEnterCriticalTimeoutSafe at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:581
+ (inlined by) vPortEnterCriticalSafe at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:588
+ (inlined by) multi_heap_internal_lock at /home/ms/esp/esp-idf/components/heap/multi_heap.c:164
+0x4008be16: multi_heap_malloc_impl at /home/ms/esp/esp-idf/components/heap/multi_heap.c:208
+0x4008222d: aligned_or_unaligned_alloc at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:82
+0x40082355: heap_caps_aligned_alloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:156
+0x40082385: heap_caps_malloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:176
+0x400824fb: heap_caps_calloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:290
+0x40082116: heap_caps_calloc at /home/ms/esp/esp-idf/components/heap/heap_caps.c:255
+0x400db284: i2c_cmd_link_create at /home/ms/esp/esp-idf/components/driver/i2c/i2c.c:1171
+0x400d790b: rtc_ds3231_read_register at /home/ms/Documents/clockgusto/main/rtc_ds3231.c:38
+0x400d7a75: rtc_ds3231_get_time at /home/ms/Documents/clockgusto/main/rtc_ds3231.c:124
+0x400d71fd: clockgusto_update at /home/ms/Documents/clockgusto/main/clock_gusto.c:227
+0x400d7635: app_main at /home/ms/Documents/clockgusto/main/clock_gusto.c:93
+0x400e7a38: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40085312: esp_cpu_wait_for_intr at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40081d84: ipc_task at /home/ms/esp/esp-idf/components/esp_system/esp_ipc.c:53
+[0m
+[0;33m--- 0x4008530f: xt_utils_wait_for_intr at /home/ms/esp/esp-idf/components/xtensa/include/xt_utils.h:82
+ (inlined by) esp_cpu_wait_for_intr at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:55
+0x400d2687: esp_vApplicationIdleHook at /home/ms/esp/esp-idf/components/esp_system/freertos_hooks.c:58
+0x40088b2e: prvIdleTask at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4338 (discriminator 1)
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x4008521d: xt_utils_compare_and_set at /home/ms/esp/esp-idf/components/xtensa/include/xt_utils.h:223
+ (inlined by) esp_cpu_compare_and_set at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:232
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x4008521a: xt_utils_compare_and_set at /home/ms/esp/esp-idf/components/xtensa/include/xt_utils.h:216
+ (inlined by) esp_cpu_compare_and_set at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:232
+0x40087f7d: spinlock_acquire at /home/ms/esp/esp-idf/components/esp_hw_support/include/spinlock.h:132
+ (inlined by) xPortEnterCriticalTimeout at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+0x4008bdd7: xPortEnterCriticalTimeoutSafe at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:581
+ (inlined by) vPortEnterCriticalSafe at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:588
+ (inlined by) multi_heap_internal_lock at /home/ms/esp/esp-idf/components/heap/multi_heap.c:164
+0x4008be16: multi_heap_malloc_impl at /home/ms/esp/esp-idf/components/heap/multi_heap.c:208
+0x4008222d: aligned_or_unaligned_alloc at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:82
+0x40082355: heap_caps_aligned_alloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:156
+0x40082385: heap_caps_malloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:176
+0x400824fb: heap_caps_calloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:290
+0x40082116: heap_caps_calloc at /home/ms/esp/esp-idf/components/heap/heap_caps.c:255
+0x400db284: i2c_cmd_link_create at /home/ms/esp/esp-idf/components/driver/i2c/i2c.c:1171
+0x400d790b: rtc_ds3231_read_register at /home/ms/Documents/clockgusto/main/rtc_ds3231.c:38
+0x400d7a75: rtc_ds3231_get_time at /home/ms/Documents/clockgusto/main/rtc_ds3231.c:124
+0x400d71fd: clockgusto_update at /home/ms/Documents/clockgusto/main/clock_gusto.c:227
+0x400d7635: app_main at /home/ms/Documents/clockgusto/main/clock_gusto.c:93
+0x400e7a38: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40085312: esp_cpu_wait_for_intr at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40081d84: ipc_task at /home/ms/esp/esp-idf/components/esp_system/esp_ipc.c:53
+[0m
+[0;33m--- 0x4008530f: xt_utils_wait_for_intr at /home/ms/esp/esp-idf/components/xtensa/include/xt_utils.h:82
+ (inlined by) esp_cpu_wait_for_intr at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:55
+0x400d2687: esp_vApplicationIdleHook at /home/ms/esp/esp-idf/components/esp_system/freertos_hooks.c:58
+0x40088b2e: prvIdleTask at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4338 (discriminator 1)
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0;33m--- 0x40087f74: spinlock_acquire at /home/ms/esp/esp-idf/components/esp_hw_support/include/spinlock.h:132
+ (inlined by) xPortEnterCriticalTimeout at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479
+[0m
+[0;33m--- 0x400014fd: strlen in ROM
+0x4000150d: strlen in ROM
+[0m
+[0;33m--- 0x40087f71: spinlock_acquire at /home/ms/esp/esp-idf/components/esp_hw_support/include/spinlock.h:137 (discriminator 1)
+ (inlined by) xPortEnterCriticalTimeout at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:479 (discriminator 1)
+0x4008bdd7: xPortEnterCriticalTimeoutSafe at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:581
+ (inlined by) vPortEnterCriticalSafe at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:588
+ (inlined by) multi_heap_internal_lock at /home/ms/esp/esp-idf/components/heap/multi_heap.c:164
+0x4008be16: multi_heap_malloc_impl at /home/ms/esp/esp-idf/components/heap/multi_heap.c:208
+0x4008222d: aligned_or_unaligned_alloc at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:82
+0x40082355: heap_caps_aligned_alloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:156
+0x40082385: heap_caps_malloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:176
+0x400824fb: heap_caps_calloc_base at /home/ms/esp/esp-idf/components/heap/heap_caps_base.c:290
+0x40082116: heap_caps_calloc at /home/ms/esp/esp-idf/components/heap/heap_caps.c:255
+0x400db284: i2c_cmd_link_create at /home/ms/esp/esp-idf/components/driver/i2c/i2c.c:1171
+0x400d790b: rtc_ds3231_read_register at /home/ms/Documents/clockgusto/main/rtc_ds3231.c:38
+0x400d7a75: rtc_ds3231_get_time at /home/ms/Documents/clockgusto/main/rtc_ds3231.c:124
+0x400d71fd: clockgusto_update at /home/ms/Documents/clockgusto/main/clock_gusto.c:227
+0x400d7635: app_main at /home/ms/Documents/clockgusto/main/clock_gusto.c:93
+0x400e7a38: main_task at /home/ms/esp/esp-idf/components/freertos/app_startup.c:208
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40085312: esp_cpu_wait_for_intr at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:64
+[0m
+[0;33m--- 0x40081d84: ipc_task at /home/ms/esp/esp-idf/components/esp_system/esp_ipc.c:53
+[0m
+[0;33m--- 0x4008530f: xt_utils_wait_for_intr at /home/ms/esp/esp-idf/components/xtensa/include/xt_utils.h:82
+ (inlined by) esp_cpu_wait_for_intr at /home/ms/esp/esp-idf/components/esp_hw_support/cpu.c:55
+0x400d2687: esp_vApplicationIdleHook at /home/ms/esp/esp-idf/components/esp_system/freertos_hooks.c:58
+0x40088b2e: prvIdleTask at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4338 (discriminator 1)
+0x40087d41: vPortTaskWrapper at /home/ms/esp/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:139
+[0m
+[0;33m--- 0x40080400: _invalid_pc_placeholder at /home/ms/esp/esp-idf/components/xtensa/xtensa_vectors.S:2235
+[0m
+[0;33m--- 0x40080638: call_start_cpu0 at /home/ms/esp/esp-idf/components/bootloader/subproject/main/bootloader_start.c:25
+[0m
+[0m

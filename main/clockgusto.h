@@ -4,6 +4,7 @@
 #include <stdbool.h>
 
 #define CLOCKGUSTO_NUM_LEDS 114
+#define CLOCKGUSTO_BYTES_PER_LED 3
 
 typedef enum _clock_word_t
 {
@@ -40,35 +41,41 @@ typedef enum _clock_word_t
     CLOCK_WORD_COUNT
 } clock_word_t;
 
-static char* clock_word_str[] = {
-    "ES", 
-    "IST", 
-    "FÜNF1", 
-    "ZEHN1", 
-    "ZWANZIG", 
-    "DREIVIERTEL", 
-    "VIERTEL", 
-    "VOR", 
-    "NACH", 
-    "HALB",
-    "EIN", 
-    "EINS", 
-    "ZWEI", 
-    "DREI", 
-    "VIER",
-    "FÜNF2",
-    "SECHS",
-    "SIEBEN",
-    "ACHT",
-    "NEUN",
-    "ZEHN2",
-    "ELF",  
-    "ZWOELF", 
-    "UHR", 
-    "min1", 
-    "min2", 
-    "min3", 
-    "min4" 
+typedef struct _clock_word_str_t
+{
+    char* data;
+    int16_t size;
+} clock_word_str_t;
+
+static clock_word_str_t clock_word_str[] = {
+    { .data = "ES", .size = 2 }, 
+    { .data = "IST", .size = 3 }, 
+    { .data = "FÜNF1", .size = 5 }, 
+    { .data = "ZEHN1", .size = 5 }, 
+    { .data = "ZWANZIG", .size = 7 }, 
+    { .data = "DREIVIERTEL", .size = 11 }, 
+    { .data = "VIERTEL", .size = 7 }, 
+    { .data = "VOR", .size = 3 }, 
+    { .data = "NACH", .size = 4 }, 
+    { .data = "HALB", .size = 4 },
+    { .data = "EIN", .size = 3 }, 
+    { .data = "EINS", .size = 4 }, 
+    { .data = "ZWEI", .size = 4 }, 
+    { .data = "DREI", .size = 4 }, 
+    { .data = "VIER", .size = 4 },
+    { .data = "FÜNF2", .size = 5 },
+    { .data = "SECHS", .size = 5 },
+    { .data = "SIEBEN", .size = 6 },
+    { .data = "ACHT", .size = 4 },
+    { .data = "NEUN", .size = 4 },
+    { .data = "ZEHN2", .size = 5 },
+    { .data = "ELF", .size = 3 },  
+    { .data = "ZWOELF", .size = 6 }, 
+    { .data = "UHR", .size = 3 }, 
+    { .data = "min1", .size = 4 }, 
+    { .data = "min2", .size = 4 }, 
+    { .data = "min3", .size = 4 }, 
+    { .data = "min4", .size = 4 },
 };
 
 typedef struct _clock_word_boundary_t
@@ -89,7 +96,8 @@ typedef struct _clock_board_t
     uint8_t minutes;
     uint8_t seconds;
     uint32_t time_mask;
-    
+    bool flip;
+
     clock_word_boundary_t clock_word_boundary_table[CLOCK_WORD_COUNT];
     led_t leds[CLOCKGUSTO_NUM_LEDS];
 } clock_board_t;

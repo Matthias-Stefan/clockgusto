@@ -1,0 +1,2286 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/clockgusto/build/clockgusto.elf /home/ms/Documents/clockgusto/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+date: Ge�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bee8h ( 48872) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001bf10 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001bf34 vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e570 vaddr=40080000 size=01aa8h (  6824) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=18018h ( 98328) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038040 vaddr=40081aa8 size=0d2cch ( 53964) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (186) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (204) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (204) app_init: Application information:[0m
+[0;32mI (205) app_init: Project name:     clockgusto[0m
+[0;32mI (209) app_init: App version:      2ffd5c9-dirty[0m
+[0;32mI (213) app_init: Compile time:     Feb  1 2025 12:06:56[0m
+[0;32mI (218) app_init: ELF file SHA256:  33d7474ee...[0m
+[0;32mI (222) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (228) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (232) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (236) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (240) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (246) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFB32B0 len 0002CD50 (179 KiB): DRAM[0m
+[0;32mI (256) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (262) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (267) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (274) spi_flash: detected chip: generic[0m
+[0;32mI (276) spi_flash: flash io: dio[0m
+[0;33mW (279) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (291) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (302) main_task: Started on CPU0[0m
+[0;32mI (312) main_task: Calling app_main()[0m
+[0;32mI (312) clock gusto: Create RMT TX channel[0m
+[0;32mI (312) clock gusto: Install led strip encoder[0m
+[0;32mI (312) clock gusto: Enable RMT TX channel[0m
+[0;32mI (312) clock gusto: Start LED rainbow chase[0m
+[0;32mI (322) clock gusto: Enable RTC DS3231[0m
+[0;32mI (322) clock gusto: Startup clockgusto[0m
+[0;32mI (332) clock gusto: Start clock[0m
+[0;32mI (332) clock gusto: Update clock[0m
+[0;32mI (332) clockgusto_update: Get time[0m
+[0;32mI (332) clockgusto_update: Set board time mask[0m
+[0;32mI (342) clock gusto: Show clock[0m
+[0;32mI (342) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (342) clock gusto: Reset clock[0m
+[0;32mI (352) clock gusto: Update clock[0m
+[0;32mI (352) clockgusto_update: Get time[0m
+[0;32mI (352) clockgusto_update: Set board time mask[0m
+[0;32mI (362) clock gusto: Show clock[0m
+[0;32mI (362) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (362) clock gusto: Reset clock[0m
+[0;32mI (372) clock gusto: Update clock[0m
+[0;32mI (372) clockgusto_update: Get time[0m
+[0;32mI (372) clockgusto_update: Set board time mask[0m
+[0;32mI (382) clock gusto: Show clock[0m
+[0;32mI (382) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (382) clock gusto: Reset clock[0m
+[0;32mI (392) clock gusto: Update clock[0m
+[0;32mI (392) clockgusto_update: Get time[0m
+[0;32mI (392) clockgusto_update: Set board time mask[0m
+[0;32mI (402) clock gusto: Show clock[0m
+[0;32mI (402) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (402) clock gusto: Reset clock[0m
+[0;32mI (412) clock gusto: Update clock[0m
+[0;32mI (412) clockgusto_update: Get time[0m
+[0;32mI (412) clockgusto_update: Set board time mask[0m
+[0;32mI (422) clock gusto: Show clock[0m
+[0;32mI (422) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (422) clock gusto: Reset clock[0m
+[0;32mI (432) clock gusto: Update clock[0m
+[0;32mI (432) clockgusto_update: Get time[0m
+[0;32mI (432) clockgusto_update: Set board time mask[0m
+[0;32mI (442) clock gusto: Show clock[0m
+[0;32mI (442) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (442) clock gusto: Reset clock[0m
+[0;32mI (452) clock gusto: Update clock[0m
+[0;32mI (452) clockgusto_update: Get time[0m
+[0;32mI (462) clockgusto_update: Set board time mask[0m
+[0;32mI (462) clock gusto: Show clock[0m
+[0;32mI (462) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (462) clock gusto: Reset clock[0m
+[0;32mI (472) clock gusto: Update clock[0m
+[0;32mI (472) clockgusto_update: Get time[0m
+[0;32mI (482) clockgusto_update: Set board time mask[0m
+[0;32mI (482) clock gusto: Show clock[0m
+[0;32mI (482) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (482) clock gusto: Reset clock[0m
+[0;32mI (492) clock gusto: Update clock[0m
+[0;32mI (492) clockgusto_update: Get time[0m
+[0;32mI (502) clockgusto_update: Set board time mask[0m
+[0;32mI (502) clock gusto: Show clock[0m
+[0;32mI (502) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (502) clock gusto: Reset clock[0m
+[0;32mI (512) clock gusto: Update clock[0m
+[0;32mI (512) clockgusto_update: Get time[0m
+[0;32mI (522) clockgusto_update: Set board time mask[0m
+[0;32mI (522) clock gusto: Show clock[0m
+[0;32mI (522) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (522) clock gusto: Reset clock[0m
+[0;32mI (532) clock gusto: Update clock[0m
+[0;32mI (532) clockgusto_update: Get time[0m
+[0;32mI (542) clockgusto_update: Set board time mask[0m
+[0;32mI (542) clock gusto: Show clock[0m
+[0;32mI (542) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (542) clock gusto: Reset clock[0m
+[0;32mI (552) clock gusto: Update clock[0m
+[0;32mI (552) clockgusto_update: Get time[0m
+[0;32mI (562) clockgusto_update: Set board time mask[0m
+[0;32mI (562) clock gusto: Show clock[0m
+[0;32mI (562) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (562) clock gusto: Reset clock[0m
+[0;32mI (572) clock gusto: Update clock[0m
+[0;32mI (572) clockgusto_update: Get time[0m
+[0;32mI (582) clockgusto_update: Set board time mask[0m
+[0;32mI (582) clock gusto: Show clock[0m
+[0;32mI (582) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (582) clock gusto: Reset clock[0m
+[0;32mI (592) clock gusto: Update clock[0m
+[0;32mI (592) clockgusto_update: Get time[0m
+[0;32mI (602) clockgusto_update: Set board time mask[0m
+[0;32mI (602) clock gusto: Show clock[0m
+[0;32mI (602) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (602) clock gusto: Reset clock[0m
+[0;32mI (612) clock gusto: Update clock[0m
+[0;32mI (612) clockgusto_update: Get time[0m
+[0;32mI (622) clockgusto_update: Set board time mask[0m
+[0;32mI (622) clock gusto: Show clock[0m
+[0;32mI (622) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (622) clock gusto: Reset clock[0m
+[0;32mI (632) clock gusto: Update clock[0m
+[0;32mI (632) clockgusto_update: Get time[0m
+[0;32mI (642) clockgusto_update: Set board time mask[0m
+[0;32mI (642) clock gusto: Show clock[0m
+[0;32mI (642) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (642) clock gusto: Reset clock[0m
+[0;32mI (652) clock gusto: Update clock[0m
+[0;32mI (652) clockgusto_update: Get time[0m
+[0;32mI (662) clockgusto_update: Set board time mask[0m
+[0;32mI (662) clock gusto: Show clock[0m
+[0;32mI (662) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (662) clock gusto: Reset clock[0m
+[0;32mI (672) clock gusto: Update clock[0m
+[0;32mI (672) clockgusto_update: Get time[0m
+[0;32mI (682) clockgusto_update: Set board time mask[0m
+[0;32mI (682) clock gusto: Show clock[0m
+[0;32mI (682) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (682) clock gusto: Reset clock[0m
+[0;32mI (692) clock gusto: Update clock[0m
+[0;32mI (692) clockgusto_update: Get time[0m
+[0;32mI (702) clockgusto_update: Set board time mask[0m
+[0;32mI (702) clock gusto: Show clock[0m
+[0;32mI (702) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (702) clock gusto: Reset clock[0m
+[0;32mI (712) clock gusto: Update clock[0m
+[0;32mI (712) clockgusto_update: Get time[0m
+[0;32mI (722) clockgusto_update: Set board time mask[0m
+[0;32mI (722) clock gusto: Show clock[0m
+[0;32mI (722) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (722) clock gusto: Reset clock[0m
+[0;32mI (732) clock gusto: Update clock[0m
+[0;32mI (732) clockgusto_update: Get time[0m
+[0;32mI (742) clockgusto_update: Set board time mask[0m
+[0;32mI (742) clock gusto: Show clock[0m
+[0;32mI (742) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (742) clock gusto: Reset clock[0m
+[0;32mI (752) clock gusto: Update clock[0m
+[0;32mI (752) clockgusto_update: Get time[0m
+[0;32mI (762) clockgusto_update: Set board time mask[0m
+[0;32mI (762) clock gusto: Show clock[0m
+[0;32mI (762) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (762) clock gusto: Reset clock[0m
+[0;32mI (772) clock gusto: Update clock[0m
+[0;32mI (772) clockgusto_update: Get time[0m
+[0;32mI (782) clockgusto_update: Set board time mask[0m
+[0;32mI (782) clock gusto: Show clock[0m
+[0;32mI (782) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (792) clock gusto: Reset clock[0m
+[0;32mI (792) clock gusto: Update clock[0m
+[0;32mI (792) clockgusto_update: Get time[0m
+[0;32mI (802) clockgusto_update: Set board time mask[0m
+[0;32mI (802) clock gusto: Show clock[0m
+[0;32mI (802) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (812) clock gusto: Reset clock[0m
+[0;32mI (812) clock gusto: Update clock[0m
+[0;32mI (812) clockgusto_update: Get time[0m
+[0;32mI (822) clockgusto_update: Set board time mask[0m
+[0;32mI (822) clock gusto: Show clock[0m
+[0;32mI (822) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (832) clock gusto: Reset clock[0m
+[0;32mI (832) clock gusto: Update clock[0m
+[0;32mI (832) clockgusto_update: Get time[0m
+[0;32mI (842) clockgusto_update: Set board time mask[0m
+[0;32mI (842) clock gusto: Show clock[0m
+[0;32mI (842) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (852) clock gusto: Reset clock[0m
+[0;32mI (852) clock gusto: Update clock[0m
+[0;32mI (852) clockgusto_update: Get time[0m
+[0;32mI (862) clockgusto_update: Set board time mask[0m
+[0;32mI (862) clock gusto: Show clock[0m
+[0;32mI (862) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (872) clock gusto: Reset clock[0m
+[0;32mI (872) clock gusto: Update clock[0m
+[0;32mI (872) clockgusto_update: Get time[0m
+[0;32mI (882) clockgusto_update: Set board time mask[0m
+[0;32mI (882) clock gusto: Show clock[0m
+[0;32mI (882) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (892) clock gusto: Reset clock[0m
+[0;32mI (892) clock gusto: Update clock[0m
+[0;32mI (892) clockgusto_update: Get time[0m
+[0;32mI (902) clockgusto_update: Set board time mask[0m
+[0;32mI (902) clock gusto: Show clock[0m
+[0;32mI (902) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (912) clock gusto: Reset clock[0m
+[0;32mI (912) clock gusto: Update clock[0m
+[0;32mI (912) clockgusto_update: Get time[0m
+[0;32mI (922) clockgusto_update: Set board time mask[0m
+[0;32mI (922) clock gusto: Show clock[0m
+[0;32mI (922) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (932) clock gusto: Reset clock[0m
+[0;32mI (932) clock gusto: Update clock[0m
+[0;32mI (932) clockgusto_update: Get time[0m
+[0;32mI (942) clockgusto_update: Set board time mask[0m
+[0;32mI (942) clock gusto: Show clock[0m
+[0;32mI (942) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (952) clock gusto: Reset clock[0m
+[0;32mI (952) clock gusto: Update clock[0m
+[0;32mI (952) clockgusto_update: Get time[0m
+[0;32mI (962) clockgusto_update: Set board time mask[0m
+[0;32mI (962) clock gusto: Show clock[0m
+[0;32mI (962) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (972) clock gusto: Reset clock[0m
+[0;32mI (972) clock gusto: Update clock[0m
+[0;32mI (972) clockgusto_update: Get time[0m
+[0;32mI (982) clockgusto_update: Set board time mask[0m
+[0;32mI (982) clock gusto: Show clock[0m
+[0;32mI (982) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (992) clock gusto: Reset clock[0m
+[0;32mI (992) clock gusto: Update clock[0m
+[0;32mI (992) clockgusto_update: Get time[0m
+[0;32mI (1002) clockgusto_update: Set board time mask[0m
+[0;32mI (1002) clock gusto: Show clock[0m
+[0;32mI (1002) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1012) clock gusto: Reset clock[0m
+[0;32mI (1012) clock gusto: Update clock[0m
+[0;32mI (1012) clockgusto_update: Get time[0m
+[0;32mI (1022) clockgusto_update: Set board time mask[0m
+[0;32mI (1022) clock gusto: Show clock[0m
+[0;32mI (1022) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1032) clock gusto: Reset clock[0m
+[0;32mI (1032) clock gusto: Update clock[0m
+[0;32mI (1032) clockgusto_update: Get time[0m
+[0;32mI (1042) clockgusto_update: Set board time mask[0m
+[0;32mI (1042) clock gusto: Show clock[0m
+[0;32mI (1042) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1052) clock gusto: Reset clock[0m
+[0;32mI (1052) clock gusto: Update clock[0m
+[0;32mI (1052) clockgusto_update: Get time[0m
+[0;32mI (1062) clockgusto_update: Set board time mask[0m
+[0;32mI (1062) clock gusto: Show clock[0m
+[0;32mI (1062) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1072) clock gusto: Reset clock[0m
+[0;32mI (1072) clock gusto: Update clock[0m
+[0;32mI (1072) clockgusto_update: Get time[0m
+[0;32mI (1082) clockgusto_update: Set board time mask[0m
+[0;32mI (1082) clock gusto: Show clock[0m
+[0;32mI (1082) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1092) clock gusto: Reset clock[0m
+[0;32mI (1092) clock gusto: Update clock[0m
+[0;32mI (1092) clockgusto_update: Get time[0m
+[0;32mI (1102) clockgusto_update: Set board time mask[0m
+[0;32mI (1102) clock gusto: Show clock[0m
+[0;32mI (1102) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1112) clock gusto: Reset clock[0m
+[0;32mI (1112) clock gusto: Update clock[0m
+[0;32mI (1112) clockgusto_update: Get time[0m
+[0;32mI (1122) clockgusto_update: Set board time mask[0m
+[0;32mI (1122) clock gusto: Show clock[0m
+[0;32mI (1132) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1132) clock gusto: Reset clock[0m
+[0;32mI (1132) clock gusto: Update clock[0m
+[0;32mI (1142) clockgusto_update: Get time[0m
+[0;32mI (1142) clockgusto_update: Set board time mask[0m
+[0;32mI (1142) clock gusto: Show clock[0m
+[0;32mI (1152) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1152) clock gusto: Reset clock[0m
+[0;32mI (1152) clock gusto: Update clock[0m
+[0;32mI (1162) clockgusto_update: Get time[0m
+[0;32mI (1162) clockgusto_update: Set board time mask[0m
+[0;32mI (1162) clock gusto: Show clock[0m
+[0;32mI (1172) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1172) clock gusto: Reset clock[0m
+[0;32mI (1172) clock gusto: Update clock[0m
+[0;32mI (1182) clockgusto_update: Get time[0m
+[0;32mI (1182) clockgusto_update: Set board time mask[0m
+[0;32mI (1182) clock gusto: Show clock[0m
+[0;32mI (1192) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1192) clock gusto: Reset clock[0m
+[0;32mI (1192) clock gusto: Update clock[0m
+[0;32mI (1202) clockgusto_update: Get time[0m
+[0;32mI (1202) clockgusto_update: Set board time mask[0m
+[0;32mI (1202) clock gusto: Show clock[0m
+[0;32mI (1212) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1212) clock gusto: Reset clock[0m
+[0;32mI (1212) clock gusto: Update clock[0m
+[0;32mI (1222) clockgusto_update: Get time[0m
+[0;32mI (1222) clockgusto_update: Set board time mask[0m
+[0;32mI (1232) clock gusto: Show clock[0m
+[0;32mI (1232) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1232) clock gusto: Reset clock[0m
+[0;32mI (1242) clock gusto: Update clock[0m
+[0;32mI (1242) clockgusto_update: Get time[0m
+[0;32mI (1242) clockgusto_update: Set board time mask[0m
+[0;32mI (1252) clock gusto: Show clock[0m
+[0;32mI (1252) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1252) clock gusto: Reset clock[0m
+[0;32mI (1262) clock gusto: Update clock[0m
+[0;32mI (1262) clockgusto_update: Get time[0m
+[0;32mI (1262) clockgusto_update: Set board time mask[0m
+[0;32mI (1272) clock gusto: Show clock[0m
+[0;32mI (1272) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1272) clock gusto: Reset clock[0m
+[0;32mI (1282) clock gusto: Update clock[0m
+[0;32mI (1282) clockgusto_update: Get time[0m
+[0;32mI (1282) clockgusto_update: Set board time mask[0m
+[0;32mI (1292) clock gusto: Show clock[0m
+[0;32mI (1292) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1292) clock gusto: Reset clock[0m
+[0;32mI (1302) clock gusto: Update clock[0m
+[0;32mI (1302) clockgusto_update: Get time[0m
+[0;32mI (1312) clockgusto_update: Set board time mask[0m
+[0;32mI (1312) clock gusto: Show clock[0m
+[0;32mI (1312) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1312) clock gusto: Reset clock[0m
+[0;32mI (1322) clock gusto: Update clock[0m
+[0;32mI (1322) clockgusto_update: Get time[0m
+[0;32mI (1332) clockgusto_update: Set board time mask[0m
+[0;32mI (1332) clock gusto: Show clock[0m
+[0;32mI (1332) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1332) clock gusto: Reset clock[0m
+[0;32mI (1342) clock gusto: Update clock[0m
+[0;32mI (1342) clockgusto_update: Get time[0m
+[0;32mI (1352) clockgusto_update: Set board time mask[0m
+[0;32mI (1352) clock gusto: Show clock[0m
+[0;32mI (1352) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1362) clock gusto: Reset clock[0m
+[0;32mI (1362) clock gusto: Update clock[0m
+[0;32mI (1362) clockgusto_update: Get time[0m
+[0;32mI (1372) clockgusto_update: Set board time mask[0m
+[0;32mI (1372) clock gusto: Show clock[0m
+[0;32mI (1372) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1382) clock gusto: Reset clock[0m
+[0;32mI (1382) clock gusto: Update clock[0m
+[0;32mI (1382) clockgusto_update: Get time[0m
+[0;32mI (1392) clockgusto_update: Set board time mask[0m
+[0;32mI (1392) clock gusto: Show clock[0m
+[0;32mI (1392) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1402) clock gusto: Reset clock[0m
+[0;32mI (1402) clock gusto: Update clock[0m
+[0;32mI (1402) clockgusto_update: Get time[0m
+[0;32mI (1412) clockgusto_update: Set board time mask[0m
+[0;32mI (1412) clock gusto: Show clock[0m
+[0;32mI (1412) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1422) clock gusto: Reset clock[0m
+[0;32mI (1422) clock gusto: Update clock[0m
+[0;32mI (1422) clockgusto_update: Get time[0m
+[0;32mI (1432) clockgusto_update: Set board time mask[0m
+[0;32mI (1432) clock gusto: Show clock[0m
+[0;32mI (1432) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1442) clock gusto: Reset clock[0m
+[0;32mI (1442) clock gusto: Update clock[0m
+[0;32mI (1442) clockgusto_update: Get time[0m
+[0;32mI (1452) clockgusto_update: Set board time mask[0m
+[0;32mI (1452) clock gusto: Show clock[0m
+[0;32mI (1452) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1462) clock gusto: Reset clock[0m
+[0;32mI (1462) clock gusto: Update clock[0m
+[0;32mI (1462) clockgusto_update: Get time[0m
+[0;32mI (1472) clockgusto_update: Set board time mask[0m
+[0;32mI (1472) clock gusto: Show clock[0m
+[0;32mI (1482) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1482) clock gusto: Reset clock[0m
+[0;32mI (1482) clock gusto: Update clock[0m
+[0;32mI (1492) clockgusto_update: Get time[0m
+[0;32mI (1492) clockgusto_update: Set board time mask[0m
+[0;32mI (1492) clock gusto: Show clock[0m
+[0;32mI (1502) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1502) clock gusto: Reset clock[0m
+[0;32mI (1502) clock gusto: Update clock[0m
+[0;32mI (1512) clockgusto_update: Get time[0m
+[0;32mI (1512) clockgusto_update: Set board time mask[0m
+[0;32mI (1512) clock gusto: Show clock[0m
+[0;32mI (1522) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1522) clock gusto: Reset clock[0m
+[0;32mI (1522) clock gusto: Update clock[0m
+[0;32mI (1532) clockgusto_update: Get time[0m
+[0;32mI (1532) clockgusto_update: Set board time mask[0m
+[0;32mI (1532) clock gusto: Show clock[0m
+[0;32mI (1542) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1542) clock gusto: Reset clock[0m
+[0;32mI (1542) clock gusto: Update clock[0m
+[0;32mI (1552) clockgusto_update: Get time[0m
+[0;32mI (1552) clockgusto_update: Set board time mask[0m
+[0;32mI (1552) clock gusto: Show clock[0m
+[0;32mI (1562) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1562) clock gusto: Reset clock[0m
+[0;32mI (1562) clock gusto: Update clock[0m
+[0;32mI (1572) clockgusto_update: Get time[0m
+[0;32mI (1572) clockgusto_update: Set board time mask[0m
+[0;32mI (1572) clock gusto: Show clock[0m
+[0;32mI (1582) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1582) clock gusto: Reset clock[0m
+[0;32mI (1582) clock gusto: Update clock[0m
+[0;32mI (1592) clockgusto_update: Get time[0m
+[0;32mI (1592) clockgusto_update: Set board time mask[0m
+[0;32mI (1602) clock gusto: Show clock[0m
+[0;32mI (1602) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1602) clock gusto: Reset clock[0m
+[0;32mI (1612) clock gusto: Update clock[0m
+[0;32mI (1612) clockgusto_update: Get time[0m
+[0;32mI (1612) clockgusto_update: Set board time mask[0m
+[0;32mI (1622) clock gusto: Show clock[0m
+[0;32mI (1622) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1622) clock gusto: Reset clock[0m
+[0;32mI (1632) clock gusto: Update clock[0m
+[0;32mI (1632) clockgusto_update: Get time[0m
+[0;32mI (1632) clockgusto_update: Set board time mask[0m
+[0;32mI (1642) clock gusto: Show clock[0m
+[0;32mI (1642) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1642) clock gusto: Reset clock[0m
+[0;32mI (1652) clock gusto: Update clock[0m
+[0;32mI (1652) clockgusto_update: Get time[0m
+[0;32mI (1652) clockgusto_update: Set board time mask[0m
+[0;32mI (1662) clock gusto: Show clock[0m
+[0;32mI (1662) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1662) clock gusto: Reset clock[0m
+[0;32mI (1672) clock gusto: Update clock[0m
+[0;32mI (1672) clockgusto_update: Get time[0m
+[0;32mI (1682) clockgusto_update: Set board time mask[0m
+[0;32mI (1682) clock gusto: Show clock[0m
+[0;32mI (1682) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1682) clock gusto: Reset clock[0m
+[0;32mI (1692) clock gusto: Update clock[0m
+[0;32mI (1692) clockgusto_update: Get time[0m
+[0;32mI (1702) clockgusto_update: Set board time mask[0m
+[0;32mI (1702) clock gusto: Show clock[0m
+[0;32mI (1702) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1712) clock gusto: Reset clock[0m
+[0;32mI (1712) clock gusto: Update clock[0m
+[0;32mI (1712) clockgusto_update: Get time[0m
+[0;32mI (1722) clockgusto_update: Set board time mask[0m
+[0;32mI (1722) clock gusto: Show clock[0m
+[0;32mI (1722) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1732) clock gusto: Reset clock[0m
+[0;32mI (1732) clock gusto: Update clock[0m
+[0;32mI (1732) clockgusto_update: Get time[0m
+[0;32mI (1742) clockgusto_update: Set board time mask[0m
+[0;32mI (1742) clock gusto: Show clock[0m
+[0;32mI (1742) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1752) clock gusto: Reset clock[0m
+[0;32mI (1752) clock gusto: Update clock[0m
+[0;32mI (1752) clockgusto_update: Get time[0m
+[0;32mI (1762) clockgusto_update: Set board time mask[0m
+[0;32mI (1762) clock gusto: Show clock[0m
+[0;32mI (1762) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1772) clock gusto: Reset clock[0m
+[0;32mI (1772) clock gusto: Update clock[0m
+[0;32mI (1772) clockgusto_update: Get time[0m
+[0;32mI (1782) clockgusto_update: Set board time mask[0m
+[0;32mI (1782) clock gusto: Show clock[0m
+[0;32mI (1782) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1792) clock gusto: Reset clock[0m
+[0;32mI (1792) clock gusto: Update clock[0m
+[0;32mI (1792) clockgusto_update: Get time[0m
+[0;32mI (1802) clockgusto_update: Set board time mask[0m
+[0;32mI (1802) clock gusto: Show clock[0m
+[0;32mI (1802) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1812) clock gusto: Reset clock[0m
+[0;32mI (1812) clock gusto: Update clock[0m
+[0;32mI (1812) clockgusto_update: Get time[0m
+[0;32mI (1822) clockgusto_update: Set board time mask[0m
+[0;32mI (1822) clock gusto: Show clock[0m
+[0;32mI (1822) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1832) clock gusto: Reset clock[0m
+[0;32mI (1832) clock gusto: Update clock[0m
+[0;32mI (1832) clockgusto_update: Get time[0m
+[0;32mI (1842) clockgusto_update: Set board time mask[0m
+[0;32mI (1842) clock gusto: Show clock[0m
+[0;32mI (1852) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1852) clock gusto: Reset clock[0m
+[0;32mI (1852) clock gusto: Update clock[0m
+[0;32mI (1862) clockgusto_update: Get time[0m
+[0;32mI (1862) clockgusto_update: Set board time mask[0m
+[0;32mI (1862) clock gusto: Show clock[0m
+[0;32mI (1872) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1872) clock gusto: Reset clock[0m
+[0;32mI (1872) clock gusto: Update clock[0m
+[0;32mI (1882) clockgusto_update: Get time[0m
+[0;32mI (1882) clockgusto_update: Set board time mask[0m
+[0;32mI (1882) clock gusto: Show clock[0m
+[0;32mI (1892) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1892) clock gusto: Reset clock[0m
+[0;32mI (1892) clock gusto: Update clock[0m
+[0;32mI (1902) clockgusto_update: Get time[0m
+[0;32mI (1902) clockgusto_update: Set board time mask[0m
+[0;32mI (1902) clock gusto: Show clock[0m
+[0;32mI (1912) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1912) clock gusto: Reset clock[0m
+[0;32mI (1912) clock gusto: Update clock[0m
+[0;32mI (1922) clockgusto_update: Get time[0m
+[0;32mI (1922) clockgusto_update: Set board time mask[0m
+[0;32mI (1922) clock gusto: Show clock[0m
+[0;32mI (1932) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1932) clock gusto: Reset clock[0m
+[0;32mI (1932) clock gusto: Update clock[0m
+[0;32mI (1942) clockgusto_update: Get time[0m
+[0;32mI (1942) clockgusto_update: Set board time mask[0m
+[0;32mI (1952) clock gusto: Show clock[0m
+[0;32mI (1952) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1952) clock gusto: Reset clock[0m
+[0;32mI (1962) clock gusto: Update clock[0m
+[0;32mI (1962) clockgusto_update: Get time[0m
+[0;32mI (1962) clockgusto_update: Set board time mask[0m
+[0;32mI (1972) clock gusto: Show clock[0m
+[0;32mI (1972) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1972) clock gusto: Reset clock[0m
+[0;32mI (1982) clock gusto: Update clock[0m
+[0;32mI (1982) clockgusto_update: Get time[0m
+[0;32mI (1982) clockgusto_update: Set board time mask[0m
+[0;32mI (1992) clock gusto: Show clock[0m
+[0;32mI (1992) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (1992) clock gusto: Reset clock[0m
+[0;32mI (2002) clock gusto: Update clock[0m
+[0;32mI (2002) clockgusto_update: Get time[0m
+[0;32mI (2002) clockgusto_update: Set board time mask[0m
+[0;32mI (2012) clock gusto: Show clock[0m
+[0;32mI (2012) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2012) clock gusto: Reset clock[0m
+[0;32mI (2022) clock gusto: Update clock[0m
+[0;32mI (2022) clockgusto_update: Get time[0m
+[0;32mI (2032) clockgusto_update: Set board time mask[0m
+[0;32mI (2032) clock gusto: Show clock[0m
+[0;32mI (2032) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2032) clock gusto: Reset clock[0m
+[0;32mI (2042) clock gusto: Update clock[0m
+[0;32mI (2042) clockgusto_update: Get time[0m
+[0;32mI (2052) clockgusto_update: Set board time mask[0m
+[0;32mI (2052) clock gusto: Show clock[0m
+[0;32mI (2052) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2062) clock gusto: Reset clock[0m
+[0;32mI (2062) clock gusto: Update clock[0m
+[0;32mI (2062) clockgusto_update: Get time[0m
+[0;32mI (2072) clockgusto_update: Set board time mask[0m
+[0;32mI (2072) clock gusto: Show clock[0m
+[0;32mI (2072) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2082) clock gusto: Reset clock[0m
+[0;32mI (2082) clock gusto: Update clock[0m
+[0;32mI (2082) clockgusto_update: Get time[0m
+[0;32mI (2092) clockgusto_update: Set board time mask[0m
+[0;32mI (2092) clock gusto: Show clock[0m
+[0;32mI (2092) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2102) clock gusto: Reset clock[0m
+[0;32mI (2102) clock gusto: Update clock[0m
+[0;32mI (2102) clockgusto_update: Get time[0m
+[0;32mI (2112) clockgusto_update: Set board time mask[0m
+[0;32mI (2112) clock gusto: Show clock[0m
+[0;32mI (2112) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2122) clock gusto: Reset clock[0m
+[0;32mI (2122) clock gusto: Update clock[0m
+[0;32mI (2122) clockgusto_update: Get time[0m
+[0;32mI (2132) clockgusto_update: Set board time mask[0m
+[0;32mI (2132) clock gusto: Show clock[0m
+[0;32mI (2132) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2142) clock gusto: Reset clock[0m
+[0;32mI (2142) clock gusto: Update clock[0m
+[0;32mI (2142) clockgusto_update: Get time[0m
+[0;32mI (2152) clockgusto_update: Set board time mask[0m
+[0;32mI (2152) clock gusto: Show clock[0m
+[0;32mI (2152) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2162) clock gusto: Reset clock[0m
+[0;32mI (2162) clock gusto: Update clock[0m
+[0;32mI (2162) clockgusto_update: Get time[0m
+[0;32mI (2172) clockgusto_update: Set board time mask[0m
+[0;32mI (2172) clock gusto: Show clock[0m
+[0;32mI (2172) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2182) clock gusto: Reset clock[0m
+[0;32mI (2182) clock gusto: Update clock[0m
+[0;32mI (2182) clockgusto_update: Get time[0m
+[0;32mI (2192) clockgusto_update: Set board time mask[0m
+[0;32mI (2192) clock gusto: Show clock[0m
+[0;32mI (2202) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2202) clock gusto: Reset clock[0m
+[0;32mI (2202) clock gusto: Update clock[0m
+[0;32mI (2212) clockgusto_update: Get time[0m
+[0;32mI (2212) clockgusto_update: Set board time mask[0m
+[0;32mI (2212) clock gusto: Show clock[0m
+[0;32mI (2222) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2222) clock gusto: Reset clock[0m
+[0;32mI (2222) clock gusto: Update clock[0m
+[0;32mI (2232) clockgusto_update: Get time[0m
+[0;32mI (2232) clockgusto_update: Set board time mask[0m
+[0;32mI (2232) clock gusto: Show clock[0m
+[0;32mI (2242) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2242) clock gusto: Reset clock[0m
+[0;32mI (2242) clock gusto: Update clock[0m
+[0;32mI (2252) clockgusto_update: Get time[0m
+[0;32mI (2252) clockgusto_update: Set board time mask[0m
+[0;32mI (2252) clock gusto: Show clock[0m
+[0;32mI (2262) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2262) clock gusto: Reset clock[0m
+[0;32mI (2262) clock gusto: Update clock[0m
+[0;32mI (2272) clockgusto_update: Get time[0m
+[0;32mI (2272) clockgusto_update: Set board time mask[0m
+[0;32mI (2272) clock gusto: Show clock[0m
+[0;32mI (2282) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2282) clock gusto: Reset clock[0m
+[0;32mI (2282) clock gusto: Update clock[0m
+[0;32mI (2292) clockgusto_update: Get time[0m
+[0;32mI (2292) clockgusto_update: Set board time mask[0m
+[0;32mI (2302) clock gusto: Show clock[0m
+[0;32mI (2302) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2302) clock gusto: Reset clock[0m
+[0;32mI (2302) clock gusto: Update clock[0m
+[0;32mI (2312) clockgusto_update: Get time[0m
+[0;32mI (2312) clockgusto_update: Set board time mask[0m
+[0;32mI (2322) clock gusto: Show clock[0m
+[0;32mI (2322) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2322) clock gusto: Reset clock[0m
+[0;32mI (2332) clock gusto: Update clock[0m
+[0;32mI (2332) clockgusto_update: Get time[0m
+[0;32mI (2332) clockgusto_update: Set board time mask[0m
+[0;32mI (2342) clock gusto: Show clock[0m
+[0;32mI (2342) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2342) clock gusto: Reset clock[0m
+[0;32mI (2352) clock gusto: Update clock[0m
+[0;32mI (2352) clockgusto_update: Get time[0m
+[0;32mI (2352) clockgusto_update: Set board time mask[0m
+[0;32mI (2362) clock gusto: Show clock[0m
+[0;32mI (2362) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2362) clock gusto: Reset clock[0m
+[0;32mI (2372) clock gusto: Update clock[0m
+[0;32mI (2372) clockgusto_update: Get time[0m
+[0;32mI (2372) clockgusto_update: Set board time mask[0m
+[0;32mI (2382) clock gusto: Show clock[0m
+[0;32mI (2382) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2382) clock gusto: Reset clock[0m
+[0;32mI (2392) clock gusto: Update clock[0m
+[0;32mI (2392) clockgusto_update: Get time[0m
+[0;32mI (2402) clockgusto_update: Set board time mask[0m
+[0;32mI (2402) clock gusto: Show clock[0m
+[0;32mI (2402) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2402) clock gusto: Reset clock[0m
+[0;32mI (2412) clock gusto: Update clock[0m
+[0;32mI (2412) clockgusto_update: Get time[0m
+[0;32mI (2422) clockgusto_update: Set board time mask[0m
+[0;32mI (2422) clock gusto: Show clock[0m
+[0;32mI (2422) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2432) clock gusto: Reset clock[0m
+[0;32mI (2432) clock gusto: Update clock[0m
+[0;32mI (2432) clockgusto_update: Get time[0m
+[0;32mI (2442) clockgusto_update: Set board time mask[0m
+[0;32mI (2442) clock gusto: Show clock[0m
+[0;32mI (2442) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2452) clock gusto: Reset clock[0m
+[0;32mI (2452) clock gusto: Update clock[0m
+[0;32mI (2452) clockgusto_update: Get time[0m
+[0;32mI (2462) clockgusto_update: Set board time mask[0m
+[0;32mI (2462) clock gusto: Show clock[0m
+[0;32mI (2462) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2472) clock gusto: Reset clock[0m
+[0;32mI (2472) clock gusto: Update clock[0m
+[0;32mI (2472) clockgusto_update: Get time[0m
+[0;32mI (2482) clockgusto_update: Set board time mask[0m
+[0;32mI (2482) clock gusto: Show clock[0m
+[0;32mI (2482) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2492) clock gusto: Reset clock[0m
+[0;32mI (2492) clock gusto: Update clock[0m
+[0;32mI (2492) clockgusto_update: Get time[0m
+[0;32mI (2502) clockgusto_update: Set board time mask[0m
+[0;32mI (2502) clock gusto: Show clock[0m
+[0;32mI (2502) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2512) clock gusto: Reset clock[0m
+[0;32mI (2512) clock gusto: Update clock[0m
+[0;32mI (2512) clockgusto_update: Get time[0m
+[0;32mI (2522) clockgusto_update: Set board time mask[0m
+[0;32mI (2522) clock gusto: Show clock[0m
+[0;32mI (2522) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2532) clock gusto: Reset clock[0m
+[0;32mI (2532) clock gusto: Update clock[0m
+[0;32mI (2532) clockgusto_update: Get time[0m
+[0;32mI (2542) clockgusto_update: Set board time mask[0m
+[0;32mI (2542) clock gusto: Show clock[0m
+[0;32mI (2542) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2552) clock gusto: Reset clock[0m
+[0;32mI (2552) clock gusto: Update clock[0m
+[0;32mI (2552) clockgusto_update: Get time[0m
+[0;32mI (2562) clockgusto_update: Set board time mask[0m
+[0;32mI (2562) clock gusto: Show clock[0m
+[0;32mI (2572) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2572) clock gusto: Reset clock[0m
+[0;32mI (2572) clock gusto: Update clock[0m
+[0;32mI (2582) clockgusto_update: Get time[0m
+[0;32mI (2582) clockgusto_update: Set board time mask[0m
+[0;32mI (2582) clock gusto: Show clock[0m
+[0;32mI (2592) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2592) clock gusto: Reset clock[0m
+[0;32mI (2592) clock gusto: Update clock[0m
+[0;32mI (2602) clockgusto_update: Get time[0m
+[0;32mI (2602) clockgusto_update: Set board time mask[0m
+[0;32mI (2602) clock gusto: Show clock[0m
+[0;32mI (2612) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2612) clock gusto: Reset clock[0m
+[0;32mI (2612) clock gusto: Update clock[0m
+[0;32mI (2622) clockgusto_update: Get time[0m
+[0;32mI (2622) clockgusto_update: Set board time mask[0m
+[0;32mI (2622) clock gusto: Show clock[0m
+[0;32mI (2632) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2632) clock gusto: Reset clock[0m
+[0;32mI (2632) clock gusto: Update clock[0m
+[0;32mI (2642) clockgusto_update: Get time[0m
+[0;32mI (2642) clockgusto_update: Set board time mask[0m
+[0;32mI (2642) clock gusto: Show clock[0m
+[0;32mI (2652) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2652) clock gusto: Reset clock[0m
+[0;32mI (2652) clock gusto: Update clock[0m
+[0;32mI (2662) clockgusto_update: Get time[0m
+[0;32mI (2662) clockgusto_update: Set board time mask[0m
+[0;32mI (2672) clock gusto: Show clock[0m
+[0;32mI (2672) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2672) clock gusto: Reset clock[0m
+[0;32mI (2682) clock gusto: Update clock[0m
+[0;32mI (2682) clockgusto_update: Get time[0m
+[0;32mI (2682) clockgusto_update: Set board time mask[0m
+[0;32mI (2692) clock gusto: Show clock[0m
+[0;32mI (2692) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2692) clock gusto: Reset clock[0m
+[0;32mI (2702) clock gusto: Update clock[0m
+[0;32mI (2702) clockgusto_update: Get time[0m
+[0;32mI (2702) clockgusto_update: Set board time mask[0m
+[0;32mI (2712) clock gusto: Show clock[0m
+[0;32mI (2712) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2712) clock gusto: Reset clock[0m
+[0;32mI (2722) clock gusto: Update clock[0m
+[0;32mI (2722) clockgusto_update: Get time[0m
+[0;32mI (2722) clockgusto_update: Set board time mask[0m
+[0;32mI (2732) clock gusto: Show clock[0m
+[0;32mI (2732) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2732) clock gusto: Reset clock[0m
+[0;32mI (2742) clock gusto: Update clock[0m
+[0;32mI (2742) clockgusto_update: Get time[0m
+[0;32mI (2752) clockgusto_update: Set board time mask[0m
+[0;32mI (2752) clock gusto: Show clock[0m
+[0;32mI (2752) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2752) clock gusto: Reset clock[0m
+[0;32mI (2762) clock gusto: Update clock[0m
+[0;32mI (2762) clockgusto_update: Get time[0m
+[0;32mI (2772) clockgusto_update: Set board time mask[0m
+[0;32mI (2772) clock gusto: Show clock[0m
+[0;32mI (2772) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2782) clock gusto: Reset clock[0m
+[0;32mI (2782) clock gusto: Update clock[0m
+[0;32mI (2782) clockgusto_update: Get time[0m
+[0;32mI (2792) clockgusto_update: Set board time mask[0m
+[0;32mI (2792) clock gusto: Show clock[0m
+[0;32mI (2792) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2802) clock gusto: Reset clock[0m
+[0;32mI (2802) clock gusto: Update clock[0m
+[0;32mI (2802) clockgusto_update: Get time[0m
+[0;32mI (2812) clockgusto_update: Set board time mask[0m
+[0;32mI (2812) clock gusto: Show clock[0m
+[0;32mI (2812) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2822) clock gusto: Reset clock[0m
+[0;32mI (2822) clock gusto: Update clock[0m
+[0;32mI (2822) clockgusto_update: Get time[0m
+[0;32mI (2832) clockgusto_update: Set board time mask[0m
+[0;32mI (2832) clock gusto: Show clock[0m
+[0;32mI (2832) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2842) clock gusto: Reset clock[0m
+[0;32mI (2842) clock gusto: Update clock[0m
+[0;32mI (2842) clockgusto_update: Get time[0m
+[0;32mI (2852) clockgusto_update: Set board time mask[0m
+[0;32mI (2852) clock gusto: Show clock[0m
+[0;32mI (2852) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2862) clock gusto: Reset clock[0m
+[0;32mI (2862) clock gusto: Update clock[0m
+[0;32mI (2862) clockgusto_update: Get time[0m
+[0;32mI (2872) clockgusto_update: Set board time mask[0m
+[0;32mI (2872) clock gusto: Show clock[0m
+[0;32mI (2872) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2882) clock gusto: Reset clock[0m
+[0;32mI (2882) clock gusto: Update clock[0m
+[0;32mI (2882) clockgusto_update: Get time[0m
+[0;32mI (2892) clockgusto_update: Set board time mask[0m
+[0;32mI (2892) clock gusto: Show clock[0m
+[0;32mI (2892) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2902) clock gusto: Reset clock[0m
+[0;32mI (2902) clock gusto: Update clock[0m
+[0;32mI (2902) clockgusto_update: Get time[0m
+[0;32mI (2912) clockgusto_update: Set board time mask[0m
+[0;32mI (2912) clock gusto: Show clock[0m
+[0;32mI (2922) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2922) clock gusto: Reset clock[0m
+[0;32mI (2922) clock gusto: Update clock[0m
+[0;32mI (2932) clockgusto_update: Get time[0m
+[0;32mI (2932) clockgusto_update: Set board time mask[0m
+[0;32mI (2932) clock gusto: Show clock[0m
+[0;32mI (2942) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2942) clock gusto: Reset clock[0m
+[0;32mI (2942) clock gusto: Update clock[0m
+[0;32mI (2952) clockgusto_update: Get time[0m
+[0;32mI (2952) clockgusto_update: Set board time mask[0m
+[0;32mI (2952) clock gusto: Show clock[0m
+[0;32mI (2962) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2962) clock gusto: Reset clock[0m
+[0;32mI (2962) clock gusto: Update clock[0m
+[0;32mI (2972) clockgusto_update: Get time[0m
+[0;32mI (2972) clockgusto_update: Set board time mask[0m
+[0;32mI (2972) clock gusto: Show clock[0m
+[0;32mI (2982) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (2982) clock gusto: Reset clock[0m
+[0;32mI (2982) clock gusto: Update clock[0m
+[0;32mI (2992) clockgusto_update: Get time[0m
+[0;32mI (2992) clockgusto_update: Set board time mask[0m
+[0;32mI (2992) clock gusto: Show clock[0m
+[0;32mI (3002) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3002) clock gusto: Reset clock[0m
+[0;32mI (3002) clock gusto: Update clock[0m
+[0;32mI (3012) clockgusto_update: Get time[0m
+[0;32mI (3012) clockgusto_update: Set board time mask[0m
+[0;32mI (3022) clock gusto: Show clock[0m
+[0;32mI (3022) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3022) clock gusto: Reset clock[0m
+[0;32mI (3022) clock gusto: Update clock[0m
+[0;32mI (3032) clockgusto_update: Get time[0m
+[0;32mI (3032) clockgusto_update: Set board time mask[0m
+[0;32mI (3042) clock gusto: Show clock[0m
+[0;32mI (3042) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3042) clock gusto: Reset clock[0m
+[0;32mI (3052) clock gusto: Update clock[0m
+[0;32mI (3052) clockgusto_update: Get time[0m
+[0;32mI (3052) clockgusto_update: Set board time mask[0m
+[0;32mI (3062) clock gusto: Show clock[0m
+[0;32mI (3062) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3062) clock gusto: Reset clock[0m
+[0;32mI (3072) clock gusto: Update clock[0m
+[0;32mI (3072) clockgusto_update: Get time[0m
+[0;32mI (3072) clockgusto_update: Set board time mask[0m
+[0;32mI (3082) clock gusto: Show clock[0m
+[0;32mI (3082) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3082) clock gusto: Reset clock[0m
+[0;32mI (3092) clock gusto: Update clock[0m
+[0;32mI (3092) clockgusto_update: Get time[0m
+[0;32mI (3092) clockgusto_update: Set board time mask[0m
+[0;32mI (3102) clock gusto: Show clock[0m
+[0;32mI (3102) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3102) clock gusto: Reset clock[0m
+[0;32mI (3112) clock gusto: Update clock[0m
+[0;32mI (3112) clockgusto_update: Get time[0m
+[0;32mI (3122) clockgusto_update: Set board time mask[0m
+[0;32mI (3122) clock gusto: Show clock[0m
+[0;32mI (3122) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3122) clock gusto: Reset clock[0m
+[0;32mI (3132) clock gusto: Update clock[0m
+[0;32mI (3132) clockgusto_update: Get time[0m
+[0;32mI (3142) clockgusto_update: Set board time mask[0m
+[0;32mI (3142) clock gusto: Show clock[0m
+[0;32mI (3142) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3152) clock gusto: Reset clock[0m
+[0;32mI (3152) clock gusto: Update clock[0m
+[0;32mI (3152) clockgusto_update: Get time[0m
+[0;32mI (3162) clockgusto_update: Set board time mask[0m
+[0;32mI (3162) clock gusto: Show clock[0m
+[0;32mI (3162) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3172) clock gusto: Reset clock[0m
+[0;32mI (3172) clock gusto: Update clock[0m
+[0;32mI (3172) clockgusto_update: Get time[0m
+[0;32mI (3182) clockgusto_update: Set board time mask[0m
+[0;32mI (3182) clock gusto: Show clock[0m
+[0;32mI (3182) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3192) clock gusto: Reset clock[0m
+[0;32mI (3192) clock gusto: Update clock[0m
+[0;32mI (3192) clockgusto_update: Get time[0m
+[0;32mI (3202) clockgusto_update: Set board time mask[0m
+[0;32mI (3202) clock gusto: Show clock[0m
+[0;32mI (3202) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3212) clock gusto: Reset clock[0m
+[0;32mI (3212) clock gusto: Update clock[0m
+[0;32mI (3212) clockgusto_update: Get time[0m
+[0;32mI (3222) clockgusto_update: Set board time mask[0m
+[0;32mI (3222) clock gusto: Show clock[0m
+[0;32mI (3222) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3232) clock gusto: Reset clock[0m
+[0;32mI (3232) clock gusto: Update clock[0m
+[0;32mI (3232) clockgusto_update: Get time[0m
+[0;32mI (3242) clockgusto_update: Set board time mask[0m
+[0;32mI (3242) clock gusto: Show clock[0m
+[0;32mI (3242) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3252) clock gusto: Reset clock[0m
+[0;32mI (3252) clock gusto: Update clock[0m
+[0;32mI (3252) clockgusto_update: Get time[0m
+[0;32mI (3262) clockgusto_update: Set board time mask[0m
+[0;32mI (3262) clock gusto: Show clock[0m
+[0;32mI (3262) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3272) clock gusto: Reset clock[0m
+[0;32mI (3272) clock gusto: Update clock[0m
+[0;32mI (3272) clockgusto_update: Get time[0m
+[0;32mI (3282) clockgusto_update: Set board time mask[0m
+[0;32mI (3282) clock gusto: Show clock[0m
+[0;32mI (3292) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3292) clock gusto: Reset clock[0m
+[0;32mI (3292) clock gusto: Update clock[0m
+[0;32mI (3302) clockgusto_update: Get time[0m
+[0;32mI (3302) clockgusto_update: Set board time mask[0m
+[0;32mI (3302) clock gusto: Show clock[0m
+[0;32mI (3312) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3312) clock gusto: Reset clock[0m
+[0;32mI (3312) clock gusto: Update clock[0m
+[0;32mI (3322) clockgusto_update: Get time[0m
+[0;32mI (3322) clockgusto_update: Set board time mask[0m
+[0;32mI (3322) clock gusto: Show clock[0m
+[0;32mI (3332) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3332) clock gusto: Reset clock[0m
+[0;32mI (3332) clock gusto: Update clock[0m
+[0;32mI (3342) clockgusto_update: Get time[0m
+[0;32mI (3342) clockgusto_update: Set board time mask[0m
+[0;32mI (3342) clock gusto: Show clock[0m
+[0;32mI (3352) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3352) clock gusto: Reset clock[0m
+[0;32mI (3352) clock gusto: Update clock[0m
+[0;32mI (3362) clockgusto_update: Get time[0m
+[0;32mI (3362) clockgusto_update: Set board time mask[0m
+[0;32mI (3362) clock gusto: Show clock[0m
+[0;32mI (3372) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3372) clock gusto: Reset clock[0m
+[0;32mI (3372) clock gusto: Update clock[0m
+[0;32mI (3382) clockgusto_update: Get time[0m
+[0;32mI (3382) clockgusto_update: Set board time mask[0m
+[0;32mI (3392) clock gusto: Show clock[0m
+[0;32mI (3392) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3392) clock gusto: Reset clock[0m
+[0;32mI (3402) clock gusto: Update clock[0m
+[0;32mI (3402) clockgusto_update: Get time[0m
+[0;32mI (3402) clockgusto_update: Set board time mask[0m
+[0;32mI (3412) clock gusto: Show clock[0m
+[0;32mI (3412) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3412) clock gusto: Reset clock[0m
+[0;32mI (3422) clock gusto: Update clock[0m
+[0;32mI (3422) clockgusto_update: Get time[0m
+[0;32mI (3422) clockgusto_update: Set board time mask[0m
+[0;32mI (3432) clock gusto: Show clock[0m
+[0;32mI (3432) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3432) clock gusto: Reset clock[0m
+[0;32mI (3442) clock gusto: Update clock[0m
+[0;32mI (3442) clockgusto_update: Get time[0m
+[0;32mI (3442) clockgusto_update: Set board time mask[0m
+[0;32mI (3452) clock gusto: Show clock[0m
+[0;32mI (3452) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3452) clock gusto: Reset clock[0m
+[0;32mI (3462) clock gusto: Update clock[0m
+[0;32mI (3462) clockgusto_update: Get time[0m
+[0;32mI (3472) clockgusto_update: Set board time mask[0m
+[0;32mI (3472) clock gusto: Show clock[0m
+[0;32mI (3472) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3472) clock gusto: Reset clock[0m
+[0;32mI (3482) clock gusto: Update clock[0m
+[0;32mI (3482) clockgusto_update: Get time[0m
+[0;32mI (3492) clockgusto_update: Set board time mask[0m
+[0;32mI (3492) clock gusto: Show clock[0m
+[0;32mI (3492) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3502) clock gusto: Reset clock[0m
+[0;32mI (3502) clock gusto: Update clock[0m
+[0;32mI (3502) clockgusto_update: Get time[0m
+[0;32mI (3512) clockgusto_update: Set board time mask[0m
+[0;32mI (3512) clock gusto: Show clock[0m
+[0;32mI (3512) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3522) clock gusto: Reset clock[0m
+[0;32mI (3522) clock gusto: Update clock[0m
+[0;32mI (3522) clockgusto_update: Get time[0m
+[0;32mI (3532) clockgusto_update: Set board time mask[0m
+[0;32mI (3532) clock gusto: Show clock[0m
+[0;32mI (3532) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3542) clock gusto: Reset clock[0m
+[0;32mI (3542) clock gusto: Update clock[0m
+[0;32mI (3542) clockgusto_update: Get time[0m
+[0;32mI (3552) clockgusto_update: Set board time mask[0m
+[0;32mI (3552) clock gusto: Show clock[0m
+[0;32mI (3552) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3562) clock gusto: Reset clock[0m
+[0;32mI (3562) clock gusto: Update clock[0m
+[0;32mI (3562) clockgusto_update: Get time[0m
+[0;32mI (3572) clockgusto_update: Set board time mask[0m
+[0;32mI (3572) clock gusto: Show clock[0m
+[0;32mI (3572) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3582) clock gusto: Reset clock[0m
+[0;32mI (3582) clock gusto: Update clock[0m
+[0;32mI (3582) clockgusto_update: Get time[0m
+[0;32mI (3592) clockgusto_update: Set board time mask[0m
+[0;32mI (3592) clock gusto: Show clock[0m
+[0;32mI (3592) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3602) clock gusto: Reset clock[0m
+[0;32mI (3602) clock gusto: Update clock[0m
+[0;32mI (3602) clockgusto_update: Get time[0m
+[0;32mI (3612) clockgusto_update: Set board time mask[0m
+[0;32mI (3612) clock gusto: Show clock[0m
+[0;32mI (3612) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3622) clock gusto: Reset clock[0m
+[0;32mI (3622) clock gusto: Update clock[0m
+[0;32mI (3622) clockgusto_update: Get time[0m
+[0;32mI (3632) clockgusto_update: Set board time mask[0m
+[0;32mI (3632) clock gusto: Show clock[0m
+[0;32mI (3642) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3642) clock gusto: Reset clock[0m
+[0;32mI (3642) clock gusto: Update clock[0m
+[0;32mI (3652) clockgusto_update: Get time[0m
+[0;32mI (3652) clockgusto_update: Set board time mask[0m
+[0;32mI (3652) clock gusto: Show clock[0m
+[0;32mI (3662) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3662) clock gusto: Reset clock[0m
+[0;32mI (3662) clock gusto: Update clock[0m
+[0;32mI (3672) clockgusto_update: Get time[0m
+[0;32mI (3672) clockgusto_update: Set board time mask[0m
+[0;32mI (3672) clock gusto: Show clock[0m
+[0;32mI (3682) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3682) clock gusto: Reset clock[0m
+[0;32mI (3682) clock gusto: Update clock[0m
+[0;32mI (3692) clockgusto_update: Get time[0m
+[0;32mI (3692) clockgusto_update: Set board time mask[0m
+[0;32mI (3692) clock gusto: Show clock[0m
+[0;32mI (3702) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3702) clock gusto: Reset clock[0m
+[0;32mI (3702) clock gusto: Update clock[0m
+[0;32mI (3712) clockgusto_update: Get time[0m
+[0;32mI (3712) clockgusto_update: Set board time mask[0m
+[0;32mI (3712) clock gusto: Show clock[0m
+[0;32mI (3722) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3722) clock gusto: Reset clock[0m
+[0;32mI (3722) clock gusto: Update clock[0m
+[0;32mI (3732) clockgusto_update: Get time[0m
+[0;32mI (3732) clockgusto_update: Set board time mask[0m
+[0;32mI (3742) clock gusto: Show clock[0m
+[0;32mI (3742) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3742) clock gusto: Reset clock[0m
+[0;32mI (3742) clock gusto: Update clock[0m
+[0;32mI (3752) clockgusto_update: Get time[0m
+[0;32mI (3752) clockgusto_update: Set board time mask[0m
+[0;32mI (3762) clock gusto: Show clock[0m
+[0;32mI (3762) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3762) clock gusto: Reset clock[0m
+[0;32mI (3772) clock gusto: Update clock[0m
+[0;32mI (3772) clockgusto_update: Get time[0m
+[0;32mI (3772) clockgusto_update: Set board time mask[0m
+[0;32mI (3782) clock gusto: Show clock[0m
+[0;32mI (3782) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3782) clock gusto: Reset clock[0m
+[0;32mI (3792) clock gusto: Update clock[0m
+[0;32mI (3792) clockgusto_update: Get time[0m
+[0;32mI (3792) clockgusto_update: Set board time mask[0m
+[0;32mI (3802) clock gusto: Show clock[0m
+[0;32mI (3802) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3802) clock gusto: Reset clock[0m
+[0;32mI (3812) clock gusto: Update clock[0m
+[0;32mI (3812) clockgusto_update: Get time[0m
+[0;32mI (3812) clockgusto_update: Set board time mask[0m
+[0;32mI (3822) clock gusto: Show clock[0m
+[0;32mI (3822) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3822) clock gusto: Reset clock[0m
+[0;32mI (3832) clock gusto: Update clock[0m
+[0;32mI (3832) clockgusto_update: Get time[0m
+[0;32mI (3842) clockgusto_update: Set board time mask[0m
+[0;32mI (3842) clock gusto: Show clock[0m
+[0;32mI (3842) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3842) clock gusto: Reset clock[0m
+[0;32mI (3852) clock gusto: Update clock[0m
+[0;32mI (3852) clockgusto_update: Get time[0m
+[0;32mI (3862) clockgusto_update: Set board time mask[0m
+[0;32mI (3862) clock gusto: Show clock[0m
+[0;32mI (3862) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3872) clock gusto: Reset clock[0m
+[0;32mI (3872) clock gusto: Update clock[0m
+[0;32mI (3872) clockgusto_update: Get time[0m
+[0;32mI (3882) clockgusto_update: Set board time mask[0m
+[0;32mI (3882) clock gusto: Show clock[0m
+[0;32mI (3882) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3892) clock gusto: Reset clock[0m
+[0;32mI (3892) clock gusto: Update clock[0m
+[0;32mI (3892) clockgusto_update: Get time[0m
+[0;32mI (3902) clockgusto_update: Set board time mask[0m
+[0;32mI (3902) clock gusto: Show clock[0m
+[0;32mI (3902) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3912) clock gusto: Reset clock[0m
+[0;32mI (3912) clock gusto: Update clock[0m
+[0;32mI (3912) clockgusto_update: Get time[0m
+[0;32mI (3922) clockgusto_update: Set board time mask[0m
+[0;32mI (3922) clock gusto: Show clock[0m
+[0;32mI (3922) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3932) clock gusto: Reset clock[0m
+[0;32mI (3932) clock gusto: Update clock[0m
+[0;32mI (3932) clockgusto_update: Get time[0m
+[0;32mI (3942) clockgusto_update: Set board time mask[0m
+[0;32mI (3942) clock gusto: Show clock[0m
+[0;32mI (3942) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3952) clock gusto: Reset clock[0m
+[0;32mI (3952) clock gusto: Update clock[0m
+[0;32mI (3952) clockgusto_update: Get time[0m
+[0;32mI (3962) clockgusto_update: Set board time mask[0m
+[0;32mI (3962) clock gusto: Show clock[0m
+[0;32mI (3962) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3972) clock gusto: Reset clock[0m
+[0;32mI (3972) clock gusto: Update clock[0m
+[0;32mI (3972) clockgusto_update: Get time[0m
+[0;32mI (3982) clockgusto_update: Set board time mask[0m
+[0;32mI (3982) clock gusto: Show clock[0m
+[0;32mI (3982) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (3992) clock gusto: Reset clock[0m
+[0;32mI (3992) clock gusto: Update clock[0m
+[0;32mI (3992) clockgusto_update: Get time[0m
+[0;32mI (4002) clockgusto_update: Set board time mask[0m
+[0;32mI (4002) clock gusto: Show clock[0m
+[0;32mI (4012) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4012) clock gusto: Reset clock[0m
+[0;32mI (4012) clock gusto: Update clock[0m
+[0;32mI (4022) clockgusto_update: Get time[0m
+[0;32mI (4022) clockgusto_update: Set board time mask[0m
+[0;32mI (4022) clock gusto: Show clock[0m
+[0;32mI (4032) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4032) clock gusto: Reset clock[0m
+[0;32mI (4032) clock gusto: Update clock[0m
+[0;32mI (4042) clockgusto_update: Get time[0m
+[0;32mI (4042) clockgusto_update: Set board time mask[0m
+[0;32mI (4042) clock gusto: Show clock[0m
+[0;32mI (4052) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4052) clock gusto: Reset clock[0m
+[0;32mI (4052) clock gusto: Update clock[0m
+[0;32mI (4062) clockgusto_update: Get time[0m
+[0;32mI (4062) clockgusto_update: Set board time mask[0m
+[0;32mI (4062) clock gusto: Show clock[0m
+[0;32mI (4072) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4072) clock gusto: Reset clock[0m
+[0;32mI (4072) clock gusto: Update clock[0m
+[0;32mI (4082) clockgusto_update: Get time[0m
+[0;32mI (4082) clockgusto_update: Set board time mask[0m
+[0;32mI (4082) clock gusto: Show clock[0m
+[0;32mI (4092) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4092) clock gusto: Reset clock[0m
+[0;32mI (4092) clock gusto: Update clock[0m
+[0;32mI (4102) clockgusto_update: Get time[0m
+[0;32mI (4102) clockgusto_update: Set board time mask[0m
+[0;32mI (4112) clock gusto: Show clock[0m
+[0;32mI (4112) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4112) clock gusto: Reset clock[0m
+[0;32mI (4122) clock gusto: Update clock[0m
+[0;32mI (4122) clockgusto_update: Get time[0m
+[0;32mI (4122) clockgusto_update: Set board time mask[0m
+[0;32mI (4132) clock gusto: Show clock[0m
+[0;32mI (4132) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4132) clock gusto: Reset clock[0m
+[0;32mI (4142) clock gusto: Update clock[0m
+[0;32mI (4142) clockgusto_update: Get time[0m
+[0;32mI (4142) clockgusto_update: Set board time mask[0m
+[0;32mI (4152) clock gusto: Show clock[0m
+[0;32mI (4152) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4152) clock gusto: Reset clock[0m
+[0;32mI (4162) clock gusto: Update clock[0m
+[0;32mI (4162) clockgusto_update: Get time[0m
+[0;32mI (4162) clockgusto_update: Set board time mask[0m
+[0;32mI (4172) clock gusto: Show clock[0m
+[0;32mI (4172) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4172) clock gusto: Reset clock[0m
+[0;32mI (4182) clock gusto: Update clock[0m
+[0;32mI (4182) clockgusto_update: Get time[0m
+[0;32mI (4192) clockgusto_update: Set board time mask[0m
+[0;32mI (4192) clock gusto: Show clock[0m
+[0;32mI (4192) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4192) clock gusto: Reset clock[0m
+[0;32mI (4202) clock gusto: Update clock[0m
+[0;32mI (4202) clockgusto_update: Get time[0m
+[0;32mI (4212) clockgusto_update: Set board time mask[0m
+[0;32mI (4212) clock gusto: Show clock[0m
+[0;32mI (4212) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4222) clock gusto: Reset clock[0m
+[0;32mI (4222) clock gusto: Update clock[0m
+[0;32mI (4222) clockgusto_update: Get time[0m
+[0;32mI (4232) clockgusto_update: Set board time mask[0m
+[0;32mI (4232) clock gusto: Show clock[0m
+[0;32mI (4232) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4242) clock gusto: Reset clock[0m
+[0;32mI (4242) clock gusto: Update clock[0m
+[0;32mI (4242) clockgusto_update: Get time[0m
+[0;32mI (4252) clockgusto_update: Set board time mask[0m
+[0;32mI (4252) clock gusto: Show clock[0m
+[0;32mI (4252) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4262) clock gusto: Reset clock[0m
+[0;32mI (4262) clock gusto: Update clock[0m
+[0;32mI (4262) clockgusto_update: Get time[0m
+[0;32mI (4272) clockgusto_update: Set board time mask[0m
+[0;32mI (4272) clock gusto: Show clock[0m
+[0;32mI (4272) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4282) clock gusto: Reset clock[0m
+[0;32mI (4282) clock gusto: Update clock[0m
+[0;32mI (4282) clockgusto_update: Get time[0m
+[0;32mI (4292) clockgusto_update: Set board time mask[0m
+[0;32mI (4292) clock gusto: Show clock[0m
+[0;32mI (4292) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4302) clock gusto: Reset clock[0m
+[0;32mI (4302) clock gusto: Update clock[0m
+[0;32mI (4302) clockgusto_update: Get time[0m
+[0;32mI (4312) clockgusto_update: Set board time mask[0m
+[0;32mI (4312) clock gusto: Show clock[0m
+[0;32mI (4312) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4322) clock gusto: Reset clock[0m
+[0;32mI (4322) clock gusto: Update clock[0m
+[0;32mI (4322) clockgusto_update: Get time[0m
+[0;32mI (4332) clockgusto_update: Set board time mask[0m
+[0;32mI (4332) clock gusto: Show clock[0m
+[0;32mI (4332) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4342) clock gusto: Reset clock[0m
+[0;32mI (4342) clock gusto: Update clock[0m
+[0;32mI (4342) clockgusto_update: Get time[0m
+[0;32mI (4352) clockgusto_update: Set board time mask[0m
+[0;32mI (4352) clock gusto: Show clock[0m
+[0;32mI (4362) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4362) clock gusto: Reset clock[0m
+[0;32mI (4362) clock gusto: Update clock[0m
+[0;32mI (4372) clockgusto_update: Get time[0m
+[0;32mI (4372) clockgusto_update: Set board time mask[0m
+[0;32mI (4372) clock gusto: Show clock[0m
+[0;32mI (4382) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4382) clock gusto: Reset clock[0m
+[0;32mI (4382) clock gusto: Update clock[0m
+[0;32mI (4392) clockgusto_update: Get time[0m
+[0;32mI (4392) clockgusto_update: Set board time mask[0m
+[0;32mI (4392) clock gusto: Show clock[0m
+[0;32mI (4402) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4402) clock gusto: Reset clock[0m
+[0;32mI (4402) clock gusto: Update clock[0m
+[0;32mI (4412) clockgusto_update: Get time[0m
+[0;32mI (4412) clockgusto_update: Set board time mask[0m
+[0;32mI (4412) clock gusto: Show clock[0m
+[0;32mI (4422) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4422) clock gusto: Reset clock[0m
+[0;32mI (4422) clock gusto: Update clock[0m
+[0;32mI (4432) clockgusto_update: Get time[0m
+[0;32mI (4432) clockgusto_update: Set board time mask[0m
+[0;32mI (4432) clock gusto: Show clock[0m
+[0;32mI (4442) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4442) clock gusto: Reset clock[0m
+[0;32mI (4442) clock gusto: Update clock[0m
+[0;32mI (4452) clockgusto_update: Get time[0m
+[0;32mI (4452) clockgusto_update: Set board time mask[0m
+[0;32mI (4462) clock gusto: Show clock[0m
+[0;32mI (4462) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4462) clock gusto: Reset clock[0m
+[0;32mI (4472) clock gusto: Update clock[0m
+[0;32mI (4472) clockgusto_update: Get time[0m
+[0;32mI (4472) clockgusto_update: Set board time mask[0m
+[0;32mI (4482) clock gusto: Show clock[0m
+[0;32mI (4482) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4482) clock gusto: Reset clock[0m
+[0;32mI (4492) clock gusto: Update clock[0m
+[0;32mI (4492) clockgusto_update: Get time[0m
+[0;32mI (4492) clockgusto_update: Set board time mask[0m
+[0;32mI (4502) clock gusto: Show clock[0m
+[0;32mI (4502) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4502) clock gusto: Reset clock[0m
+[0;32mI (4512) clock gusto: Update clock[0m
+[0;32mI (4512) clockgusto_update: Get time[0m
+[0;32mI (4512) clockgusto_update: Set board time mask[0m
+[0;32mI (4522) clock gusto: Show clock[0m
+[0;32mI (4522) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4522) clock gusto: Reset clock[0m
+[0;32mI (4532) clock gusto: Update clock[0m
+[0;32mI (4532) clockgusto_update: Get time[0m
+[0;32mI (4532) clockgusto_update: Set board time mask[0m
+[0;32mI (4542) clock gusto: Show clock[0m
+[0;32mI (4542) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4542) clock gusto: Reset clock[0m
+[0;32mI (4552) clock gusto: Update clock[0m
+[0;32mI (4552) clockgusto_update: Get time[0m
+[0;32mI (4562) clockgusto_update: Set board time mask[0m
+[0;32mI (4562) clock gusto: Show clock[0m
+[0;32mI (4562) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4562) clock gusto: Reset clock[0m
+[0;32mI (4572) clock gusto: Update clock[0m
+[0;32mI (4572) clockgusto_update: Get time[0m
+[0;32mI (4582) clockgusto_update: Set board time mask[0m
+[0;32mI (4582) clock gusto: Show clock[0m
+[0;32mI (4582) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4592) clock gusto: Reset clock[0m
+[0;32mI (4592) clock gusto: Update clock[0m
+[0;32mI (4592) clockgusto_update: Get time[0m
+[0;32mI (4602) clockgusto_update: Set board time mask[0m
+[0;32mI (4602) clock gusto: Show clock[0m
+[0;32mI (4602) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4612) clock gusto: Reset clock[0m
+[0;32mI (4612) clock gusto: Update clock[0m
+[0;32mI (4612) clockgusto_update: Get time[0m
+[0;32mI (4622) clockgusto_update: Set board time mask[0m
+[0;32mI (4622) clock gusto: Show clock[0m
+[0;32mI (4622) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4632) clock gusto: Reset clock[0m
+[0;32mI (4632) clock gusto: Update clock[0m
+[0;32mI (4632) clockgusto_update: Get time[0m
+[0;32mI (4642) clockgusto_update: Set board time mask[0m
+[0;32mI (4642) clock gusto: Show clock[0m
+[0;32mI (4642) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4652) clock gusto: Reset clock[0m
+[0;32mI (4652) clock gusto: Update clock[0m
+[0;32mI (4652) clockgusto_update: Get time[0m
+[0;32mI (4662) clockgusto_update: Set board time mask[0m
+[0;32mI (4662) clock gusto: Show clock[0m
+[0;32mI (4662) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4672) clock gusto: Reset clock[0m
+[0;32mI (4672) clock gusto: Update clock[0m
+[0;32mI (4672) clockgusto_update: Get time[0m
+[0;32mI (4682) clockgusto_update: Set board time mask[0m
+[0;32mI (4682) clock gusto: Show clock[0m
+[0;32mI (4682) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4692) clock gusto: Reset clock[0m
+[0;32mI (4692) clock gusto: Update clock[0m
+[0;32mI (4692) clockgusto_update: Get time[0m
+[0;32mI (4702) clockgusto_update: Set board time mask[0m
+[0;32mI (4702) clock gusto: Show clock[0m
+[0;32mI (4702) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4712) clock gusto: Reset clock[0m
+[0;32mI (4712) clock gusto: Update clock[0m
+[0;32mI (4712) clockgusto_update: Get time[0m
+[0;32mI (4722) clockgusto_update: Set board time mask[0m
+[0;32mI (4722) clock gusto: Show clock[0m
+[0;32mI (4732) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4732) clock gusto: Reset clock[0m
+[0;32mI (4732) clock gusto: Update clock[0m
+[0;32mI (4742) clockgusto_update: Get time[0m
+[0;32mI (4742) clockgusto_update: Set board time mask[0m
+[0;32mI (4742) clock gusto: Show clock[0m
+[0;32mI (4752) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4752) clock gusto: Reset clock[0m
+[0;32mI (4752) clock gusto: Update clock[0m
+[0;32mI (4762) clockgusto_update: Get time[0m
+[0;32mI (4762) clockgusto_update: Set board time mask[0m
+[0;32mI (4762) clock gusto: Show clock[0m
+[0;32mI (4772) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4772) clock gusto: Reset clock[0m
+[0;32mI (4772) clock gusto: Update clock[0m
+[0;32mI (4782) clockgusto_update: Get time[0m
+[0;32mI (4782) clockgusto_update: Set board time mask[0m
+[0;32mI (4782) clock gusto: Show clock[0m
+[0;32mI (4792) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4792) clock gusto: Reset clock[0m
+[0;32mI (4792) clock gusto: Update clock[0m
+[0;32mI (4802) clockgusto_update: Get time[0m
+[0;32mI (4802) clockgusto_update: Set board time mask[0m
+[0;32mI (4802) clock gusto: Show clock[0m
+[0;32mI (4812) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4812) clock gusto: Reset clock[0m
+[0;32mI (4812) clock gusto: Update clock[0m
+[0;32mI (4822) clockgusto_update: Get time[0m
+[0;32mI (4822) clockgusto_update: Set board time mask[0m
+[0;32mI (4832) clock gusto: Show clock[0m
+[0;32mI (4832) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4832) clock gusto: Reset clock[0m
+[0;32mI (4842) clock gusto: Update clock[0m
+[0;32mI (4842) clockgusto_update: Get time[0m
+[0;32mI (4842) clockgusto_update: Set board time mask[0m
+[0;32mI (4852) clock gusto: Show clock[0m
+[0;32mI (4852) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4852) clock gusto: Reset clock[0m
+[0;32mI (4862) clock gusto: Update clock[0m
+[0;32mI (4862) clockgusto_update: Get time[0m
+[0;32mI (4862) clockgusto_update: Set board time mask[0m
+[0;32mI (4872) clock gusto: Show clock[0m
+[0;32mI (4872) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4872) clock gusto: Reset clock[0m
+[0;32mI (4882) clock gusto: Update clock[0m
+[0;32mI (4882) clockgusto_update: Get time[0m
+[0;32mI (4882) clockgusto_update: Set board time mask[0m
+[0;32mI (4892) clock gusto: Show clock[0m
+[0;32mI (4892) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4892) clock gusto: Reset clock[0m
+[0;32mI (4902) clock gusto: Update clock[0m
+[0;32mI (4902) clockgusto_update: Get time[0m
+[0;32mI (4912) clockgusto_update: Set board time mask[0m
+[0;32mI (4912) clock gusto: Show clock[0m
+[0;32mI (4912) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4912) clock gusto: Reset clock[0m
+[0;32mI (4922) clock gusto: Update clock[0m
+[0;32mI (4922) clockgusto_update: Get time[0m
+[0;32mI (4932) clockgusto_update: Set board time mask[0m
+[0;32mI (4932) clock gusto: Show clock[0m
+[0;32mI (4932) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4942) clock gusto: Reset clock[0m
+[0;32mI (4942) clock gusto: Update clock[0m
+[0;32mI (4942) clockgusto_update: Get time[0m
+[0;32mI (4952) clockgusto_update: Set board time mask[0m
+[0;32mI (4952) clock gusto: Show clock[0m
+[0;32mI (4952) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4962) clock gusto: Reset clock[0m
+[0;32mI (4962) clock gusto: Update clock[0m
+[0;32mI (4962) clockgusto_update: Get time[0m
+[0;32mI (4972) clockgusto_update: Set board time mask[0m
+[0;32mI (4972) clock gusto: Show clock[0m
+[0;32mI (4972) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (4982) clock gusto: Reset clock[0m
+[0;32mI (4982) clock gusto: Update clock[0m
+[0;32mI (4982) clockgusto_update: Get time[0m
+[0;32mI (4992) clockgusto_update: Set board time mask[0m
+[0;32mI (4992) clock gusto: Show clock[0m
+[0;32mI (4992) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5002) clock gusto: Reset clock[0m
+[0;32mI (5002) clock gusto: Update clock[0m
+[0;32mI (5002) clockgusto_update: Get time[0m
+[0;32mI (5012) clockgusto_update: Set board time mask[0m
+[0;32mI (5012) clock gusto: Show clock[0m
+[0;32mI (5012) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5022) clock gusto: Reset clock[0m
+[0;32mI (5022) clock gusto: Update clock[0m
+[0;32mI (5022) clockgusto_update: Get time[0m
+[0;32mI (5032) clockgusto_update: Set board time mask[0m
+[0;32mI (5032) clock gusto: Show clock[0m
+[0;32mI (5032) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5042) clock gusto: Reset clock[0m
+[0;32mI (5042) clock gusto: Update clock[0m
+[0;32mI (5042) clockgusto_update: Get time[0m
+[0;32mI (5052) clockgusto_update: Set board time mask[0m
+[0;32mI (5052) clock gusto: Show clock[0m
+[0;32mI (5052) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5062) clock gusto: Reset clock[0m
+[0;32mI (5062) clock gusto: Update clock[0m
+[0;32mI (5062) clockgusto_update: Get time[0m
+[0;32mI (5072) clockgusto_update: Set board time mask[0m
+[0;32mI (5072) clock gusto: Show clock[0m
+[0;32mI (5082) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5082) clock gusto: Reset clock[0m
+[0;32mI (5082) clock gusto: Update clock[0m
+[0;32mI (5092) clockgusto_update: Get time[0m
+[0;32mI (5092) clockgusto_update: Set board time mask[0m
+[0;32mI (5092) clock gusto: Show clock[0m
+[0;32mI (5102) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5102) clock gusto: Reset clock[0m
+[0;32mI (5102) clock gusto: Update clock[0m
+[0;32mI (5112) clockgusto_update: Get time[0m
+[0;32mI (5112) clockgusto_update: Set board time mask[0m
+[0;32mI (5112) clock gusto: Show clock[0m
+[0;32mI (5122) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5122) clock gusto: Reset clock[0m
+[0;32mI (5122) clock gusto: Update clock[0m
+[0;32mI (5132) clockgusto_update: Get time[0m
+[0;32mI (5132) clockgusto_update: Set board time mask[0m
+[0;32mI (5132) clock gusto: Show clock[0m
+[0;32mI (5142) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5142) clock gusto: Reset clock[0m
+[0;32mI (5142) clock gusto: Update clock[0m
+[0;32mI (5152) clockgusto_update: Get time[0m
+[0;32mI (5152) clockgusto_update: Set board time mask[0m
+[0;32mI (5152) clock gusto: Show clock[0m
+[0;32mI (5162) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5162) clock gusto: Reset clock[0m
+[0;32mI (5162) clock gusto: Update clock[0m
+[0;32mI (5172) clockgusto_update: Get time[0m
+[0;32mI (5172) clockgusto_update: Set board time mask[0m
+[0;32mI (5182) clock gusto: Show clock[0m
+[0;32mI (5182) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5182) clock gusto: Reset clock[0m
+[0;32mI (5192) clock gusto: Update clock[0m
+[0;32mI (5192) clockgusto_update: Get time[0m
+[0;32mI (5192) clockgusto_update: Set board time mask[0m
+[0;32mI (5202) clock gusto: Show clock[0m
+[0;32mI (5202) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5202) clock gusto: Reset clock[0m
+[0;32mI (5212) clock gusto: Update clock[0m
+[0;32mI (5212) clockgusto_update: Get time[0m
+[0;32mI (5212) clockgusto_update: Set board time mask[0m
+[0;32mI (5222) clock gusto: Show clock[0m
+[0;32mI (5222) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5222) clock gusto: Reset clock[0m
+[0;32mI (5232) clock gusto: Update clock[0m
+[0;32mI (5232) clockgusto_update: Get time[0m
+[0;32mI (5232) clockgusto_update: Set board time mask[0m
+[0;32mI (5242) clock gusto: Show clock[0m
+[0;32mI (5242) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5242) clock gusto: Reset clock[0m
+[0;32mI (5252) clock gusto: Update clock[0m
+[0;32mI (5252) clockgusto_update: Get time[0m
+[0;32mI (5252) clockgusto_update: Set board time mask[0m
+[0;32mI (5262) clock gusto: Show clock[0m
+[0;32mI (5262) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5262) clock gusto: Reset clock[0m
+[0;32mI (5272) clock gusto: Update clock[0m
+[0;32mI (5272) clockgusto_update: Get time[0m
+[0;32mI (5282) clockgusto_update: Set board time mask[0m
+[0;32mI (5282) clock gusto: Show clock[0m
+[0;32mI (5282) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5282) clock gusto: Reset clock[0m
+[0;32mI (5292) clock gusto: Update clock[0m
+[0;32mI (5292) clockgusto_update: Get time[0m
+[0;32mI (5302) clockgusto_update: Set board time mask[0m
+[0;32mI (5302) clock gusto: Show clock[0m
+[0;32mI (5302) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5312) clock gusto: Reset clock[0m
+[0;32mI (5312) clock gusto: Update clock[0m
+[0;32mI (5312) clockgusto_update: Get time[0m
+[0;32mI (5322) clockgusto_update: Set board time mask[0m
+[0;32mI (5322) clock gusto: Show clock[0m
+[0;32mI (5322) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5332) clock gusto: Reset clock[0m
+[0;32mI (5332) clock gusto: Update clock[0m
+[0;32mI (5332) clockgusto_update: Get time[0m
+[0;32mI (5342) clockgusto_update: Set board time mask[0m
+[0;32mI (5342) clock gusto: Show clock[0m
+[0;32mI (5342) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5352) clock gusto: Reset clock[0m
+[0;32mI (5352) clock gusto: Update clock[0m
+[0;32mI (5352) clockgusto_update: Get time[0m
+[0;32mI (5362) clockgusto_update: Set board time mask[0m
+[0;32mI (5362) clock gusto: Show clock[0m
+[0;32mI (5362) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5372) clock gusto: Reset clock[0m
+[0;32mI (5372) clock gusto: Update clock[0m
+[0;32mI (5372) clockgusto_update: Get time[0m
+[0;32mI (5382) clockgusto_update: Set board time mask[0m
+[0;32mI (5382) clock gusto: Show clock[0m
+[0;32mI (5382) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5392) clock gusto: Reset clock[0m
+[0;32mI (5392) clock gusto: Update clock[0m
+[0;32mI (5392) clockgusto_update: Get time[0m
+[0;32mI (5402) clockgusto_update: Set board time mask[0m
+[0;32mI (5402) clock gusto: Show clock[0m
+[0;32mI (5402) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5412) clock gusto: Reset clock[0m
+[0;32mI (5412) clock gusto: Update clock[0m
+[0;32mI (5412) clockgusto_update: Get time[0m
+[0;32mI (5422) clockgusto_update: Set board time mask[0m
+[0;32mI (5422) clock gusto: Show clock[0m
+[0;32mI (5422) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5432) clock gusto: Reset clock[0m
+[0;32mI (5432) clock gusto: Update clock[0m
+[0;32mI (5442) clockgusto_update: Get time[0m
+[0;32mI (5442) clockgusto_update: Set board time mask[0m
+[0;32mI (5442) clock gusto: Show clock[0m
+[0;32mI (5452) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5452) clock gusto: Reset clock[0m
+[0;32mI (5452) clock gusto: Update clock[0m
+[0;32mI (5462) clockgusto_update: Get time[0m
+[0;32mI (5462) clockgusto_update: Set board time mask[0m
+[0;32mI (5462) clock gusto: Show clock[0m
+[0;32mI (5472) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5472) clock gusto: Reset clock[0m
+[0;32mI (5472) clock gusto: Update clock[0m
+[0;32mI (5482) clockgusto_update: Get time[0m
+[0;32mI (5482) clockgusto_update: Set board time mask[0m
+[0;32mI (5482) clock gusto: Show clock[0m
+[0;32mI (5492) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5492) clock gusto: Reset clock[0m
+[0;32mI (5492) clock gusto: Update clock[0m
+[0;32mI (5502) clockgusto_update: Get time[0m
+[0;32mI (5502) clockgusto_update: Set board time mask[0m
+[0;32mI (5502) clock gusto: Show clock[0m
+[0;32mI (5512) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5512) clock gusto: Reset clock[0m
+[0;32mI (5512) clock gusto: Update clock[0m
+[0;32mI (5522) clockgusto_update: Get time[0m
+[0;32mI (5522) clockgusto_update: Set board time mask[0m
+[0;32mI (5522) clock gusto: Show clock[0m
+[0;32mI (5532) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5532) clock gusto: Reset clock[0m
+[0;32mI (5532) clock gusto: Update clock[0m
+[0;32mI (5542) clockgusto_update: Get time[0m
+[0;32mI (5542) clockgusto_update: Set board time mask[0m
+[0;32mI (5552) clock gusto: Show clock[0m
+[0;32mI (5552) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5552) clock gusto: Reset clock[0m
+[0;32mI (5562) clock gusto: Update clock[0m
+[0;32mI (5562) clockgusto_update: Get time[0m
+[0;32mI (5562) clockgusto_update: Set board time mask[0m
+[0;32mI (5572) clock gusto: Show clock[0m
+[0;32mI (5572) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5572) clock gusto: Reset clock[0m
+[0;32mI (5582) clock gusto: Update clock[0m
+[0;32mI (5582) clockgusto_update: Get time[0m
+[0;32mI (5582) clockgusto_update: Set board time mask[0m
+[0;32mI (5592) clock gusto: Show clock[0m
+[0;32mI (5592) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5592) clock gusto: Reset clock[0m
+[0;32mI (5602) clock gusto: Update clock[0m
+[0;32mI (5602) clockgusto_update: Get time[0m
+[0;32mI (5602) clockgusto_update: Set board time mask[0m
+[0;32mI (5612) clock gusto: Show clock[0m
+[0;32mI (5612) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5612) clock gusto: Reset clock[0m
+[0;32mI (5622) clock gusto: Update clock[0m
+[0;32mI (5622) clockgusto_update: Get time[0m
+[0;32mI (5632) clockgusto_update: Set board time mask[0m
+[0;32mI (5632) clock gusto: Show clock[0m
+[0;32mI (5632) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5632) clock gusto: Reset clock[0m
+[0;32mI (5642) clock gusto: Update clock[0m
+[0;32mI (5642) clockgusto_update: Get time[0m
+[0;32mI (5652) clockgusto_update: Set board time mask[0m
+[0;32mI (5652) clock gusto: Show clock[0m
+[0;32mI (5652) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5662) clock gusto: Reset clock[0m
+[0;32mI (5662) clock gusto: Update clock[0m
+[0;32mI (5662) clockgusto_update: Get time[0m
+[0;32mI (5672) clockgusto_update: Set board time mask[0m
+[0;32mI (5672) clock gusto: Show clock[0m
+[0;32mI (5672) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5682) clock gusto: Reset clock[0m
+[0;32mI (5682) clock gusto: Update clock[0m
+[0;32mI (5682) clockgusto_update: Get time[0m
+[0;32mI (5692) clockgusto_update: Set board time mask[0m
+[0;32mI (5692) clock gusto: Show clock[0m
+[0;32mI (5692) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5702) clock gusto: Reset clock[0m
+[0;32mI (5702) clock gusto: Update clock[0m
+[0;32mI (5702) clockgusto_update: Get time[0m
+[0;32mI (5712) clockgusto_update: Set board time mask[0m
+[0;32mI (5712) clock gusto: Show clock[0m
+[0;32mI (5712) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5722) clock gusto: Reset clock[0m
+[0;32mI (5722) clock gusto: Update clock[0m
+[0;32mI (5722) clockgusto_update: Get time[0m
+[0;32mI (5732) clockgusto_update: Set board time mask[0m
+[0;32mI (5732) clock gusto: Show clock[0m
+[0;32mI (5732) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5742) clock gusto: Reset clock[0m
+[0;32mI (5742) clock gusto: Update clock[0m
+[0;32mI (5742) clockgusto_update: Get time[0m
+[0;32mI (5752) clockgusto_update: Set board time mask[0m
+[0;32mI (5752) clock gusto: Show clock[0m
+[0;32mI (5752) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5762) clock gusto: Reset clock[0m
+[0;32mI (5762) clock gusto: Update clock[0m
+[0;32mI (5762) clockgusto_update: Get time[0m
+[0;32mI (5772) clockgusto_update: Set board time mask[0m
+[0;32mI (5772) clock gusto: Show clock[0m
+[0;32mI (5772) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5782) clock gusto: Reset clock[0m
+[0;32mI (5782) clock gusto: Update clock[0m
+[0;32mI (5782) clockgusto_update: Get time[0m
+[0;32mI (5792) clockgusto_update: Set board time mask[0m
+[0;32mI (5792) clock gusto: Show clock[0m
+[0;32mI (5802) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5802) clock gusto: Reset clock[0m
+[0;32mI (5802) clock gusto: Update clock[0m
+[0;32mI (5812) clockgusto_update: Get time[0m
+[0;32mI (5812) clockgusto_update: Set board time mask[0m
+[0;32mI (5812) clock gusto: Show clock[0m
+[0;32mI (5822) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5822) clock gusto: Reset clock[0m
+[0;32mI (5822) clock gusto: Update clock[0m
+[0;32mI (5832) clockgusto_update: Get time[0m
+[0;32mI (5832) clockgusto_update: Set board time mask[0m
+[0;32mI (5832) clock gusto: Show clock[0m
+[0;32mI (5842) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5842) clock gusto: Reset clock[0m
+[0;32mI (5842) clock gusto: Update clock[0m
+[0;32mI (5852) clockgusto_update: Get time[0m
+[0;32mI (5852) clockgusto_update: Set board time mask[0m
+[0;32mI (5852) clock gusto: Show clock[0m
+[0;32mI (5862) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5862) clock gusto: Reset clock[0m
+[0;32mI (5862) clock gusto: Update clock[0m
+[0;32mI (5872) clockgusto_update: Get time[0m
+[0;32mI (5872) clockgusto_update: Set board time mask[0m
+[0;32mI (5872) clock gusto: Show clock[0m
+[0;32mI (5882) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5882) clock gusto: Reset clock[0m
+[0;32mI (5882) clock gusto: Update clock[0m
+[0;32mI (5892) clockgusto_update: Get time[0m
+[0;32mI (5892) clockgusto_update: Set board time mask[0m
+[0;32mI (5902) clock gusto: Show clock[0m
+[0;32mI (5902) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5902) clock gusto: Reset clock[0m
+[0;32mI (5912) clock gusto: Update clock[0m
+[0;32mI (5912) clockgusto_update: Get time[0m
+[0;32mI (5912) clockgusto_update: Set board time mask[0m
+[0;32mI (5922) clock gusto: Show clock[0m
+[0;32mI (5922) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5922) clock gusto: Reset clock[0m
+[0;32mI (5932) clock gusto: Update clock[0m
+[0;32mI (5932) clockgusto_update: Get time[0m
+[0;32mI (5932) clockgusto_update: Set board time mask[0m
+[0;32mI (5942) clock gusto: Show clock[0m
+[0;32mI (5942) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5942) clock gusto: Reset clock[0m
+[0;32mI (5952) clock gusto: Update clock[0m
+[0;32mI (5952) clockgusto_update: Get time[0m
+[0;32mI (5952) clockgusto_update: Set board time mask[0m
+[0;32mI (5962) clock gusto: Show clock[0m
+[0;32mI (5962) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5962) clock gusto: Reset clock[0m
+[0;32mI (5972) clock gusto: Update clock[0m
+[0;32mI (5972) clockgusto_update: Get time[0m
+[0;32mI (5982) clockgusto_update: Set board time mask[0m
+[0;32mI (5982) clock gusto: Show clock[0m
+[0;32mI (5982) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (5982) clock gusto: Reset clock[0m
+[0;32mI (5992) clock gusto: Update clock[0m
+[0;32mI (5992) clockgusto_update: Get time[0m
+[0;32mI (6002) clockgusto_update: Set board time mask[0m
+[0;32mI (6002) clock gusto: Show clock[0m
+[0;32mI (6002) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6012) clock gusto: Reset clock[0m
+[0;32mI (6012) clock gusto: Update clock[0m
+[0;32mI (6012) clockgusto_update: Get time[0m
+[0;32mI (6022) clockgusto_update: Set board time mask[0m
+[0;32mI (6022) clock gusto: Show clock[0m
+[0;32mI (6022) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6032) clock gusto: Reset clock[0m
+[0;32mI (6032) clock gusto: Update clock[0m
+[0;32mI (6032) clockgusto_update: Get time[0m
+[0;32mI (6042) clockgusto_update: Set board time mask[0m
+[0;32mI (6042) clock gusto: Show clock[0m
+[0;32mI (6042) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6052) clock gusto: Reset clock[0m
+[0;32mI (6052) clock gusto: Update clock[0m
+[0;32mI (6052) clockgusto_update: Get time[0m
+[0;32mI (6062) clockgusto_update: Set board time mask[0m
+[0;32mI (6062) clock gusto: Show clock[0m
+[0;32mI (6062) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6072) clock gusto: Reset clock[0m
+[0;32mI (6072) clock gusto: Update clock[0m
+[0;32mI (6072) clockgusto_update: Get time[0m
+[0;32mI (6082) clockgusto_update: Set board time mask[0m
+[0;32mI (6082) clock gusto: Show clock[0m
+[0;32mI (6082) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6092) clock gusto: Reset clock[0m
+[0;32mI (6092) clock gusto: Update clock[0m
+[0;32mI (6092) clockgusto_update: Get time[0m
+[0;32mI (6102) clockgusto_update: Set board time mask[0m
+[0;32mI (6102) clock gusto: Show clock[0m
+[0;32mI (6102) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6112) clock gusto: Reset clock[0m
+[0;32mI (6112) clock gusto: Update clock[0m
+[0;32mI (6112) clockgusto_update: Get time[0m
+[0;32mI (6122) clockgusto_update: Set board time mask[0m
+[0;32mI (6122) clock gusto: Show clock[0m
+[0;32mI (6122) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6132) clock gusto: Reset clock[0m
+[0;32mI (6132) clock gusto: Update clock[0m
+[0;32mI (6132) clockgusto_update: Get time[0m
+[0;32mI (6142) clockgusto_update: Set board time mask[0m
+[0;32mI (6142) clock gusto: Show clock[0m
+[0;32mI (6152) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6152) clock gusto: Reset clock[0m
+[0;32mI (6152) clock gusto: Update clock[0m
+[0;32mI (6162) clockgusto_update: Get time[0m
+[0;32mI (6162) clockgusto_update: Set board time mask[0m
+[0;32mI (6162) clock gusto: Show clock[0m
+[0;32mI (6172) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6172) clock gusto: Reset clock[0m
+[0;32mI (6172) clock gusto: Update clock[0m
+[0;32mI (6182) clockgusto_update: Get time[0m
+[0;32mI (6182) clockgusto_update: Set board time mask[0m
+[0;32mI (6182) clock gusto: Show clock[0m
+[0;32mI (6192) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6192) clock gusto: Reset clock[0m
+[0;32mI (6192) clock gusto: Update clock[0m
+[0;32mI (6202) clockgusto_update: Get time[0m
+[0;32mI (6202) clockgusto_update: Set board time mask[0m
+[0;32mI (6202) clock gusto: Show clock[0m
+[0;32mI (6212) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6212) clock gusto: Reset clock[0m
+[0;32mI (6212) clock gusto: Update clock[0m
+[0;32mI (6222) clockgusto_update: Get time[0m
+[0;32mI (6222) clockgusto_update: Set board time mask[0m
+[0;32mI (6222) clock gusto: Show clock[0m
+[0;32mI (6232) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6232) clock gusto: Reset clock[0m
+[0;32mI (6232) clock gusto: Update clock[0m
+[0;32mI (6242) clockgusto_update: Get time[0m
+[0;32mI (6242) clockgusto_update: Set board time mask[0m
+[0;32mI (6242) clock gusto: Show clock[0m
+[0;32mI (6252) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6252) clock gusto: Reset clock[0m
+[0;32mI (6252) clock gusto: Update clock[0m
+[0;32mI (6262) clockgusto_update: Get time[0m
+[0;32mI (6262) clockgusto_update: Set board time mask[0m
+[0;32mI (6272) clock gusto: Show clock[0m
+[0;32mI (6272) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6272) clock gusto: Reset clock[0m
+[0;32mI (6282) clock gusto: Update clock[0m
+[0;32mI (6282) clockgusto_update: Get time[0m
+[0;32mI (6282) clockgusto_update: Set board time mask[0m
+[0;32mI (6292) clock gusto: Show clock[0m
+[0;32mI (6292) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6292) clock gusto: Reset clock[0m
+[0;32mI (6302) clock gusto: Update clock[0m
+[0;32mI (6302) clockgusto_update: Get time[0m
+[0;32mI (6302) clockgusto_update: Set board time mask[0m
+[0;32mI (6312) clock gusto: Show clock[0m
+[0;32mI (6312) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6312) clock gusto: Reset clock[0m
+[0;32mI (6322) clock gusto: Update clock[0m
+[0;32mI (6322) clockgusto_update: Get time[0m
+[0;32mI (6322) clockgusto_update: Set board time mask[0m
+[0;32mI (6332) clock gusto: Show clock[0m
+[0;32mI (6332) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6332) clock gusto: Reset clock[0m
+[0;32mI (6342) clock gusto: Update clock[0m
+[0;32mI (6342) clockgusto_update: Get time[0m
+[0;32mI (6352) clockgusto_update: Set board time mask[0m
+[0;32mI (6352) clock gusto: Show clock[0m
+[0;32mI (6352) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6352) clock gusto: Reset clock[0m
+[0;32mI (6362) clock gusto: Update clock[0m
+[0;32mI (6362) clockgusto_update: Get time[0m
+[0;32mI (6372) clockgusto_update: Set board time mask[0m
+[0;32mI (6372) clock gusto: Show clock[0m
+[0;32mI (6372) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6382) clock gusto: Reset clock[0m
+[0;32mI (6382) clock gusto: Update clock[0m
+[0;32mI (6382) clockgusto_update: Get time[0m
+[0;32mI (6392) clockgusto_update: Set board time mask[0m
+[0;32mI (6392) clock gusto: Show clock[0m
+[0;32mI (6392) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6402) clock gusto: Reset clock[0m
+[0;32mI (6402) clock gusto: Update clock[0m
+[0;32mI (6402) clockgusto_update: Get time[0m
+[0;32mI (6412) clockgusto_update: Set board time mask[0m
+[0;32mI (6412) clock gusto: Show clock[0m
+[0;32mI (6412) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6422) clock gusto: Reset clock[0m
+[0;32mI (6422) clock gusto: Update clock[0m
+[0;32mI (6422) clockgusto_update: Get time[0m
+[0;32mI (6432) clockgusto_update: Set board time mask[0m
+[0;32mI (6432) clock gusto: Show clock[0m
+[0;32mI (6432) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6442) clock gusto: Reset clock[0m
+[0;32mI (6442) clock gusto: Update clock[0m
+[0;32mI (6442) clockgusto_update: Get time[0m
+[0;32mI (6452) clockgusto_update: Set board time mask[0m
+[0;32mI (6452) clock gusto: Show clock[0m
+[0;32mI (6452) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6462) clock gusto: Reset clock[0m
+[0;32mI (6462) clock gusto: Update clock[0m
+[0;32mI (6462) clockgusto_update: Get time[0m
+[0;32mI (6472) clockgusto_update: Set board time mask[0m
+[0;32mI (6472) clock gusto: Show clock[0m
+[0;32mI (6472) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6482) clock gusto: Reset clock[0m
+[0;32mI (6482) clock gusto: Update clock[0m
+[0;32mI (6482) clockgusto_update: Get time[0m
+[0;32mI (6492) clockgusto_update: Set board time mask[0m
+[0;32mI (6492) clock gusto: Show clock[0m
+[0;32mI (6492) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6502) clock gusto: Reset clock[0m
+[0;32mI (6502) clock gusto: Update clock[0m
+[0;32mI (6502) clockgusto_update: Get time[0m
+[0;32mI (6512) clockgusto_update: Set board time mask[0m
+[0;32mI (6512) clock gusto: Show clock[0m
+[0;32mI (6522) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6522) clock gusto: Reset clock[0m
+[0;32mI (6522) clock gusto: Update clock[0m
+[0;32mI (6532) clockgusto_update: Get time[0m
+[0;32mI (6532) clockgusto_update: Set board time mask[0m
+[0;32mI (6532) clock gusto: Show clock[0m
+[0;32mI (6542) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6542) clock gusto: Reset clock[0m
+[0;32mI (6542) clock gusto: Update clock[0m
+[0;32mI (6552) clockgusto_update: Get time[0m
+[0;32mI (6552) clockgusto_update: Set board time mask[0m
+[0;32mI (6552) clock gusto: Show clock[0m
+[0;32mI (6562) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6562) clock gusto: Reset clock[0m
+[0;32mI (6562) clock gusto: Update clock[0m
+[0;32mI (6572) clockgusto_update: Get time[0m
+[0;32mI (6572) clockgusto_update: Set board time mask[0m
+[0;32mI (6572) clock gusto: Show clock[0m
+[0;32mI (6582) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6582) clock gusto: Reset clock[0m
+[0;32mI (6582) clock gusto: Update clock[0m
+[0;32mI (6592) clockgusto_update: Get time[0m
+[0;32mI (6592) clockgusto_update: Set board time mask[0m
+[0;32mI (6592) clock gusto: Show clock[0m
+[0;32mI (6602) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6602) clock gusto: Reset clock[0m
+[0;32mI (6602) clock gusto: Update clock[0m
+[0;32mI (6612) clockgusto_update: Get time[0m
+[0;32mI (6612) clockgusto_update: Set board time mask[0m
+[0;32mI (6622) clock gusto: Show clock[0m
+[0;32mI (6622) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6622) clock gusto: Reset clock[0m
+[0;32mI (6632) clock gusto: Update clock[0m
+[0;32mI (6632) clockgusto_update: Get time[0m
+[0;32mI (6632) clockgusto_update: Set board time mask[0m
+[0;32mI (6642) clock gusto: Show clock[0m
+[0;32mI (6642) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6642) clock gusto: Reset clock[0m
+[0;32mI (6652) clock gusto: Update clock[0m
+[0;32mI (6652) clockgusto_update: Get time[0m
+[0;32mI (6652) clockgusto_update: Set board time mask[0m
+[0;32mI (6662) clock gusto: Show clock[0m
+[0;32mI (6662) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6662) clock gusto: Reset clock[0m
+[0;32mI (6672) clock gusto: Update clock[0m
+[0;32mI (6672) clockgusto_update: Get time[0m
+[0;32mI (6672) clockgusto_update: Set board time mask[0m
+[0;32mI (6682) clock gusto: Show clock[0m
+[0;32mI (6682) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6682) clock gusto: Reset clock[0m
+[0;32mI (6692) clock gusto: Update clock[0m
+[0;32mI (6692) clockgusto_update: Get time[0m
+[0;32mI (6702) clockgusto_update: Set board time mask[0m
+[0;32mI (6702) clock gusto: Show clock[0m
+[0;32mI (6702) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6702) clock gusto: Reset clock[0m
+[0;32mI (6712) clock gusto: Update clock[0m
+[0;32mI (6712) clockgusto_update: Get time[0m
+[0;32mI (6722) clockgusto_update: Set board time mask[0m
+[0;32mI (6722) clock gusto: Show clock[0m
+[0;32mI (6722) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6732) clock gusto: Reset clock[0m
+[0;32mI (6732) clock gusto: Update clock[0m
+[0;32mI (6732) clockgusto_update: Get time[0m
+[0;32mI (6742) clockgusto_update: Set board time mask[0m
+[0;32mI (6742) clock gusto: Show clock[0m
+[0;32mI (6742) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6752) clock gusto: Reset clock[0m
+[0;32mI (6752) clock gusto: Update clock[0m
+[0;32mI (6752) clockgusto_update: Get time[0m
+[0;32mI (6762) clockgusto_update: Set board time mask[0m
+[0;32mI (6762) clock gusto: Show clock[0m
+[0;32mI (6762) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6772) clock gusto: Reset clock[0m
+[0;32mI (6772) clock gusto: Update clock[0m
+[0;32mI (6772) clockgusto_update: Get time[0m
+[0;32mI (6782) clockgusto_update: Set board time mask[0m
+[0;32mI (6782) clock gusto: Show clock[0m
+[0;32mI (6782) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6792) clock gusto: Reset clock[0m
+[0;32mI (6792) clock gusto: Update clock[0m
+[0;32mI (6792) clockgusto_update: Get time[0m
+[0;32mI (6802) clockgusto_update: Set board time mask[0m
+[0;32mI (6802) clock gusto: Show clock[0m
+[0;32mI (6802) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6812) clock gusto: Reset clock[0m
+[0;32mI (6812) clock gusto: Update clock[0m
+[0;32mI (6812) clockgusto_update: Get time[0m
+[0;32mI (6822) clockgusto_update: Set board time mask[0m
+[0;32mI (6822) clock gusto: Show clock[0m
+[0;32mI (6822) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6832) clock gusto: Reset clock[0m
+[0;32mI (6832) clock gusto: Update clock[0m
+[0;32mI (6832) clockgusto_update: Get time[0m
+[0;32mI (6842) clockgusto_update: Set board time mask[0m
+[0;32mI (6842) clock gusto: Show clock[0m
+[0;32mI (6842) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6852) clock gusto: Reset clock[0m
+[0;32mI (6852) clock gusto: Update clock[0m
+[0;32mI (6852) clockgusto_update: Get time[0m
+[0;32mI (6862) clockgusto_update: Set board time mask[0m
+[0;32mI (6862) clock gusto: Show clock[0m
+[0;32mI (6872) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6872) clock gusto: Reset clock[0m
+[0;32mI (6872) clock gusto: Update clock[0m
+[0;32mI (6882) clockgusto_update: Get time[0m
+[0;32mI (6882) clockgusto_update: Set board time mask[0m
+[0;32mI (6882) clock gusto: Show clock[0m
+[0;32mI (6892) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6892) clock gusto: Reset clock[0m
+[0;32mI (6892) clock gusto: Update clock[0m
+[0;32mI (6902) clockgusto_update: Get time[0m
+[0;32mI (6902) clockgusto_update: Set board time mask[0m
+[0;32mI (6902) clock gusto: Show clock[0m
+[0;32mI (6912) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6912) clock gusto: Reset clock[0m
+[0;32mI (6912) clock gusto: Update clock[0m
+[0;32mI (6922) clockgusto_update: Get time[0m
+[0;32mI (6922) clockgusto_update: Set board time mask[0m
+[0;32mI (6922) clock gusto: Show clock[0m
+[0;32mI (6932) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6932) clock gusto: Reset clock[0m
+[0;32mI (6932) clock gusto: Update clock[0m
+[0;32mI (6942) clockgusto_update: Get time[0m
+[0;32mI (6942) clockgusto_update: Set board time mask[0m
+[0;32mI (6942) clock gusto: Show clock[0m
+[0;32mI (6952) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6952) clock gusto: Reset clock[0m
+[0;32mI (6952) clock gusto: Update clock[0m
+[0;32mI (6962) clockgusto_update: Get time[0m
+[0;32mI (6962) clockgusto_update: Set board time mask[0m
+[0;32mI (6972) clock gusto: Show clock[0m
+[0;32mI (6972) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6972) clock gusto: Reset clock[0m
+[0;32mI (6972) clock gusto: Update clock[0m
+[0;32mI (6982) clockgusto_update: Get time[0m
+[0;32mI (6982) clockgusto_update: Set board time mask[0m
+[0;32mI (6992) clock gusto: Show clock[0m
+[0;32mI (6992) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (6992) clock gusto: Reset clock[0m
+[0;32mI (7002) clock gusto: Update clock[0m
+[0;32mI (7002) clockgusto_update: Get time[0m
+[0;32mI (7002) clockgusto_update: Set board time mask[0m
+[0;32mI (7012) clock gusto: Show clock[0m
+[0;32mI (7012) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7012) clock gusto: Reset clock[0m
+[0;32mI (7022) clock gusto: Update clock[0m
+[0;32mI (7022) clockgusto_update: Get time[0m
+[0;32mI (7022) clockgusto_update: Set board time mask[0m
+[0;32mI (7032) clock gusto: Show clock[0m
+[0;32mI (7032) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7032) clock gusto: Reset clock[0m
+[0;32mI (7042) clock gusto: Update clock[0m
+[0;32mI (7042) clockgusto_update: Get time[0m
+[0;32mI (7042) clockgusto_update: Set board time mask[0m
+[0;32mI (7052) clock gusto: Show clock[0m
+[0;32mI (7052) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7052) clock gusto: Reset clock[0m
+[0;32mI (7062) clock gusto: Update clock[0m
+[0;32mI (7062) clockgusto_update: Get time[0m
+[0;32mI (7072) clockgusto_update: Set board time mask[0m
+[0;32mI (7072) clock gusto: Show clock[0m
+[0;32mI (7072) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7072) clock gusto: Reset clock[0m
+[0;32mI (7082) clock gusto: Update clock[0m
+[0;32mI (7082) clockgusto_update: Get time[0m
+[0;32mI (7092) clockgusto_update: Set board time mask[0m
+[0;32mI (7092) clock gusto: Show clock[0m
+[0;32mI (7092) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7102) clock gusto: Reset clock[0m
+[0;32mI (7102) clock gusto: Update clock[0m
+[0;32mI (7102) clockgusto_update: Get time[0m
+[0;32mI (7112) clockgusto_update: Set board time mask[0m
+[0;32mI (7112) clock gusto: Show clock[0m
+[0;32mI (7112) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7122) clock gusto: Reset clock[0m
+[0;32mI (7122) clock gusto: Update clock[0m
+[0;32mI (7122) clockgusto_update: Get time[0m
+[0;32mI (7132) clockgusto_update: Set board time mask[0m
+[0;32mI (7132) clock gusto: Show clock[0m
+[0;32mI (7132) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7142) clock gusto: Reset clock[0m
+[0;32mI (7142) clock gusto: Update clock[0m
+[0;32mI (7142) clockgusto_update: Get time[0m
+[0;32mI (7152) clockgusto_update: Set board time mask[0m
+[0;32mI (7152) clock gusto: Show clock[0m
+[0;32mI (7152) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7162) clock gusto: Reset clock[0m
+[0;32mI (7162) clock gusto: Update clock[0m
+[0;32mI (7162) clockgusto_update: Get time[0m
+[0;32mI (7172) clockgusto_update: Set board time mask[0m
+[0;32mI (7172) clock gusto: Show clock[0m
+[0;32mI (7172) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7182) clock gusto: Reset clock[0m
+[0;32mI (7182) clock gusto: Update clock[0m
+[0;32mI (7182) clockgusto_update: Get time[0m
+[0;32mI (7192) clockgusto_update: Set board time mask[0m
+[0;32mI (7192) clock gusto: Show clock[0m
+[0;32mI (7192) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7202) clock gusto: Reset clock[0m
+[0;32mI (7202) clock gusto: Update clock[0m
+[0;32mI (7202) clockgusto_update: Get time[0m
+[0;32mI (7212) clockgusto_update: Set board time mask[0m
+[0;32mI (7212) clock gusto: Show clock[0m
+[0;32mI (7212) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7222) clock gusto: Reset clock[0m
+[0;32mI (7222) clock gusto: Update clock[0m
+[0;32mI (7222) clockgusto_update: Get time[0m
+[0;32mI (7232) clockgusto_update: Set board time mask[0m
+[0;32mI (7232) clock gusto: Show clock[0m
+[0;32mI (7242) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7242) clock gusto: Reset clock[0m
+[0;32mI (7242) clock gusto: Update clock[0m
+[0;32mI (7252) clockgusto_update: Get time[0m
+[0;32mI (7252) clockgusto_update: Set board time mask[0m
+[0;32mI (7252) clock gusto: Show clock[0m
+[0;32mI (7262) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7262) clock gusto: Reset clock[0m
+[0;32mI (7262) clock gusto: Update clock[0m
+[0;32mI (7272) clockgusto_update: Get time[0m
+[0;32mI (7272) clockgusto_update: Set board time mask[0m
+[0;32mI (7272) clock gusto: Show clock[0m
+[0;32mI (7282) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7282) clock gusto: Reset clock[0m
+[0;32mI (7282) clock gusto: Update clock[0m
+[0;32mI (7292) clockgusto_update: Get time[0m
+[0;32mI (7292) clockgusto_update: Set board time mask[0m
+[0;32mI (7292) clock gusto: Show clock[0m
+[0;32mI (7302) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7302) clock gusto: Reset clock[0m
+[0;32mI (7302) clock gusto: Update clock[0m
+[0;32mI (7312) clockgusto_update: Get time[0m
+[0;32mI (7312) clockgusto_update: Set board time mask[0m
+[0;32mI (7312) clock gusto: Show clock[0m
+[0;32mI (7322) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7322) clock gusto: Reset clock[0m
+[0;32mI (7322) clock gusto: Update clock[0m
+[0;32mI (7332) clockgusto_update: Get time[0m
+[0;32mI (7332) clockgusto_update: Set board time mask[0m
+[0;32mI (7342) clock gusto: Show clock[0m
+[0;32mI (7342) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7342) clock gusto: Reset clock[0m
+[0;32mI (7352) clock gusto: Update clock[0m
+[0;32mI (7352) clockgusto_update: Get time[0m
+[0;32mI (7352) clockgusto_update: Set board time mask[0m
+[0;32mI (7362) clock gusto: Show clock[0m
+[0;32mI (7362) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7362) clock gusto: Reset clock[0m
+[0;32mI (7372) clock gusto: Update clock[0m
+[0;32mI (7372) clockgusto_update: Get time[0m
+[0;32mI (7372) clockgusto_update: Set board time mask[0m
+[0;32mI (7382) clock gusto: Show clock[0m
+[0;32mI (7382) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7382) clock gusto: Reset clock[0m
+[0;32mI (7392) clock gusto: Update clock[0m
+[0;32mI (7392) clockgusto_update: Get time[0m
+[0;32mI (7392) clockgusto_update: Set board time mask[0m
+[0;32mI (7402) clock gusto: Show clock[0m
+[0;32mI (7402) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7402) clock gusto: Reset clock[0m
+[0;32mI (7412) clock gusto: Update clock[0m
+[0;32mI (7412) clockgusto_update: Get time[0m
+[0;32mI (7422) clockgusto_update: Set board time mask[0m
+[0;32mI (7422) clock gusto: Show clock[0m
+[0;32mI (7422) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7422) clock gusto: Reset clock[0m
+[0;32mI (7432) clock gusto: Update clock[0m
+[0;32mI (7432) clockgusto_update: Get time[0m
+[0;32mI (7442) clockgusto_update: Set board time mask[0m
+[0;32mI (7442) clock gusto: Show clock[0m
+[0;32mI (7442) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7452) clock gusto: Reset clock[0m
+[0;32mI (7452) clock gusto: Update clock[0m
+[0;32mI (7452) clockgusto_update: Get time[0m
+[0;32mI (7462) clockgusto_update: Set board time mask[0m
+[0;32mI (7462) clock gusto: Show clock[0m
+[0;32mI (7462) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7472) clock gusto: Reset clock[0m
+[0;32mI (7472) clock gusto: Update clock[0m
+[0;32mI (7472) clockgusto_update: Get time[0m
+[0;32mI (7482) clockgusto_update: Set board time mask[0m
+[0;32mI (7482) clock gusto: Show clock[0m
+[0;32mI (7482) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7492) clock gusto: Reset clock[0m
+[0;32mI (7492) clock gusto: Update clock[0m
+[0;32mI (7492) clockgusto_update: Get time[0m
+[0;32mI (7502) clockgusto_update: Set board time mask[0m
+[0;32mI (7502) clock gusto: Show clock[0m
+[0;32mI (7502) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7512) clock gusto: Reset clock[0m
+[0;32mI (7512) clock gusto: Update clock[0m
+[0;32mI (7512) clockgusto_update: Get time[0m
+[0;32mI (7522) clockgusto_update: Set board time mask[0m
+[0;32mI (7522) clock gusto: Show clock[0m
+[0;32mI (7522) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7532) clock gusto: Reset clock[0m
+[0;32mI (7532) clock gusto: Update clock[0m
+[0;32mI (7532) clockgusto_update: Get time[0m
+[0;32mI (7542) clockgusto_update: Set board time mask[0m
+[0;32mI (7542) clock gusto: Show clock[0m
+[0;32mI (7542) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7552) clock gusto: Reset clock[0m
+[0;32mI (7552) clock gusto: Update clock[0m
+[0;32mI (7552) clockgusto_update: Get time[0m
+[0;32mI (7562) clockgusto_update: Set board time mask[0m
+[0;32mI (7562) clock gusto: Show clock[0m
+[0;32mI (7562) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7572) clock gusto: Reset clock[0m
+[0;32mI (7572) clock gusto: Update clock[0m
+[0;32mI (7572) clockgusto_update: Get time[0m
+[0;32mI (7582) clockgusto_update: Set board time mask[0m
+[0;32mI (7582) clock gusto: Show clock[0m
+[0;32mI (7592) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7592) clock gusto: Reset clock[0m
+[0;32mI (7592) clock gusto: Update clock[0m
+[0;32mI (7602) clockgusto_update: Get time[0m
+[0;32mI (7602) clockgusto_update: Set board time mask[0m
+[0;32mI (7602) clock gusto: Show clock[0m
+[0;32mI (7612) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7612) clock gusto: Reset clock[0m
+[0;32mI (7612) clock gusto: Update clock[0m
+[0;32mI (7622) clockgusto_update: Get time[0m
+[0;32mI (7622) clockgusto_update: Set board time mask[0m
+[0;32mI (7622) clock gusto: Show clock[0m
+[0;32mI (7632) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7632) clock gusto: Reset clock[0m
+[0;32mI (7632) clock gusto: Update clock[0m
+[0;32mI (7642) clockgusto_update: Get time[0m
+[0;32mI (7642) clockgusto_update: Set board time mask[0m
+[0;32mI (7642) clock gusto: Show clock[0m
+[0;32mI (7652) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7652) clock gusto: Reset clock[0m
+[0;32mI (7652) clock gusto: Update clock[0m
+[0;32mI (7662) clockgusto_update: Get time[0m
+[0;32mI (7662) clockgusto_update: Set board time mask[0m
+[0;32mI (7662) clock gusto: Show clock[0m
+[0;32mI (7672) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7672) clock gusto: Reset clock[0m
+[0;32mI (7672) clock gusto: Update clock[0m
+[0;32mI (7682) clockgusto_update: Get time[0m
+[0;32mI (7682) clockgusto_update: Set board time mask[0m
+[0;32mI (7692) clock gusto: Show clock[0m
+[0;32mI (7692) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7692) clock gusto: Reset clock[0m
+[0;32mI (7692) clock gusto: Update clock[0m
+[0;32mI (7702) clockgusto_update: Get time[0m
+[0;32mI (7702) clockgusto_update: Set board time mask[0m
+[0;32mI (7712) clock gusto: Show clock[0m
+[0;32mI (7712) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7712) clock gusto: Reset clock[0m
+[0;32mI (7722) clock gusto: Update clock[0m
+[0;32mI (7722) clockgusto_update: Get time[0m
+[0;32mI (7722) clockgusto_update: Set board time mask[0m
+[0;32mI (7732) clock gusto: Show clock[0m
+[0;32mI (7732) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7732) clock gusto: Reset clock[0m
+[0;32mI (7742) clock gusto: Update clock[0m
+[0;32mI (7742) clockgusto_update: Get time[0m
+[0;32mI (7742) clockgusto_update: Set board time mask[0m
+[0;32mI (7752) clock gusto: Show clock[0m
+[0;32mI (7752) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7752) clock gusto: Reset clock[0m
+[0;32mI (7762) clock gusto: Update clock[0m
+[0;32mI (7762) clockgusto_update: Get time[0m
+[0;32mI (7762) clockgusto_update: Set board time mask[0m
+[0;32mI (7772) clock gusto: Show clock[0m
+[0;32mI (7772) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7772) clock gusto: Reset clock[0m
+[0;32mI (7782) clock gusto: Update clock[0m
+[0;32mI (7782) clockgusto_update: Get time[0m
+[0;32mI (7792) clockgusto_update: Set board time mask[0m
+[0;32mI (7792) clock gusto: Show clock[0m
+[0;32mI (7792) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7792) clock gusto: Reset clock[0m
+[0;32mI (7802) clock gusto: Update clock[0m
+[0;32mI (7802) clockgusto_update: Get time[0m
+[0;32mI (7812) clockgusto_update: Set board time mask[0m
+[0;32mI (7812) clock gusto: Show clock[0m
+[0;32mI (7812) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7822) clock gusto: Reset clock[0m
+[0;32mI (7822) clock gusto: Update clock[0m
+[0;32mI (7822) clockgusto_update: Get time[0m
+[0;32mI (7832) clockgusto_update: Set board time mask[0m
+[0;32mI (7832) clock gusto: Show clock[0m
+[0;32mI (7832) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7842) clock gusto: Reset clock[0m
+[0;32mI (7842) clock gusto: Update clock[0m
+[0;32mI (7842) clockgusto_update: Get time[0m
+[0;32mI (7852) clockgusto_update: Set board time mask[0m
+[0;32mI (7852) clock gusto: Show clock[0m
+[0;32mI (7852) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7862) clock gusto: Reset clock[0m
+[0;32mI (7862) clock gusto: Update clock[0m
+[0;32mI (7862) clockgusto_update: Get time[0m
+[0;32mI (7872) clockgusto_update: Set board time mask[0m
+[0;32mI (7872) clock gusto: Show clock[0m
+[0;32mI (7872) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7882) clock gusto: Reset clock[0m
+[0;32mI (7882) clock gusto: Update clock[0m
+[0;32mI (7882) clockgusto_update: Get time[0m
+[0;32mI (7892) clockgusto_update: Set board time mask[0m
+[0;32mI (7892) clock gusto: Show clock[0m
+[0;32mI (7892) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7902) clock gusto: Reset clock[0m
+[0;32mI (7902) clock gusto: Update clock[0m
+[0;32mI (7902) clockgusto_update: Get time[0m
+[0;32mI (7912) clockgusto_update: Set board time mask[0m
+[0;32mI (7912) clock gusto: Show clock[0m
+[0;32mI (7912) clockgusto_show: FÜNF VOR SIEBEN [0m
+[0;32mI (7922) clock gusto: Reset clock[0m
+[0;32mI (7922) clock gusto: Update clock[0m
+[0;32mI (7922) clockgusto_update: Get time[0m

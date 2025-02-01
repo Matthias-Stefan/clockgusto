@@ -1,0 +1,86 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/ms/Documents/clockgusto/build/bootloader/esp-idf/esptool_py && /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ms/Documents/clockgusto/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/clock_gusto.c.obj
+/home/ms/Documents/clockgusto/main/clock_gusto.c: In function 'clockgusto_set_board_time_mask':
+/home/ms/Documents/clockgusto/main/clock_gusto.c:463:11: warning: comparison is always true due to limited range of data type [-Wtype-limits]
+  463 |     if (0 <= minutes && minutes < 5)
+      |           ^~
+/home/ms/Documents/clockgusto/main/clock_gusto.c:389:14: warning: unused variable 'time_mask' [-Wunused-variable]
+  389 |     uint32_t time_mask = state.clock_board.time_mask;
+      |              ^~~~~~~~~
+/home/ms/Documents/clockgusto/main/clock_gusto.c:382:13: warning: unused variable 'seconds' [-Wunused-variable]
+  382 |     uint8_t seconds = state.clock_board.seconds;
+      |             ^~~~~~~
+/home/ms/Documents/clockgusto/main/clock_gusto.c: In function 'clockgusto_show':
+/home/ms/Documents/clockgusto/main/clock_gusto.c:303:42: warning: iteration 38 invokes undefined behavior [-Waggressive-loop-optimizations]
+  303 |             if (state.clock_board.leds[j].on == true)
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/ms/Documents/clockgusto/main/clock_gusto.c:301:27: note: within this loop
+  301 |         for (int j = 0; j < CLOCKGUSTO_NUM_LEDS * CLOCKGUSTO_BYTES_PER_LED; j += CLOCKGUSTO_BYTES_PER_LED)
+/home/ms/Documents/clockgusto/main/clock_gusto.c: In function 'clockgusto_update':
+/home/ms/Documents/clockgusto/main/clock_gusto.c:250:31: warning: iteration 28 invokes undefined behavior [-Waggressive-loop-optimizations]
+  250 |         clock_word_boundary_t boundary = clock_board->clock_word_boundary_table[(clock_word_t)mask_idx];
+      |                               ^~~~~~~~
+/home/ms/Documents/clockgusto/main/clock_gusto.c:246:41: note: within this loop
+  246 |     for (uint8_t mask_idx = 0; mask_idx < CLOCKGUSTO_NUM_LEDS; ++mask_idx)
+/home/ms/Documents/clockgusto/main/clock_gusto.c: In function 'clockgusto_show':
+/home/ms/Documents/clockgusto/main/clock_gusto.c:295:53: warning: iteration 38 invokes undefined behavior [-Waggressive-loop-optimizations]
+  295 |             state.led_strip_pixels[led_idx * 3 + 0] = green;
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/home/ms/Documents/clockgusto/main/clock_gusto.c:291:22: note: within this loop
+  291 |              led_idx < CLOCKGUSTO_NUM_LEDS * CLOCKGUSTO_BYTES_PER_LED;
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable clockgusto.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.9.dev3
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ms/Documents/clockgusto/build/clockgusto.bin
+[9/10] cd /home/ms/Documents/clockgusto/build/esp-idf/esptool_py && /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ms/Documents/clockgusto/build/partition_table/partition-table.bin /home/ms/Documents/clockgusto/build/clockgusto.bin
+clockgusto.bin binary size 0x352e0 bytes. Smallest app partition is 0x100000 bytes. 0xcad20 bytes (79%) free.
+[9/10] cd /home/ms/esp/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/ms/esp/esp-idf -D "SERIAL_TOOL=/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python;;/home/ms/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ms/Documents/clockgusto/build -P /home/ms/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 clockgusto.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.dev3
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: cc:7b:5c:35:f5:24
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00045fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26112 bytes to 16485...
+Writing at 0x00001000... (50 %)
+Writing at 0x00007571... (100 %)
+Wrote 26112 bytes (16485 compressed) at 0x00001000 in 1.7 seconds (effective 122.4 kbit/s)...
+Hash of data verified.
+Compressed 217824 bytes to 118731...
+Writing at 0x00010000... (12 %)
+Writing at 0x0001c0bd... (25 %)
+Writing at 0x0002361b... (37 %)
+Writing at 0x00029718... (50 %)
+Writing at 0x000302f8... (62 %)
+Writing at 0x00037a33... (75 %)
+Writing at 0x0003d55e... (87 %)
+Writing at 0x00043885... (100 %)
+Wrote 217824 bytes (118731 compressed) at 0x00010000 in 10.5 seconds (effective 165.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 548.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,0 +1,1250 @@
+Command: /home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python /home/ms/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ms/Documents/clockgusto/build/clockgusto.elf /home/ms/Documents/clockgusto/build/bootloader/bootloader.elf -m '/home/ms/.espressif/python_env/idf5.5_py3.13_env/bin/python' '/home/ms/esp/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1346-gcc9fb5bd5e 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 12 2025 15:36:05[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0bef0h ( 48880) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001bf18 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (105) esp_image: segment 2: paddr=0001bf3c vaddr=3ffb0000 size=02634h (  9780) load[0m
+[0;32mI (112) esp_image: segment 3: paddr=0001e578 vaddr=40080000 size=01aa0h (  6816) load[0m
+[0;32mI (119) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=180ech ( 98540) map[0m
+[0;32mI (157) esp_image: segment 5: paddr=00038114 vaddr=40081aa0 size=0d2d4h ( 53972) load[0m
+[0;32mI (186) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (186) boot: Disabling RNG early entropy source...[0m
+[0;32mI (196) cpu_start: Multicore app[0m
+[0;32mI (204) cpu_start: Pro cpu start user code[0m
+[0;32mI (205) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (205) app_init: Application information:[0m
+[0;32mI (205) app_init: Project name:     clockgusto[0m
+[0;32mI (209) app_init: App version:      1[0m
+[0;32mI (212) app_init: Compile time:     Jan 12 2025 15:36:00[0m
+[0;32mI (217) app_init: ELF file SHA256:  7fb63b0e4...[0m
+[0;32mI (222) app_init: ESP-IDF:          v5.5-dev-1346-gcc9fb5bd5e[0m
+[0;32mI (227) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (231) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (235) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (239) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (245) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (250) heap_init: At 3FFB31E8 len 0002CE18 (179 KiB): DRAM[0m
+[0;32mI (255) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (261) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (266) heap_init: At 4008ED74 len 0001128C (68 KiB): IRAM[0m
+[0;32mI (273) spi_flash: detected chip: generic[0m
+[0;32mI (275) spi_flash: flash io: dio[0m
+[0;33mW (278) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (290) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (301) main_task: Started on CPU0[0m
+[0;32mI (311) main_task: Calling app_main()[0m
+[0;32mI (311) clock gusto: Create RMT TX channel[0m
+[0;32mI (311) clock gusto: Install led strip encoder[0m
+[0;32mI (311) clock gusto: Enable RMT TX channel[0m
+[0;32mI (311) clock gusto: Start LED rainbow chase[0m
+[0;32mI (321) clock gusto: Enable RTC DS3231[0m
+[0;32mI (321) clock gusto: Startup clockgusto[0m
+[0;32mI (331) clock gusto: Start clock[0m
+[0;32mI (331) clock gusto: Update clock[0m
+[0;32mI (331) clockgusto_update: Get time[0m
+[0;32mI (331) clockgusto_update: Set board time mask[0m
+[0;32mI (341) clockgusto_update: On[0m
+[0;32mI (341) clockgusto_update: On[0m
+[0;32mI (341) clockgusto_update: On[0m
+[0;32mI (351) clockgusto_update: On[0m
+[0;32mI (351) clockgusto_update: On[0m
+[0;32mI (351) clockgusto_update: On[0m
+[0;32mI (351) clockgusto_update: On[0m
+[0;32mI (361) clockgusto_update: On[0m
+[0;32mI (361) clockgusto_update: On[0m
+[0;32mI (361) clockgusto_update: On[0m
+[0;32mI (361) clockgusto_update: On[0m
+[0;32mI (371) clockgusto_update: On[0m
+[0;32mI (371) clockgusto_update: On[0m
+[0;32mI (371) clockgusto_update: On[0m
+[0;32mI (371) clockgusto_update: On[0m
+[0;32mI (381) clockgusto_update: On[0m
+[0;32mI (381) clock gusto: Show clock[0m
+[0;32mI (381) clock gusto: ZWANZIG[0m
+[0;32mI (391) clock gusto: NACH[0m
+[0;32mI (391) clock gusto: ELF[0m
+[0;32mI (1391) clock gusto: Reset clock[0m
+[0;32mI (1391) clock gusto: Update clock[0m
+[0;32mI (1391) clockgusto_update: Get time[0m
+[0;32mI (1391) clockgusto_update: Set board time mask[0m
+[0;32mI (1391) clockgusto_update: On[0m
+[0;32mI (1391) clockgusto_update: On[0m
+[0;32mI (1391) clockgusto_update: On[0m
+[0;32mI (1401) clockgusto_update: On[0m
+[0;32mI (1401) clockgusto_update: On[0m
+[0;32mI (1401) clockgusto_update: On[0m
+[0;32mI (1401) clockgusto_update: On[0m
+[0;32mI (1411) clockgusto_update: On[0m
+[0;32mI (1411) clockgusto_update: On[0m
+[0;32mI (1411) clockgusto_update: On[0m
+[0;32mI (1421) clockgusto_update: On[0m
+[0;32mI (1421) clockgusto_update: On[0m
+[0;32mI (1421) clockgusto_update: On[0m
+[0;32mI (1421) clockgusto_update: On[0m
+[0;32mI (1431) clockgusto_update: On[0m
+[0;32mI (1431) clockgusto_update: On[0m
+[0;32mI (1431) clock gusto: Show clock[0m
+[0;32mI (1441) clock gusto: ZWANZIG[0m
+[0;32mI (1441) clock gusto: NACH[0m
+[0;32mI (1441) clock gusto: ELF[0m
+[0;32mI (2451) clock gusto: Reset clock[0m
+[0;32mI (2451) clock gusto: Update clock[0m
+[0;32mI (2451) clockgusto_update: Get time[0m
+[0;32mI (2451) clockgusto_update: Set board time mask[0m
+[0;32mI (2451) clockgusto_update: On[0m
+[0;32mI (2451) clockgusto_update: On[0m
+[0;32mI (2451) clockgusto_update: On[0m
+[0;32mI (2461) clockgusto_update: On[0m
+[0;32mI (2461) clockgusto_update: On[0m
+[0;32mI (2461) clockgusto_update: On[0m
+[0;32mI (2461) clockgusto_update: On[0m
+[0;32mI (2471) clockgusto_update: On[0m
+[0;32mI (2471) clockgusto_update: On[0m
+[0;32mI (2471) clockgusto_update: On[0m
+[0;32mI (2481) clockgusto_update: On[0m
+[0;32mI (2481) clockgusto_update: On[0m
+[0;32mI (2481) clockgusto_update: On[0m
+[0;32mI (2481) clockgusto_update: On[0m
+[0;32mI (2491) clockgusto_update: On[0m
+[0;32mI (2491) clockgusto_update: On[0m
+[0;32mI (2491) clock gusto: Show clock[0m
+[0;32mI (2501) clock gusto: ZWANZIG[0m
+[0;32mI (2501) clock gusto: NACH[0m
+[0;32mI (2501) clock gusto: ELF[0m
+[0;32mI (3511) clock gusto: Reset clock[0m
+[0;32mI (3511) clock gusto: Update clock[0m
+[0;32mI (3511) clockgusto_update: Get time[0m
+[0;32mI (3511) clockgusto_update: Set board time mask[0m
+[0;32mI (3511) clockgusto_update: On[0m
+[0;32mI (3511) clockgusto_update: On[0m
+[0;32mI (3511) clockgusto_update: On[0m
+[0;32mI (3521) clockgusto_update: On[0m
+[0;32mI (3521) clockgusto_update: On[0m
+[0;32mI (3521) clockgusto_update: On[0m
+[0;32mI (3521) clockgusto_update: On[0m
+[0;32mI (3531) clockgusto_update: On[0m
+[0;32mI (3531) clockgusto_update: On[0m
+[0;32mI (3531) clockgusto_update: On[0m
+[0;32mI (3541) clockgusto_update: On[0m
+[0;32mI (3541) clockgusto_update: On[0m
+[0;32mI (3541) clockgusto_update: On[0m
+[0;32mI (3541) clockgusto_update: On[0m
+[0;32mI (3551) clockgusto_update: On[0m
+[0;32mI (3551) clockgusto_update: On[0m
+[0;32mI (3551) clock gusto: Show clock[0m
+[0;32mI (3561) clock gusto: ZWANZIG[0m
+[0;32mI (3561) clock gusto: NACH[0m
+[0;32mI (3561) clock gusto: ELF[0m
+[0;32mI (4571) clock gusto: Reset clock[0m
+[0;32mI (4571) clock gusto: Update clock[0m
+[0;32mI (4571) clockgusto_update: Get time[0m
+[0;32mI (4571) clockgusto_update: Set board time mask[0m
+[0;32mI (4571) clockgusto_update: On[0m
+[0;32mI (4571) clockgusto_update: On[0m
+[0;32mI (4571) clockgusto_update: On[0m
+[0;32mI (4581) clockgusto_update: On[0m
+[0;32mI (4581) clockgusto_update: On[0m
+[0;32mI (4581) clockgusto_update: On[0m
+[0;32mI (4581) clockgusto_update: On[0m
+[0;32mI (4591) clockgusto_update: On[0m
+[0;32mI (4591) clockgusto_update: On[0m
+[0;32mI (4591) clockgusto_update: On[0m
+[0;32mI (4601) clockgusto_update: On[0m
+[0;32mI (4601) clockgusto_update: On[0m
+[0;32mI (4601) clockgusto_update: On[0m
+[0;32mI (4601) clockgusto_update: On[0m
+[0;32mI (4611) clockgusto_update: On[0m
+[0;32mI (4611) clockgusto_update: On[0m
+[0;32mI (4611) clock gusto: Show clock[0m
+[0;32mI (4621) clock gusto: ZWANZIG[0m
+[0;32mI (4621) clock gusto: NACH[0m
+[0;32mI (4621) clock gusto: ELF[0m
+[0;32mI (5631) clock gusto: Reset clock[0m
+[0;32mI (5631) clock gusto: Update clock[0m
+[0;32mI (5631) clockgusto_update: Get time[0m
+[0;32mI (5631) clockgusto_update: Set board time mask[0m
+[0;32mI (5631) clockgusto_update: On[0m
+[0;32mI (5631) clockgusto_update: On[0m
+[0;32mI (5631) clockgusto_update: On[0m
+[0;32mI (5641) clockgusto_update: On[0m
+[0;32mI (5641) clockgusto_update: On[0m
+[0;32mI (5641) clockgusto_update: On[0m
+[0;32mI (5641) clockgusto_update: On[0m
+[0;32mI (5651) clockgusto_update: On[0m
+[0;32mI (5651) clockgusto_update: On[0m
+[0;32mI (5651) clockgusto_update: On[0m
+[0;32mI (5661) clockgusto_update: On[0m
+[0;32mI (5661) clockgusto_update: On[0m
+[0;32mI (5661) clockgusto_update: On[0m
+[0;32mI (5661) clockgusto_update: On[0m
+[0;32mI (5671) clockgusto_update: On[0m
+[0;32mI (5671) clockgusto_update: On[0m
+[0;32mI (5671) clock gusto: Show clock[0m
+[0;32mI (5681) clock gusto: ZWANZIG[0m
+[0;32mI (5681) clock gusto: NACH[0m
+[0;32mI (5681) clock gusto: ELF[0m
+[0;32mI (6691) clock gusto: Reset clock[0m
+[0;32mI (6691) clock gusto: Update clock[0m
+[0;32mI (6691) clockgusto_update: Get time[0m
+[0;32mI (6691) clockgusto_update: Set board time mask[0m
+[0;32mI (6691) clockgusto_update: On[0m
+[0;32mI (6691) clockgusto_update: On[0m
+[0;32mI (6691) clockgusto_update: On[0m
+[0;32mI (6701) clockgusto_update: On[0m
+[0;32mI (6701) clockgusto_update: On[0m
+[0;32mI (6701) clockgusto_update: On[0m
+[0;32mI (6701) clockgusto_update: On[0m
+[0;32mI (6711) clockgusto_update: On[0m
+[0;32mI (6711) clockgusto_update: On[0m
+[0;32mI (6711) clockgusto_update: On[0m
+[0;32mI (6721) clockgusto_update: On[0m
+[0;32mI (6721) clockgusto_update: On[0m
+[0;32mI (6721) clockgusto_update: On[0m
+[0;32mI (6721) clockgusto_update: On[0m
+[0;32mI (6731) clockgusto_update: On[0m
+[0;32mI (6731) clockgusto_update: On[0m
+[0;32mI (6731) clock gusto: Show clock[0m
+[0;32mI (6741) clock gusto: ZWANZIG[0m
+[0;32mI (6741) clock gusto: NACH[0m
+[0;32mI (6741) clock gusto: ELF[0m
+[0;32mI (7751) clock gusto: Reset clock[0m
+[0;32mI (7751) clock gusto: Update clock[0m
+[0;32mI (7751) clockgusto_update: Get time[0m
+[0;32mI (7751) clockgusto_update: Set board time mask[0m
+[0;32mI (7751) clockgusto_update: On[0m
+[0;32mI (7751) clockgusto_update: On[0m
+[0;32mI (7751) clockgusto_update: On[0m
+[0;32mI (7761) clockgusto_update: On[0m
+[0;32mI (7761) clockgusto_update: On[0m
+[0;32mI (7761) clockgusto_update: On[0m
+[0;32mI (7761) clockgusto_update: On[0m
+[0;32mI (7771) clockgusto_update: On[0m
+[0;32mI (7771) clockgusto_update: On[0m
+[0;32mI (7771) clockgusto_update: On[0m
+[0;32mI (7781) clockgusto_update: On[0m
+[0;32mI (7781) clockgusto_update: On[0m
+[0;32mI (7781) clockgusto_update: On[0m
+[0;32mI (7781) clockgusto_update: On[0m
+[0;32mI (7791) clockgusto_update: On[0m
+[0;32mI (7791) clockgusto_update: On[0m
+[0;32mI (7791) clock gusto: Show clock[0m
+[0;32mI (7801) clock gusto: ZWANZIG[0m
+[0;32mI (7801) clock gusto: NACH[0m
+[0;32mI (7801) clock gusto: ELF[0m
+[0;32mI (8811) clock gusto: Reset clock[0m
+[0;32mI (8811) clock gusto: Update clock[0m
+[0;32mI (8811) clockgusto_update: Get time[0m
+[0;32mI (8811) clockgusto_update: Set board time mask[0m
+[0;32mI (8811) clockgusto_update: On[0m
+[0;32mI (8811) clockgusto_update: On[0m
+[0;32mI (8811) clockgusto_update: On[0m
+[0;32mI (8821) clockgusto_update: On[0m
+[0;32mI (8821) clockgusto_update: On[0m
+[0;32mI (8821) clockgusto_update: On[0m
+[0;32mI (8821) clockgusto_update: On[0m
+[0;32mI (8831) clockgusto_update: On[0m
+[0;32mI (8831) clockgusto_update: On[0m
+[0;32mI (8831) clockgusto_update: On[0m
+[0;32mI (8841) clockgusto_update: On[0m
+[0;32mI (8841) clockgusto_update: On[0m
+[0;32mI (8841) clockgusto_update: On[0m
+[0;32mI (8841) clockgusto_update: On[0m
+[0;32mI (8851) clockgusto_update: On[0m
+[0;32mI (8851) clockgusto_update: On[0m
+[0;32mI (8851) clock gusto: Show clock[0m
+[0;32mI (8861) clock gusto: ZWANZIG[0m
+[0;32mI (8861) clock gusto: NACH[0m
+[0;32mI (8861) clock gusto: ELF[0m
+[0;32mI (9871) clock gusto: Reset clock[0m
+[0;32mI (9871) clock gusto: Update clock[0m
+[0;32mI (9871) clockgusto_update: Get time[0m
+[0;32mI (9871) clockgusto_update: Set board time mask[0m
+[0;32mI (9871) clockgusto_update: On[0m
+[0;32mI (9871) clockgusto_update: On[0m
+[0;32mI (9871) clockgusto_update: On[0m
+[0;32mI (9881) clockgusto_update: On[0m
+[0;32mI (9881) clockgusto_update: On[0m
+[0;32mI (9881) clockgusto_update: On[0m
+[0;32mI (9881) clockgusto_update: On[0m
+[0;32mI (9891) clockgusto_update: On[0m
+[0;32mI (9891) clockgusto_update: On[0m
+[0;32mI (9891) clockgusto_update: On[0m
+[0;32mI (9901) clockgusto_update: On[0m
+[0;32mI (9901) clockgusto_update: On[0m
+[0;32mI (9901) clockgusto_update: On[0m
+[0;32mI (9901) clockgusto_update: On[0m
+[0;32mI (9911) clockgusto_update: On[0m
+[0;32mI (9911) clockgusto_update: On[0m
+[0;32mI (9911) clock gusto: Show clock[0m
+[0;32mI (9921) clock gusto: ZWANZIG[0m
+[0;32mI (9921) clock gusto: NACH[0m
+[0;32mI (9921) clock gusto: ELF[0m
+[0;32mI (10931) clock gusto: Reset clock[0m
+[0;32mI (10931) clock gusto: Update clock[0m
+[0;32mI (10931) clockgusto_update: Get time[0m
+[0;32mI (10931) clockgusto_update: Set board time mask[0m
+[0;32mI (10931) clockgusto_update: On[0m
+[0;32mI (10931) clockgusto_update: On[0m
+[0;32mI (10931) clockgusto_update: On[0m
+[0;32mI (10941) clockgusto_update: On[0m
+[0;32mI (10941) clockgusto_update: On[0m
+[0;32mI (10941) clockgusto_update: On[0m
+[0;32mI (10951) clockgusto_update: On[0m
+[0;32mI (10951) clockgusto_update: On[0m
+[0;32mI (10951) clockgusto_update: On[0m
+[0;32mI (10951) clockgusto_update: On[0m
+[0;32mI (10961) clockgusto_update: On[0m
+[0;32mI (10961) clockgusto_update: On[0m
+[0;32mI (10961) clockgusto_update: On[0m
+[0;32mI (10971) clockgusto_update: On[0m
+[0;32mI (10971) clockgusto_update: On[0m
+[0;32mI (10971) clockgusto_update: On[0m
+[0;32mI (10971) clock gusto: Show clock[0m
+[0;32mI (10981) clock gusto: ZWANZIG[0m
+[0;32mI (10981) clock gusto: NACH[0m
+[0;32mI (10981) clock gusto: ELF[0m
+[0;32mI (11991) clock gusto: Reset clock[0m
+[0;32mI (11991) clock gusto: Update clock[0m
+[0;32mI (11991) clockgusto_update: Get time[0m
+[0;32mI (11991) clockgusto_update: Set board time mask[0m
+[0;32mI (11991) clockgusto_update: On[0m
+[0;32mI (11991) clockgusto_update: On[0m
+[0;32mI (11991) clockgusto_update: On[0m
+[0;32mI (12001) clockgusto_update: On[0m
+[0;32mI (12001) clockgusto_update: On[0m
+[0;32mI (12001) clockgusto_update: On[0m
+[0;32mI (12011) clockgusto_update: On[0m
+[0;32mI (12011) clockgusto_update: On[0m
+[0;32mI (12011) clockgusto_update: On[0m
+[0;32mI (12011) clockgusto_update: On[0m
+[0;32mI (12021) clockgusto_update: On[0m
+[0;32mI (12021) clockgusto_update: On[0m
+[0;32mI (12021) clockgusto_update: On[0m
+[0;32mI (12031) clockgusto_update: On[0m
+[0;32mI (12031) clockgusto_update: On[0m
+[0;32mI (12031) clockgusto_update: On[0m
+[0;32mI (12031) clock gusto: Show clock[0m
+[0;32mI (12041) clock gusto: ZWANZIG[0m
+[0;32mI (12041) clock gusto: NACH[0m
+[0;32mI (12041) clock gusto: ELF[0m
+[0;32mI (13051) clock gusto: Reset clock[0m
+[0;32mI (13051) clock gusto: Update clock[0m
+[0;32mI (13051) clockgusto_update: Get time[0m
+[0;32mI (13051) clockgusto_update: Set board time mask[0m
+[0;32mI (13051) clockgusto_update: On[0m
+[0;32mI (13051) clockgusto_update: On[0m
+[0;32mI (13051) clockgusto_update: On[0m
+[0;32mI (13061) clockgusto_update: On[0m
+[0;32mI (13061) clockgusto_update: On[0m
+[0;32mI (13061) clockgusto_update: On[0m
+[0;32mI (13071) clockgusto_update: On[0m
+[0;32mI (13071) clockgusto_update: On[0m
+[0;32mI (13071) clockgusto_update: On[0m
+[0;32mI (13071) clockgusto_update: On[0m
+[0;32mI (13081) clockgusto_update: On[0m
+[0;32mI (13081) clockgusto_update: On[0m
+[0;32mI (13081) clockgusto_update: On[0m
+[0;32mI (13091) clockgusto_update: On[0m
+[0;32mI (13091) clockgusto_update: On[0m
+[0;32mI (13091) clockgusto_update: On[0m
+[0;32mI (13091) clock gusto: Show clock[0m
+[0;32mI (13101) clock gusto: ZWANZIG[0m
+[0;32mI (13101) clock gusto: NACH[0m
+[0;32mI (13101) clock gusto: ELF[0m
+[0;32mI (14111) clock gusto: Reset clock[0m
+[0;32mI (14111) clock gusto: Update clock[0m
+[0;32mI (14111) clockgusto_update: Get time[0m
+[0;32mI (14111) clockgusto_update: Set board time mask[0m
+[0;32mI (14111) clockgusto_update: On[0m
+[0;32mI (14111) clockgusto_update: On[0m
+[0;32mI (14111) clockgusto_update: On[0m
+[0;32mI (14121) clockgusto_update: On[0m
+[0;32mI (14121) clockgusto_update: On[0m
+[0;32mI (14121) clockgusto_update: On[0m
+[0;32mI (14131) clockgusto_update: On[0m
+[0;32mI (14131) clockgusto_update: On[0m
+[0;32mI (14131) clockgusto_update: On[0m
+[0;32mI (14131) clockgusto_update: On[0m
+[0;32mI (14141) clockgusto_update: On[0m
+[0;32mI (14141) clockgusto_update: On[0m
+[0;32mI (14141) clockgusto_update: On[0m
+[0;32mI (14151) clockgusto_update: On[0m
+[0;32mI (14151) clockgusto_update: On[0m
+[0;32mI (14151) clockgusto_update: On[0m
+[0;32mI (14151) clock gusto: Show clock[0m
+[0;32mI (14161) clock gusto: ZWANZIG[0m
+[0;32mI (14161) clock gusto: NACH[0m
+[0;32mI (14161) clock gusto: ELF[0m
+[0;32mI (15171) clock gusto: Reset clock[0m
+[0;32mI (15171) clock gusto: Update clock[0m
+[0;32mI (15171) clockgusto_update: Get time[0m
+[0;32mI (15171) clockgusto_update: Set board time mask[0m
+[0;32mI (15171) clockgusto_update: On[0m
+[0;32mI (15171) clockgusto_update: On[0m
+[0;32mI (15171) clockgusto_update: On[0m
+[0;32mI (15181) clockgusto_update: On[0m
+[0;32mI (15181) clockgusto_update: On[0m
+[0;32mI (15181) clockgusto_update: On[0m
+[0;32mI (15191) clockgusto_update: On[0m
+[0;32mI (15191) clockgusto_update: On[0m
+[0;32mI (15191) clockgusto_update: On[0m
+[0;32mI (15191) clockgusto_update: On[0m
+[0;32mI (15201) clockgusto_update: On[0m
+[0;32mI (15201) clockgusto_update: On[0m
+[0;32mI (15201) clockgusto_update: On[0m
+[0;32mI (15211) clockgusto_update: On[0m
+[0;32mI (15211) clockgusto_update: On[0m
+[0;32mI (15211) clockgusto_update: On[0m
+[0;32mI (15211) clock gusto: Show clock[0m
+[0;32mI (15221) clock gusto: ZWANZIG[0m
+[0;32mI (15221) clock gusto: NACH[0m
+[0;32mI (15221) clock gusto: ELF[0m
+[0;32mI (16231) clock gusto: Reset clock[0m
+[0;32mI (16231) clock gusto: Update clock[0m
+[0;32mI (16231) clockgusto_update: Get time[0m
+[0;32mI (16231) clockgusto_update: Set board time mask[0m
+[0;32mI (16231) clockgusto_update: On[0m
+[0;32mI (16231) clockgusto_update: On[0m
+[0;32mI (16231) clockgusto_update: On[0m
+[0;32mI (16241) clockgusto_update: On[0m
+[0;32mI (16241) clockgusto_update: On[0m
+[0;32mI (16241) clockgusto_update: On[0m
+[0;32mI (16251) clockgusto_update: On[0m
+[0;32mI (16251) clockgusto_update: On[0m
+[0;32mI (16251) clockgusto_update: On[0m
+[0;32mI (16251) clockgusto_update: On[0m
+[0;32mI (16261) clockgusto_update: On[0m
+[0;32mI (16261) clockgusto_update: On[0m
+[0;32mI (16261) clockgusto_update: On[0m
+[0;32mI (16271) clockgusto_update: On[0m
+[0;32mI (16271) clockgusto_update: On[0m
+[0;32mI (16271) clockgusto_update: On[0m
+[0;32mI (16271) clock gusto: Show clock[0m
+[0;32mI (16281) clock gusto: ZWANZIG[0m
+[0;32mI (16281) clock gusto: NACH[0m
+[0;32mI (16281) clock gusto: ELF[0m
+[0;32mI (17291) clock gusto: Reset clock[0m
+[0;32mI (17291) clock gusto: Update clock[0m
+[0;32mI (17291) clockgusto_update: Get time[0m
+[0;32mI (17291) clockgusto_update: Set board time mask[0m
+[0;32mI (17291) clockgusto_update: On[0m
+[0;32mI (17291) clockgusto_update: On[0m
+[0;32mI (17291) clockgusto_update: On[0m
+[0;32mI (17301) clockgusto_update: On[0m
+[0;32mI (17301) clockgusto_update: On[0m
+[0;32mI (17301) clockgusto_update: On[0m
+[0;32mI (17311) clockgusto_update: On[0m
+[0;32mI (17311) clockgusto_update: On[0m
+[0;32mI (17311) clockgusto_update: On[0m
+[0;32mI (17311) clockgusto_update: On[0m
+[0;32mI (17321) clockgusto_update: On[0m
+[0;32mI (17321) clockgusto_update: On[0m
+[0;32mI (17321) clockgusto_update: On[0m
+[0;32mI (17331) clockgusto_update: On[0m
+[0;32mI (17331) clockgusto_update: On[0m
+[0;32mI (17331) clockgusto_update: On[0m
+[0;32mI (17331) clock gusto: Show clock[0m
+[0;32mI (17341) clock gusto: ZWANZIG[0m
+[0;32mI (17341) clock gusto: NACH[0m
+[0;32mI (17341) clock gusto: ELF[0m
+[0;32mI (18351) clock gusto: Reset clock[0m
+[0;32mI (18351) clock gusto: Update clock[0m
+[0;32mI (18351) clockgusto_update: Get time[0m
+[0;32mI (18351) clockgusto_update: Set board time mask[0m
+[0;32mI (18351) clockgusto_update: On[0m
+[0;32mI (18351) clockgusto_update: On[0m
+[0;32mI (18351) clockgusto_update: On[0m
+[0;32mI (18361) clockgusto_update: On[0m
+[0;32mI (18361) clockgusto_update: On[0m
+[0;32mI (18361) clockgusto_update: On[0m
+[0;32mI (18371) clockgusto_update: On[0m
+[0;32mI (18371) clockgusto_update: On[0m
+[0;32mI (18371) clockgusto_update: On[0m
+[0;32mI (18371) clockgusto_update: On[0m
+[0;32mI (18381) clockgusto_update: On[0m
+[0;32mI (18381) clockgusto_update: On[0m
+[0;32mI (18381) clockgusto_update: On[0m
+[0;32mI (18391) clockgusto_update: On[0m
+[0;32mI (18391) clockgusto_update: On[0m
+[0;32mI (18391) clockgusto_update: On[0m
+[0;32mI (18391) clock gusto: Show clock[0m
+[0;32mI (18401) clock gusto: ZWANZIG[0m
+[0;32mI (18401) clock gusto: NACH[0m
+[0;32mI (18401) clock gusto: ELF[0m
+[0;32mI (19411) clock gusto: Reset clock[0m
+[0;32mI (19411) clock gusto: Update clock[0m
+[0;32mI (19411) clockgusto_update: Get time[0m
+[0;32mI (19411) clockgusto_update: Set board time mask[0m
+[0;32mI (19411) clockgusto_update: On[0m
+[0;32mI (19411) clockgusto_update: On[0m
+[0;32mI (19411) clockgusto_update: On[0m
+[0;32mI (19421) clockgusto_update: On[0m
+[0;32mI (19421) clockgusto_update: On[0m
+[0;32mI (19421) clockgusto_update: On[0m
+[0;32mI (19431) clockgusto_update: On[0m
+[0;32mI (19431) clockgusto_update: On[0m
+[0;32mI (19431) clockgusto_update: On[0m
+[0;32mI (19431) clockgusto_update: On[0m
+[0;32mI (19441) clockgusto_update: On[0m
+[0;32mI (19441) clockgusto_update: On[0m
+[0;32mI (19441) clockgusto_update: On[0m
+[0;32mI (19451) clockgusto_update: On[0m
+[0;32mI (19451) clockgusto_update: On[0m
+[0;32mI (19451) clockgusto_update: On[0m
+[0;32mI (19451) clock gusto: Show clock[0m
+[0;32mI (19461) clock gusto: ZWANZIG[0m
+[0;32mI (19461) clock gusto: NACH[0m
+[0;32mI (19461) clock gusto: ELF[0m
+[0;32mI (20471) clock gusto: Reset clock[0m
+[0;32mI (20471) clock gusto: Update clock[0m
+[0;32mI (20471) clockgusto_update: Get time[0m
+[0;32mI (20471) clockgusto_update: Set board time mask[0m
+[0;32mI (20471) clockgusto_update: On[0m
+[0;32mI (20471) clockgusto_update: On[0m
+[0;32mI (20471) clockgusto_update: On[0m
+[0;32mI (20481) clockgusto_update: On[0m
+[0;32mI (20481) clockgusto_update: On[0m
+[0;32mI (20481) clockgusto_update: On[0m
+[0;32mI (20491) clockgusto_update: On[0m
+[0;32mI (20491) clockgusto_update: On[0m
+[0;32mI (20491) clockgusto_update: On[0m
+[0;32mI (20491) clockgusto_update: On[0m
+[0;32mI (20501) clockgusto_update: On[0m
+[0;32mI (20501) clockgusto_update: On[0m
+[0;32mI (20501) clockgusto_update: On[0m
+[0;32mI (20511) clockgusto_update: On[0m
+[0;32mI (20511) clockgusto_update: On[0m
+[0;32mI (20511) clockgusto_update: On[0m
+[0;32mI (20511) clock gusto: Show clock[0m
+[0;32mI (20521) clock gusto: ZWANZIG[0m
+[0;32mI (20521) clock gusto: NACH[0m
+[0;32mI (20521) clock gusto: ELF[0m
+[0;32mI (21531) clock gusto: Reset clock[0m
+[0;32mI (21531) clock gusto: Update clock[0m
+[0;32mI (21531) clockgusto_update: Get time[0m
+[0;32mI (21531) clockgusto_update: Set board time mask[0m
+[0;32mI (21531) clockgusto_update: On[0m
+[0;32mI (21531) clockgusto_update: On[0m
+[0;32mI (21531) clockgusto_update: On[0m
+[0;32mI (21541) clockgusto_update: On[0m
+[0;32mI (21541) clockgusto_update: On[0m
+[0;32mI (21541) clockgusto_update: On[0m
+[0;32mI (21551) clockgusto_update: On[0m
+[0;32mI (21551) clockgusto_update: On[0m
+[0;32mI (21551) clockgusto_update: On[0m
+[0;32mI (21551) clockgusto_update: On[0m
+[0;32mI (21561) clockgusto_update: On[0m
+[0;32mI (21561) clockgusto_update: On[0m
+[0;32mI (21561) clockgusto_update: On[0m
+[0;32mI (21571) clockgusto_update: On[0m
+[0;32mI (21571) clockgusto_update: On[0m
+[0;32mI (21571) clockgusto_update: On[0m
+[0;32mI (21571) clock gusto: Show clock[0m
+[0;32mI (21581) clock gusto: ZWANZIG[0m
+[0;32mI (21581) clock gusto: NACH[0m
+[0;32mI (21581) clock gusto: ELF[0m
+[0;32mI (22591) clock gusto: Reset clock[0m
+[0;32mI (22591) clock gusto: Update clock[0m
+[0;32mI (22591) clockgusto_update: Get time[0m
+[0;32mI (22591) clockgusto_update: Set board time mask[0m
+[0;32mI (22591) clockgusto_update: On[0m
+[0;32mI (22591) clockgusto_update: On[0m
+[0;32mI (22591) clockgusto_update: On[0m
+[0;32mI (22601) clockgusto_update: On[0m
+[0;32mI (22601) clockgusto_update: On[0m
+[0;32mI (22601) clockgusto_update: On[0m
+[0;32mI (22611) clockgusto_update: On[0m
+[0;32mI (22611) clockgusto_update: On[0m
+[0;32mI (22611) clockgusto_update: On[0m
+[0;32mI (22611) clockgusto_update: On[0m
+[0;32mI (22621) clockgusto_update: On[0m
+[0;32mI (22621) clockgusto_update: On[0m
+[0;32mI (22621) clockgusto_update: On[0m
+[0;32mI (22631) clockgusto_update: On[0m
+[0;32mI (22631) clockgusto_update: On[0m
+[0;32mI (22631) clockgusto_update: On[0m
+[0;32mI (22631) clock gusto: Show clock[0m
+[0;32mI (22641) clock gusto: ZWANZIG[0m
+[0;32mI (22641) clock gusto: NACH[0m
+[0;32mI (22641) clock gusto: ELF[0m
+[0;32mI (23651) clock gusto: Reset clock[0m
+[0;32mI (23651) clock gusto: Update clock[0m
+[0;32mI (23651) clockgusto_update: Get time[0m
+[0;32mI (23651) clockgusto_update: Set board time mask[0m
+[0;32mI (23651) clockgusto_update: On[0m
+[0;32mI (23651) clockgusto_update: On[0m
+[0;32mI (23651) clockgusto_update: On[0m
+[0;32mI (23661) clockgusto_update: On[0m
+[0;32mI (23661) clockgusto_update: On[0m
+[0;32mI (23661) clockgusto_update: On[0m
+[0;32mI (23671) clockgusto_update: On[0m
+[0;32mI (23671) clockgusto_update: On[0m
+[0;32mI (23671) clockgusto_update: On[0m
+[0;32mI (23671) clockgusto_update: On[0m
+[0;32mI (23681) clockgusto_update: On[0m
+[0;32mI (23681) clockgusto_update: On[0m
+[0;32mI (23681) clockgusto_update: On[0m
+[0;32mI (23691) clockgusto_update: On[0m
+[0;32mI (23691) clockgusto_update: On[0m
+[0;32mI (23691) clockgusto_update: On[0m
+[0;32mI (23691) clock gusto: Show clock[0m
+[0;32mI (23701) clock gusto: ZWANZIG[0m
+[0;32mI (23701) clock gusto: NACH[0m
+[0;32mI (23701) clock gusto: ELF[0m
+[0;32mI (24711) clock gusto: Reset clock[0m
+[0;32mI (24711) clock gusto: Update clock[0m
+[0;32mI (24711) clockgusto_update: Get time[0m
+[0;32mI (24711) clockgusto_update: Set board time mask[0m
+[0;32mI (24711) clockgusto_update: On[0m
+[0;32mI (24711) clockgusto_update: On[0m
+[0;32mI (24711) clockgusto_update: On[0m
+[0;32mI (24721) clockgusto_update: On[0m
+[0;32mI (24721) clockgusto_update: On[0m
+[0;32mI (24721) clockgusto_update: On[0m
+[0;32mI (24731) clockgusto_update: On[0m
+[0;32mI (24731) clockgusto_update: On[0m
+[0;32mI (24731) clockgusto_update: On[0m
+[0;32mI (24731) clockgusto_update: On[0m
+[0;32mI (24741) clockgusto_update: On[0m
+[0;32mI (24741) clockgusto_update: On[0m
+[0;32mI (24741) clockgusto_update: On[0m
+[0;32mI (24751) clockgusto_update: On[0m
+[0;32mI (24751) clockgusto_update: On[0m
+[0;32mI (24751) clockgusto_update: On[0m
+[0;32mI (24751) clock gusto: Show clock[0m
+[0;32mI (24761) clock gusto: ZWANZIG[0m
+[0;32mI (24761) clock gusto: NACH[0m
+[0;32mI (24761) clock gusto: ELF[0m
+[0;32mI (25771) clock gusto: Reset clock[0m
+[0;32mI (25771) clock gusto: Update clock[0m
+[0;32mI (25771) clockgusto_update: Get time[0m
+[0;32mI (25771) clockgusto_update: Set board time mask[0m
+[0;32mI (25771) clockgusto_update: On[0m
+[0;32mI (25771) clockgusto_update: On[0m
+[0;32mI (25771) clockgusto_update: On[0m
+[0;32mI (25781) clockgusto_update: On[0m
+[0;32mI (25781) clockgusto_update: On[0m
+[0;32mI (25781) clockgusto_update: On[0m
+[0;32mI (25791) clockgusto_update: On[0m
+[0;32mI (25791) clockgusto_update: On[0m
+[0;32mI (25791) clockgusto_update: On[0m
+[0;32mI (25791) clockgusto_update: On[0m
+[0;32mI (25801) clockgusto_update: On[0m
+[0;32mI (25801) clockgusto_update: On[0m
+[0;32mI (25801) clockgusto_update: On[0m
+[0;32mI (25811) clockgusto_update: On[0m
+[0;32mI (25811) clockgusto_update: On[0m
+[0;32mI (25811) clockgusto_update: On[0m
+[0;32mI (25811) clock gusto: Show clock[0m
+[0;32mI (25821) clock gusto: ZWANZIG[0m
+[0;32mI (25821) clock gusto: NACH[0m
+[0;32mI (25821) clock gusto: ELF[0m
+[0;32mI (26831) clock gusto: Reset clock[0m
+[0;32mI (26831) clock gusto: Update clock[0m
+[0;32mI (26831) clockgusto_update: Get time[0m
+[0;32mI (26831) clockgusto_update: Set board time mask[0m
+[0;32mI (26831) clockgusto_update: On[0m
+[0;32mI (26831) clockgusto_update: On[0m
+[0;32mI (26831) clockgusto_update: On[0m
+[0;32mI (26841) clockgusto_update: On[0m
+[0;32mI (26841) clockgusto_update: On[0m
+[0;32mI (26841) clockgusto_update: On[0m
+[0;32mI (26851) clockgusto_update: On[0m
+[0;32mI (26851) clockgusto_update: On[0m
+[0;32mI (26851) clockgusto_update: On[0m
+[0;32mI (26851) clockgusto_update: On[0m
+[0;32mI (26861) clockgusto_update: On[0m
+[0;32mI (26861) clockgusto_update: On[0m
+[0;32mI (26861) clockgusto_update: On[0m
+[0;32mI (26871) clockgusto_update: On[0m
+[0;32mI (26871) clockgusto_update: On[0m
+[0;32mI (26871) clockgusto_update: On[0m
+[0;32mI (26871) clock gusto: Show clock[0m
+[0;32mI (26881) clock gusto: ZWANZIG[0m
+[0;32mI (26881) clock gusto: NACH[0m
+[0;32mI (26881) clock gusto: ELF[0m
+[0;32mI (27891) clock gusto: Reset clock[0m
+[0;32mI (27891) clock gusto: Update clock[0m
+[0;32mI (27891) clockgusto_update: Get time[0m
+[0;32mI (27891) clockgusto_update: Set board time mask[0m
+[0;32mI (27891) clockgusto_update: On[0m
+[0;32mI (27891) clockgusto_update: On[0m
+[0;32mI (27891) clockgusto_update: On[0m
+[0;32mI (27901) clockgusto_update: On[0m
+[0;32mI (27901) clockgusto_update: On[0m
+[0;32mI (27901) clockgusto_update: On[0m
+[0;32mI (27911) clockgusto_update: On[0m
+[0;32mI (27911) clockgusto_update: On[0m
+[0;32mI (27911) clockgusto_update: On[0m
+[0;32mI (27911) clockgusto_update: On[0m
+[0;32mI (27921) clockgusto_update: On[0m
+[0;32mI (27921) clockgusto_update: On[0m
+[0;32mI (27921) clockgusto_update: On[0m
+[0;32mI (27931) clockgusto_update: On[0m
+[0;32mI (27931) clockgusto_update: On[0m
+[0;32mI (27931) clockgusto_update: On[0m
+[0;32mI (27931) clock gusto: Show clock[0m
+[0;32mI (27941) clock gusto: ZWANZIG[0m
+[0;32mI (27941) clock gusto: NACH[0m
+[0;32mI (27941) clock gusto: ELF[0m
+[0;32mI (28951) clock gusto: Reset clock[0m
+[0;32mI (28951) clock gusto: Update clock[0m
+[0;32mI (28951) clockgusto_update: Get time[0m
+[0;32mI (28951) clockgusto_update: Set board time mask[0m
+[0;32mI (28951) clockgusto_update: On[0m
+[0;32mI (28951) clockgusto_update: On[0m
+[0;32mI (28951) clockgusto_update: On[0m
+[0;32mI (28961) clockgusto_update: On[0m
+[0;32mI (28961) clockgusto_update: On[0m
+[0;32mI (28961) clockgusto_update: On[0m
+[0;32mI (28971) clockgusto_update: On[0m
+[0;32mI (28971) clockgusto_update: On[0m
+[0;32mI (28971) clockgusto_update: On[0m
+[0;32mI (28971) clockgusto_update: On[0m
+[0;32mI (28981) clockgusto_update: On[0m
+[0;32mI (28981) clockgusto_update: On[0m
+[0;32mI (28981) clockgusto_update: On[0m
+[0;32mI (28991) clockgusto_update: On[0m
+[0;32mI (28991) clockgusto_update: On[0m
+[0;32mI (28991) clockgusto_update: On[0m
+[0;32mI (28991) clock gusto: Show clock[0m
+[0;32mI (29001) clock gusto: ZWANZIG[0m
+[0;32mI (29001) clock gusto: NACH[0m
+[0;32mI (29001) clock gusto: ELF[0m
+[0;32mI (30011) clock gusto: Reset clock[0m
+[0;32mI (30011) clock gusto: Update clock[0m
+[0;32mI (30011) clockgusto_update: Get time[0m
+[0;32mI (30011) clockgusto_update: Set board time mask[0m
+[0;32mI (30011) clockgusto_update: On[0m
+[0;32mI (30011) clockgusto_update: On[0m
+[0;32mI (30011) clockgusto_update: On[0m
+[0;32mI (30021) clockgusto_update: On[0m
+[0;32mI (30021) clockgusto_update: On[0m
+[0;32mI (30021) clockgusto_update: On[0m
+[0;32mI (30031) clockgusto_update: On[0m
+[0;32mI (30031) clockgusto_update: On[0m
+[0;32mI (30031) clockgusto_update: On[0m
+[0;32mI (30031) clockgusto_update: On[0m
+[0;32mI (30041) clockgusto_update: On[0m
+[0;32mI (30041) clockgusto_update: On[0m
+[0;32mI (30041) clockgusto_update: On[0m
+[0;32mI (30051) clockgusto_update: On[0m
+[0;32mI (30051) clockgusto_update: On[0m
+[0;32mI (30051) clockgusto_update: On[0m
+[0;32mI (30051) clock gusto: Show clock[0m
+[0;32mI (30061) clock gusto: ZWANZIG[0m
+[0;32mI (30061) clock gusto: NACH[0m
+[0;32mI (30061) clock gusto: ELF[0m
+[0;32mI (31071) clock gusto: Reset clock[0m
+[0;32mI (31071) clock gusto: Update clock[0m
+[0;32mI (31071) clockgusto_update: Get time[0m
+[0;32mI (31071) clockgusto_update: Set board time mask[0m
+[0;32mI (31071) clockgusto_update: On[0m
+[0;32mI (31071) clockgusto_update: On[0m
+[0;32mI (31071) clockgusto_update: On[0m
+[0;32mI (31081) clockgusto_update: On[0m
+[0;32mI (31081) clockgusto_update: On[0m
+[0;32mI (31081) clockgusto_update: On[0m
+[0;32mI (31091) clockgusto_update: On[0m
+[0;32mI (31091) clockgusto_update: On[0m
+[0;32mI (31091) clockgusto_update: On[0m
+[0;32mI (31091) clockgusto_update: On[0m
+[0;32mI (31101) clockgusto_update: On[0m
+[0;32mI (31101) clockgusto_update: On[0m
+[0;32mI (31101) clockgusto_update: On[0m
+[0;32mI (31111) clockgusto_update: On[0m
+[0;32mI (31111) clockgusto_update: On[0m
+[0;32mI (31111) clockgusto_update: On[0m
+[0;32mI (31111) clock gusto: Show clock[0m
+[0;32mI (31121) clock gusto: ZWANZIG[0m
+[0;32mI (31121) clock gusto: NACH[0m
+[0;32mI (31121) clock gusto: ELF[0m
+[0;32mI (32131) clock gusto: Reset clock[0m
+[0;32mI (32131) clock gusto: Update clock[0m
+[0;32mI (32131) clockgusto_update: Get time[0m
+[0;32mI (32131) clockgusto_update: Set board time mask[0m
+[0;32mI (32131) clockgusto_update: On[0m
+[0;32mI (32131) clockgusto_update: On[0m
+[0;32mI (32131) clockgusto_update: On[0m
+[0;32mI (32141) clockgusto_update: On[0m
+[0;32mI (32141) clockgusto_update: On[0m
+[0;32mI (32141) clockgusto_update: On[0m
+[0;32mI (32151) clockgusto_update: On[0m
+[0;32mI (32151) clockgusto_update: On[0m
+[0;32mI (32151) clockgusto_update: On[0m
+[0;32mI (32151) clockgusto_update: On[0m
+[0;32mI (32161) clockgusto_update: On[0m
+[0;32mI (32161) clockgusto_update: On[0m
+[0;32mI (32161) clockgusto_update: On[0m
+[0;32mI (32171) clockgusto_update: On[0m
+[0;32mI (32171) clockgusto_update: On[0m
+[0;32mI (32171) clockgusto_update: On[0m
+[0;32mI (32171) clock gusto: Show clock[0m
+[0;32mI (32181) clock gusto: ZWANZIG[0m
+[0;32mI (32181) clock gusto: NACH[0m
+[0;32mI (32181) clock gusto: ELF[0m
+[0;32mI (33191) clock gusto: Reset clock[0m
+[0;32mI (33191) clock gusto: Update clock[0m
+[0;32mI (33191) clockgusto_update: Get time[0m
+[0;32mI (33191) clockgusto_update: Flip clock[0m
+[0;32mI (33191) clockgusto_update: Set board time mask[0m
+[0;32mI (33191) clockgusto_update: On[0m
+[0;32mI (33191) clockgusto_update: On[0m
+[0;32mI (33201) clockgusto_update: On[0m
+[0;32mI (33201) clockgusto_update: On[0m
+[0;32mI (33201) clockgusto_update: On[0m
+[0;32mI (33211) clockgusto_update: On[0m
+[0;32mI (33211) clockgusto_update: On[0m
+[0;32mI (33211) clockgusto_update: On[0m
+[0;32mI (33211) clockgusto_update: On[0m
+[0;32mI (33221) clockgusto_update: On[0m
+[0;32mI (33221) clockgusto_update: On[0m
+[0;32mI (33221) clockgusto_update: On[0m
+[0;32mI (33231) clockgusto_update: On[0m
+[0;32mI (33231) clockgusto_update: On[0m
+[0;32mI (33231) clockgusto_update: On[0m
+[0;32mI (33231) clockgusto_update: On[0m
+[0;32mI (33241) clockgusto_update: On[0m
+[0;32mI (33241) clock gusto: Show clock[0m
+[0;32mI (33241) clock gusto: ZWANZIG[0m
+[0;32mI (33251) clock gusto: NACH[0m
+[0;32mI (33251) clock gusto: ELF[0m
+[0;32mI (33251) clock gusto: min1[0m
+[0;32mI (34261) clock gusto: Reset clock[0m
+[0;32mI (34261) clock gusto: Update clock[0m
+[0;32mI (34261) clockgusto_update: Get time[0m
+[0;32mI (34261) clockgusto_update: Set board time mask[0m
+[0;32mI (34261) clockgusto_update: On[0m
+[0;32mI (34261) clockgusto_update: On[0m
+[0;32mI (34261) clockgusto_update: On[0m
+[0;32mI (34271) clockgusto_update: On[0m
+[0;32mI (34271) clockgusto_update: On[0m
+[0;32mI (34271) clockgusto_update: On[0m
+[0;32mI (34281) clockgusto_update: On[0m
+[0;32mI (34281) clockgusto_update: On[0m
+[0;32mI (34281) clockgusto_update: On[0m
+[0;32mI (34281) clockgusto_update: On[0m
+[0;32mI (34291) clockgusto_update: On[0m
+[0;32mI (34291) clockgusto_update: On[0m
+[0;32mI (34291) clockgusto_update: On[0m
+[0;32mI (34301) clockgusto_update: On[0m
+[0;32mI (34301) clockgusto_update: On[0m
+[0;32mI (34301) clockgusto_update: On[0m
+[0;32mI (34301) clockgusto_update: On[0m
+[0;32mI (34311) clock gusto: Show clock[0m
+[0;32mI (34311) clock gusto: ZWANZIG[0m
+[0;32mI (34311) clock gusto: NACH[0m
+[0;32mI (34321) clock gusto: ELF[0m
+[0;32mI (34321) clock gusto: min1[0m
+[0;32mI (35321) clock gusto: Reset clock[0m
+[0;32mI (35321) clock gusto: Update clock[0m
+[0;32mI (35321) clockgusto_update: Get time[0m
+[0;32mI (35321) clockgusto_update: Set board time mask[0m
+[0;32mI (35321) clockgusto_update: On[0m
+[0;32mI (35321) clockgusto_update: On[0m
+[0;32mI (35321) clockgusto_update: On[0m
+[0;32mI (35331) clockgusto_update: On[0m
+[0;32mI (35331) clockgusto_update: On[0m
+[0;32mI (35331) clockgusto_update: On[0m
+[0;32mI (35341) clockgusto_update: On[0m
+[0;32mI (35341) clockgusto_update: On[0m
+[0;32mI (35341) clockgusto_update: On[0m
+[0;32mI (35341) clockgusto_update: On[0m
+[0;32mI (35351) clockgusto_update: On[0m
+[0;32mI (35351) clockgusto_update: On[0m
+[0;32mI (35351) clockgusto_update: On[0m
+[0;32mI (35361) clockgusto_update: On[0m
+[0;32mI (35361) clockgusto_update: On[0m
+[0;32mI (35361) clockgusto_update: On[0m
+[0;32mI (35361) clockgusto_update: On[0m
+[0;32mI (35371) clock gusto: Show clock[0m
+[0;32mI (35371) clock gusto: ZWANZIG[0m
+[0;32mI (35371) clock gusto: NACH[0m
+[0;32mI (35381) clock gusto: ELF[0m
+[0;32mI (35381) clock gusto: min1[0m
+[0;32mI (36381) clock gusto: Reset clock[0m
+[0;32mI (36381) clock gusto: Update clock[0m
+[0;32mI (36381) clockgusto_update: Get time[0m
+[0;32mI (36381) clockgusto_update: Set board time mask[0m
+[0;32mI (36381) clockgusto_update: On[0m
+[0;32mI (36381) clockgusto_update: On[0m
+[0;32mI (36381) clockgusto_update: On[0m
+[0;32mI (36391) clockgusto_update: On[0m
+[0;32mI (36391) clockgusto_update: On[0m
+[0;32mI (36391) clockgusto_update: On[0m
+[0;32mI (36401) clockgusto_update: On[0m
+[0;32mI (36401) clockgusto_update: On[0m
+[0;32mI (36401) clockgusto_update: On[0m
+[0;32mI (36401) clockgusto_update: On[0m
+[0;32mI (36411) clockgusto_update: On[0m
+[0;32mI (36411) clockgusto_update: On[0m
+[0;32mI (36411) clockgusto_update: On[0m
+[0;32mI (36421) clockgusto_update: On[0m
+[0;32mI (36421) clockgusto_update: On[0m
+[0;32mI (36421) clockgusto_update: On[0m
+[0;32mI (36421) clockgusto_update: On[0m
+[0;32mI (36431) clock gusto: Show clock[0m
+[0;32mI (36431) clock gusto: ZWANZIG[0m
+[0;32mI (36431) clock gusto: NACH[0m
+[0;32mI (36441) clock gusto: ELF[0m
+[0;32mI (36441) clock gusto: min1[0m
+[0;32mI (37441) clock gusto: Reset clock[0m
+[0;32mI (37441) clock gusto: Update clock[0m
+[0;32mI (37441) clockgusto_update: Get time[0m
+[0;32mI (37441) clockgusto_update: Set board time mask[0m
+[0;32mI (37441) clockgusto_update: On[0m
+[0;32mI (37441) clockgusto_update: On[0m
+[0;32mI (37441) clockgusto_update: On[0m
+[0;32mI (37451) clockgusto_update: On[0m
+[0;32mI (37451) clockgusto_update: On[0m
+[0;32mI (37451) clockgusto_update: On[0m
+[0;32mI (37461) clockgusto_update: On[0m
+[0;32mI (37461) clockgusto_update: On[0m
+[0;32mI (37461) clockgusto_update: On[0m
+[0;32mI (37461) clockgusto_update: On[0m
+[0;32mI (37471) clockgusto_update: On[0m
+[0;32mI (37471) clockgusto_update: On[0m
+[0;32mI (37471) clockgusto_update: On[0m
+[0;32mI (37481) clockgusto_update: On[0m
+[0;32mI (37481) clockgusto_update: On[0m
+[0;32mI (37481) clockgusto_update: On[0m
+[0;32mI (37481) clockgusto_update: On[0m
+[0;32mI (37491) clock gusto: Show clock[0m
+[0;32mI (37491) clock gusto: ZWANZIG[0m
+[0;32mI (37491) clock gusto: NACH[0m
+[0;32mI (37501) clock gusto: ELF[0m
+[0;32mI (37501) clock gusto: min1[0m
+[0;32mI (38501) clock gusto: Reset clock[0m
+[0;32mI (38501) clock gusto: Update clock[0m
+[0;32mI (38501) clockgusto_update: Get time[0m
+[0;32mI (38501) clockgusto_update: Set board time mask[0m
+[0;32mI (38501) clockgusto_update: On[0m
+[0;32mI (38501) clockgusto_update: On[0m
+[0;32mI (38501) clockgusto_update: On[0m
+[0;32mI (38511) clockgusto_update: On[0m
+[0;32mI (38511) clockgusto_update: On[0m
+[0;32mI (38511) clockgusto_update: On[0m
+[0;32mI (38521) clockgusto_update: On[0m
+[0;32mI (38521) clockgusto_update: On[0m
+[0;32mI (38521) clockgusto_update: On[0m
+[0;32mI (38521) clockgusto_update: On[0m
+[0;32mI (38531) clockgusto_update: On[0m
+[0;32mI (38531) clockgusto_update: On[0m
+[0;32mI (38531) clockgusto_update: On[0m
+[0;32mI (38541) clockgusto_update: On[0m
+[0;32mI (38541) clockgusto_update: On[0m
+[0;32mI (38541) clockgusto_update: On[0m
+[0;32mI (38541) clockgusto_update: On[0m
+[0;32mI (38551) clock gusto: Show clock[0m
+[0;32mI (38551) clock gusto: ZWANZIG[0m
+[0;32mI (38551) clock gusto: NACH[0m
+[0;32mI (38561) clock gusto: ELF[0m
+[0;32mI (38561) clock gusto: min1[0m
+[0;32mI (39561) clock gusto: Reset clock[0m
+[0;32mI (39561) clock gusto: Update clock[0m
+[0;32mI (39561) clockgusto_update: Get time[0m
+[0;32mI (39561) clockgusto_update: Set board time mask[0m
+[0;32mI (39561) clockgusto_update: On[0m
+[0;32mI (39561) clockgusto_update: On[0m
+[0;32mI (39561) clockgusto_update: On[0m
+[0;32mI (39571) clockgusto_update: On[0m
+[0;32mI (39571) clockgusto_update: On[0m
+[0;32mI (39571) clockgusto_update: On[0m
+[0;32mI (39581) clockgusto_update: On[0m
+[0;32mI (39581) clockgusto_update: On[0m
+[0;32mI (39581) clockgusto_update: On[0m
+[0;32mI (39581) clockgusto_update: On[0m
+[0;32mI (39591) clockgusto_update: On[0m
+[0;32mI (39591) clockgusto_update: On[0m
+[0;32mI (39591) clockgusto_update: On[0m
+[0;32mI (39601) clockgusto_update: On[0m
+[0;32mI (39601) clockgusto_update: On[0m
+[0;32mI (39601) clockgusto_update: On[0m
+[0;32mI (39601) clockgusto_update: On[0m
+[0;32mI (39611) clock gusto: Show clock[0m
+[0;32mI (39611) clock gusto: ZWANZIG[0m
+[0;32mI (39611) clock gusto: NACH[0m
+[0;32mI (39621) clock gusto: ELF[0m
+[0;32mI (39621) clock gusto: min1[0m
+[0;32mI (40621) clock gusto: Reset clock[0m
+[0;32mI (40621) clock gusto: Update clock[0m
+[0;32mI (40621) clockgusto_update: Get time[0m
+[0;32mI (40621) clockgusto_update: Set board time mask[0m
+[0;32mI (40621) clockgusto_update: On[0m
+[0;32mI (40621) clockgusto_update: On[0m
+[0;32mI (40621) clockgusto_update: On[0m
+[0;32mI (40631) clockgusto_update: On[0m
+[0;32mI (40631) clockgusto_update: On[0m
+[0;32mI (40631) clockgusto_update: On[0m
+[0;32mI (40641) clockgusto_update: On[0m
+[0;32mI (40641) clockgusto_update: On[0m
+[0;32mI (40641) clockgusto_update: On[0m
+[0;32mI (40641) clockgusto_update: On[0m
+[0;32mI (40651) clockgusto_update: On[0m
+[0;32mI (40651) clockgusto_update: On[0m
+[0;32mI (40651) clockgusto_update: On[0m
+[0;32mI (40661) clockgusto_update: On[0m
+[0;32mI (40661) clockgusto_update: On[0m
+[0;32mI (40661) clockgusto_update: On[0m
+[0;32mI (40661) clockgusto_update: On[0m
+[0;32mI (40671) clock gusto: Show clock[0m
+[0;32mI (40671) clock gusto: ZWANZIG[0m
+[0;32mI (40671) clock gusto: NACH[0m
+[0;32mI (40681) clock gusto: ELF[0m
+[0;32mI (40681) clock gusto: min1[0m
+[0;32mI (41681) clock gusto: Reset clock[0m
+[0;32mI (41681) clock gusto: Update clock[0m
+[0;32mI (41681) clockgusto_update: Get time[0m
+[0;32mI (41681) clockgusto_update: Set board time mask[0m
+[0;32mI (41681) clockgusto_update: On[0m
+[0;32mI (41681) clockgusto_update: On[0m
+[0;32mI (41681) clockgusto_update: On[0m
+[0;32mI (41691) clockgusto_update: On[0m
+[0;32mI (41691) clockgusto_update: On[0m
+[0;32mI (41691) clockgusto_update: On[0m
+[0;32mI (41701) clockgusto_update: On[0m
+[0;32mI (41701) clockgusto_update: On[0m
+[0;32mI (41701) clockgusto_update: On[0m
+[0;32mI (41701) clockgusto_update: On[0m
+[0;32mI (41711) clockgusto_update: On[0m
+[0;32mI (41711) clockgusto_update: On[0m
+[0;32mI (41711) clockgusto_update: On[0m
+[0;32mI (41721) clockgusto_update: On[0m
+[0;32mI (41721) clockgusto_update: On[0m
+[0;32mI (41721) clockgusto_update: On[0m
+[0;32mI (41721) clockgusto_update: On[0m
+[0;32mI (41731) clock gusto: Show clock[0m
+[0;32mI (41731) clock gusto: ZWANZIG[0m
+[0;32mI (41731) clock gusto: NACH[0m
+[0;32mI (41741) clock gusto: ELF[0m
+[0;32mI (41741) clock gusto: min1[0m
+[0;32mI (42741) clock gusto: Reset clock[0m
+[0;32mI (42741) clock gusto: Update clock[0m
+[0;32mI (42741) clockgusto_update: Get time[0m
+[0;32mI (42741) clockgusto_update: Set board time mask[0m
+[0;32mI (42741) clockgusto_update: On[0m
+[0;32mI (42741) clockgusto_update: On[0m
+[0;32mI (42741) clockgusto_update: On[0m
+[0;32mI (42751) clockgusto_update: On[0m
+[0;32mI (42751) clockgusto_update: On[0m
+[0;32mI (42751) clockgusto_update: On[0m
+[0;32mI (42761) clockgusto_update: On[0m
+[0;32mI (42761) clockgusto_update: On[0m
+[0;32mI (42761) clockgusto_update: On[0m
+[0;32mI (42761) clockgusto_update: On[0m
+[0;32mI (42771) clockgusto_update: On[0m
+[0;32mI (42771) clockgusto_update: On[0m
+[0;32mI (42771) clockgusto_update: On[0m
+[0;32mI (42781) clockgusto_update: On[0m
+[0;32mI (42781) clockgusto_update: On[0m
+[0;32mI (42781) clockgusto_update: On[0m
+[0;32mI (42781) clockgusto_update: On[0m
+[0;32mI (42791) clock gusto: Show clock[0m
+[0;32mI (42791) clock gusto: ZWANZIG[0m
+[0;32mI (42791) clock gusto: NACH[0m
+[0;32mI (42801) clock gusto: ELF[0m
+[0;32mI (42801) clock gusto: min1[0m
+[0;32mI (43801) clock gusto: Reset clock[0m
+[0;32mI (43801) clock gusto: Update clock[0m
+[0;32mI (43801) clockgusto_update: Get time[0m
+[0;32mI (43801) clockgusto_update: Set board time mask[0m
+[0;32mI (43801) clockgusto_update: On[0m
+[0;32mI (43801) clockgusto_update: On[0m
+[0;32mI (43801) clockgusto_update: On[0m
+[0;32mI (43811) clockgusto_update: On[0m
+[0;32mI (43811) clockgusto_update: On[0m
+[0;32mI (43811) clockgusto_update: On[0m
+[0;32mI (43821) clockgusto_update: On[0m
+[0;32mI (43821) clockgusto_update: On[0m
+[0;32mI (43821) clockgusto_update: On[0m
+[0;32mI (43821) clockgusto_update: On[0m
+[0;32mI (43831) clockgusto_update: On[0m
+[0;32mI (43831) clockgusto_update: On[0m
+[0;32mI (43831) clockgusto_update: On[0m
+[0;32mI (43841) clockgusto_update: On[0m
+[0;32mI (43841) clockgusto_update: On[0m
+[0;32mI (43841) clockgusto_update: On[0m
+[0;32mI (43841) clockgusto_update: On[0m
+[0;32mI (43851) clock gusto: Show clock[0m
+[0;32mI (43851) clock gusto: ZWANZIG[0m
+[0;32mI (43851) clock gusto: NACH[0m
+[0;32mI (43861) clock gusto: ELF[0m
+[0;32mI (43861) clock gusto: min1[0m
+[0;32mI (44861) clock gusto: Reset clock[0m
+[0;32mI (44861) clock gusto: Update clock[0m
+[0;32mI (44861) clockgusto_update: Get time[0m
+[0;32mI (44861) clockgusto_update: Set board time mask[0m
+[0;32mI (44861) clockgusto_update: On[0m
+[0;32mI (44861) clockgusto_update: On[0m
+[0;32mI (44861) clockgusto_update: On[0m
+[0;32mI (44871) clockgusto_update: On[0m
+[0;32mI (44871) clockgusto_update: On[0m
+[0;32mI (44871) clockgusto_update: On[0m
+[0;32mI (44881) clockgusto_update: On[0m
+[0;32mI (44881) clockgusto_update: On[0m
+[0;32mI (44881) clockgusto_update: On[0m
+[0;32mI (44881) clockgusto_update: On[0m
+[0;32mI (44891) clockgusto_update: On[0m
+[0;32mI (44891) clockgusto_update: On[0m
+[0;32mI (44891) clockgusto_update: On[0m
+[0;32mI (44901) clockgusto_update: On[0m
+[0;32mI (44901) clockgusto_update: On[0m
+[0;32mI (44901) clockgusto_update: On[0m
+[0;32mI (44901) clockgusto_update: On[0m
+[0;32mI (44911) clock gusto: Show clock[0m
+[0;32mI (44911) clock gusto: ZWANZIG[0m
+[0;32mI (44911) clock gusto: NACH[0m
+[0;32mI (44921) clock gusto: ELF[0m
+[0;32mI (44921) clock gusto: min1[0m
+[0;32mI (45921) clock gusto: Reset clock[0m
+[0;32mI (45921) clock gusto: Update clock[0m
+[0;32mI (45921) clockgusto_update: Get time[0m
+[0;32mI (45921) clockgusto_update: Set board time mask[0m
+[0;32mI (45921) clockgusto_update: On[0m
+[0;32mI (45921) clockgusto_update: On[0m
+[0;32mI (45921) clockgusto_update: On[0m
+[0;32mI (45931) clockgusto_update: On[0m
+[0;32mI (45931) clockgusto_update: On[0m
+[0;32mI (45931) clockgusto_update: On[0m
+[0;32mI (45941) clockgusto_update: On[0m
+[0;32mI (45941) clockgusto_update: On[0m
+[0;32mI (45941) clockgusto_update: On[0m
+[0;32mI (45941) clockgusto_update: On[0m
+[0;32mI (45951) clockgusto_update: On[0m
+[0;32mI (45951) clockgusto_update: On[0m
+[0;32mI (45951) clockgusto_update: On[0m
+[0;32mI (45961) clockgusto_update: On[0m
+[0;32mI (45961) clockgusto_update: On[0m
+[0;32mI (45961) clockgusto_update: On[0m
+[0;32mI (45961) clockgusto_update: On[0m
+[0;32mI (45971) clock gusto: Show clock[0m
+[0;32mI (45971) clock gusto: ZWANZIG[0m
+[0;32mI (45971) clock gusto: NACH[0m
+[0;32mI (45981) clock gusto: ELF[0m
+[0;32mI (45981) clock gusto: min1[0m
+[0;32mI (46981) clock gusto: Reset clock[0m
+[0;32mI (46981) clock gusto: Update clock[0m
+[0;32mI (46981) clockgusto_update: Get time[0m
+[0;32mI (46981) clockgusto_update: Set board time mask[0m
+[0;32mI (46981) clockgusto_update: On[0m
+[0;32mI (46981) clockgusto_update: On[0m
+[0;32mI (46981) clockgusto_update: On[0m
+[0;32mI (46991) clockgusto_update: On[0m
+[0;32mI (46991) clockgusto_update: On[0m
+[0;32mI (46991) clockgusto_update: On[0m
+[0;32mI (47001) clockgusto_update: On[0m
+[0;32mI (47001) clockgusto_update: On[0m
+[0;32mI (47001) clockgusto_update: On[0m
+[0;32mI (47001) clockgusto_update: On[0m
+[0;32mI (47011) clockgusto_update: On[0m
+[0;32mI (47011) clockgusto_update: On[0m
+[0;32mI (47011) clockgusto_update: On[0m
+[0;32mI (47021) clockgusto_update: On[0m
+[0;32mI (47021) clockgusto_update: On[0m
+[0;32mI (47021) clockgusto_update: On[0m
+[0;32mI (47021) clockgusto_update: On[0m
+[0;32mI (47031) clock gusto: Show clock[0m
+[0;32mI (47031) clock gusto: ZWANZIG[0m
+[0;32mI (47031) clock gusto: NACH[0m
+[0;32mI (47041) clock gusto: ELF[0m
+[0;32mI (47041) clock gusto: min1[0m
+[0;32mI (48041) clock gusto: Reset clock[0m
+[0;32mI (48041) clock gusto: Update clock[0m
+[0;32mI (48041) clockgusto_update: Get time[0m
+[0;32mI (48041) clockgusto_update: Set board time mask[0m
+[0;32mI (48041) clockgusto_update: On[0m
+[0;32mI (48041) clockgusto_update: On[0m
+[0;32mI (48041) clockgusto_update: On[0m
+[0;32mI (48051) clockgusto_update: On[0m
+[0;32mI (48051) clockgusto_update: On[0m
+[0;32mI (48051) clockgusto_update: On[0m
+[0;32mI (48061) clockgusto_update: On[0m
+[0;32mI (48061) clockgusto_update: On[0m
+[0;32mI (48061) clockgusto_update: On[0m
+[0;32mI (48061) clockgusto_update: On[0m
+[0;32mI (48071) clockgusto_update: On[0m
+[0;32mI (48071) clockgusto_update: On[0m
+[0;32mI (48071) clockgusto_update: On[0m
+[0;32mI (48081) clockgusto_update: On[0m
+[0;32mI (48081) clockgusto_update: On[0m
+[0;32mI (48081) clockgusto_update: On[0m
+[0;32mI (48081) clockgusto_update: On[0m
+[0;32mI (48091) clock gusto: Show clock[0m
+[0;32mI (48091) clock gusto: ZWANZIG[0m
+[0;32mI (48091) clock gusto: NACH[0m
+[0;32mI (48101) clock gusto: ELF[0m
+[0;32mI (48101) clock gusto: min1[0m
+[0;32mI (49101) clock gusto: Reset clock[0m
+[0;32mI (49101) clock gusto: Update clock[0m
+[0;32mI (49101) clockgusto_update: Get time[0m
+[0;32mI (49101) clockgusto_update: Set board time mask[0m
+[0;32mI (49101) clockgusto_update: On[0m
+[0;32mI (49101) clockgusto_update: On[0m
+[0;32mI (49101) clockgusto_update: On[0m
+[0;32mI (49111) clockgusto_update: On[0m
+[0;32mI (49111) clockgusto_update: On[0m
+[0;32mI (49111) clockgusto_update: On[0m
+[0;32mI (49121) clockgusto_update: On[0m
+[0;32mI (49121) clockgusto_update: On[0m
+[0;32mI (49121) clockgusto_update: On[0m
+[0;32mI (49121) clockgusto_update: On[0m
+[0;32mI (49131) clockgusto_update: On[0m
+[0;32mI (49131) clockgusto_update: On[0m
+[0;32mI (49131) clockgusto_update: On[0m
+[0;32mI (49141) clockgusto_update: On[0m
+[0;32mI (49141) clockgusto_update: On[0m
+[0;32mI (49141) clockgusto_update: On[0m
+[0;32mI (49141) clockgusto_update: On[0m
+[0;32mI (49151) clock gusto: Show clock[0m
+[0;32mI (49151) clock gusto: ZWANZIG[0m
+[0;32mI (49151) clock gusto: NACH[0m
+[0;32mI (49161) clock gusto: ELF[0m
+[0;32mI (49161) clock gusto: min1[0m
+[0;32mI (50161) clock gusto: Reset clock[0m
+[0;32mI (50161) clock gusto: Update clock[0m
+[0;32mI (50161) clockgusto_update: Get time[0m
+[0;32mI (50161) clockgusto_update: Set board time mask[0m
+[0;32mI (50161) clockgusto_update: On[0m
+[0;32mI (50161) clockgusto_update: On[0m
+[0;32mI (50161) clockgusto_update: On[0m
+[0;32mI (50171) clockgusto_update: On[0m
+[0;32mI (50171) clockgusto_update: On[0m
+[0;32mI (50171) clockgusto_update: On[0m
+[0;32mI (50181) clockgusto_update: On[0m
+[0;32mI (50181) clockgusto_update: On[0m
+[0;32mI (50181) clockgusto_update: On[0m
+[0;32mI (50181) clockgusto_update: On[0m
+[0;32mI (50191) clockgusto_update: On[0m
+[0;32mI (50191) clockgusto_update: On[0m
+[0;32mI (50191) clockgusto_update: On[0m
+[0;32mI (50201) clockgusto_update: On[0m
+[0;32mI (50201) clockgusto_update: On[0m
+[0;32mI (50201) clockgusto_update: On[0m
+[0;32mI (50201) clockgusto_update: On[0m
+[0;32mI (50211) clock gusto: Show clock[0m
+[0;32mI (50211) clock gusto: ZWANZIG[0m
+[0;32mI (50211) clock gusto: NACH[0m
+[0;32mI (50221) clock gusto: ELF[0m
+[0;32mI (50221) clock gusto: min1[0m

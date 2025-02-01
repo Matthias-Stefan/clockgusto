@@ -16,7 +16,8 @@
 #include "esp_log.h"
 #include "driver/rmt_tx.h"
 
-#include "clock_gusto.h"
+#include "clockgusto.h"
+#include "clockgusto_wifi.h"
 #include "led_strip_encoder.h"
 #include "rtc_ds3231.h"
 
@@ -24,12 +25,12 @@
 #define TAG "clock gusto"
 #define RMT_LED_STRIP_RESOLUTION_HZ 10000000 
 #define RMT_LED_STRIP_GPIO_NUM      4
-#define CLOCKGUSTO_CHASE_SPEED_MS   10 
+#define CLOCKGUSTO_CHASE_SPEED_MS   10
 
 typedef struct _clockgusto_state_t
 {
     clock_board_t clock_board;
-    uint8_t led_strip_pixels[CLOCKGUSTO_NUM_LEDS * 3];
+    uint8_t led_strip_pixels[CLOCKGUSTO_NUM_LEDS * CLOCKGUSTO_BYTES_PER_LED];
 
     rmt_transmit_config_t tx_config;
     rmt_channel_handle_t led_chan;
@@ -38,10 +39,6 @@ typedef struct _clockgusto_state_t
 
 static clockgusto_state_t state;
 
-static void clockgusto_lock_leds();
-static void clockgusto_unlock_leds();
-static void clockgusto_lock_led(uint16_t index);
-static void clockgusto_lock_clock_word(clock_word_t clock_word);
 static void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t* r, uint32_t* g, uint32_t* b);
 static void clockgusto_set_board_time_mask();
 
@@ -80,12 +77,19 @@ void app_main(void)
     
     ESP_LOGI(TAG, "Startup clockgusto");
     clockgusto_startup();
-    
+   
+#if true
     const char* compile_time = __TIME__;
     uint8_t hours = (uint8_t)strtol(compile_time, NULL, 10);
     uint8_t minutes = (uint8_t)strtol(compile_time + 3, NULL, 10);
     uint8_t seconds = (uint8_t)strtol(compile_time + 6, NULL, 10);
     ESP_ERROR_CHECK(rtc_ds3231_set_time(hours, minutes, seconds));
+#else
+    int8_t hours = 7;
+    int8_t minutes = 13;
+    int8_t seconds = 00;
+    ESP_ERROR_CHECK(rtc_ds3231_set_time(hours, minutes, seconds));
+#endif
 
     state.clock_board.hours = hours;
     state.clock_board.minutes = minutes;
@@ -93,13 +97,13 @@ void app_main(void)
     ESP_LOGI(TAG, "Start clock");
     while (true) 
     {
-        ESP_LOGI(TAG, "Update clock");
+        //ESP_LOGI(TAG, "Update clock");
         clockgusto_update();
 
-        ESP_LOGI(TAG, "Show clock");
+        //ESP_LOGI(TAG, "Show clock");
         clockgusto_show();
 
-        ESP_LOGI(TAG, "Reset clock");
+        //ESP_LOGI(TAG, "Reset clock");
         clockgusto_reset();
     }
 }
@@ -224,15 +228,26 @@ void clockgusto_startup()
 
 void clockgusto_update()
 {
-    ESP_LOGI(__FUNCTION__, "Get time");
     clock_board_t* clock_board = &state.clock_board;
-    rtc_ds3231_get_time(&clock_board->hours, &clock_board->minutes, &clock_board->seconds); 
-    
-    ESP_LOGI(__FUNCTION__, "Set board time mask");
+    uint8_t hours, minutes, seconds; 
+    rtc_ds3231_get_time(&hours, &minutes, &seconds); 
+   
+    if (clock_board->hours != hours || clock_board->minutes != minutes)
+    {
+        clock_board->flip = true;
+        clock_board->hours = hours;
+        clock_board->minutes = minutes;
+        clock_board->seconds = seconds;
+    }
+
+    //ESP_LOGI(__FUNCTION__, "Set board time mask");
     clockgusto_set_board_time_mask();
 
-    ESP_LOGI(__FUNCTION__, "Unlock leds");
-    clockgusto_unlock_leds();
+    for (uint16_t led_idx = 0; led_idx < CLOCKGUSTO_NUM_LEDS; ++led_idx)
+    {
+        clock_board->leds[led_idx].on = false;
+    }
+
     for (uint8_t mask_idx = 0; mask_idx < CLOCKGUSTO_NUM_LEDS; ++mask_idx)
     {
         uint32_t mask = 0x0 | 1 << mask_idx;
@@ -245,29 +260,10 @@ void clockgusto_update()
                  led_idx < (boundary.index + boundary.size);
                  ++led_idx)
             {
-                led_t* led = &clock_board->leds[led_idx];
-                if (!led->locked)
-                {
-                    *(bool *)(led->on) = true;
-                }
-            }
-            clockgusto_lock_led((clock_word_t)mask_idx);
-        }
-        else 
-        {
-            for (uint16_t led_idx = boundary.index; 
-                 led_idx < (boundary.index + boundary.size);
-                 ++led_idx)
-            {
-                led_t* led = &clock_board->leds[led_idx];
-                if (!led->locked)
-                {
-                    *(bool *)(led->on) = false;
-                }
+                clock_board->leds[led_idx].on = true;
             }
         }
     }
-    clockgusto_unlock_leds();
 }
 
 void clockgusto_show()
@@ -278,61 +274,57 @@ void clockgusto_show()
     static uint16_t hue = 0;
     static uint16_t start_rgb = 0;
 
-    for (uint8_t mask_idx = 0; mask_idx < CLOCK_WORD_COUNT; ++mask_idx)
+    if (state.clock_board.flip == true)
     {
-       uint32_t mask = 0x0 | 1 << mask_idx;
-       uint32_t mask_result = mask & state.clock_board.time_mask;
 
-       if (mask_result > 0)
-       {
-            ESP_LOGI(TAG, "%s", clock_word_str[(uint32_t)mask_idx]);
-       }
-    }
-
-
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = i; j < CLOCKGUSTO_NUM_LEDS; j += 3) 
+        for (uint8_t mask_idx = 0; mask_idx < CLOCK_WORD_COUNT; ++mask_idx)
         {
-            if (state.clock_board.leds[j].on)
-            {
-                hue = j * 360 / CLOCKGUSTO_NUM_LEDS + start_rgb;
-                led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
-                state.led_strip_pixels[j * 3 + 0] = green;
-                state.led_strip_pixels[j * 3 + 1] = blue;
-                state.led_strip_pixels[j * 3 + 2] = red;
-            }
-            else 
-            {
-                led_strip_hsv2rgb(0, 0, 0, &red, &green, &blue);
-                state.led_strip_pixels[j * 3 + 0] = green;
-                state.led_strip_pixels[j * 3 + 1] = blue;
-                state.led_strip_pixels[j * 3 + 2] = red;
+            uint32_t mask = 0x0 | 1 << mask_idx;
+            uint32_t mask_result = mask & state.clock_board.time_mask;
 
+            if (mask_result > 0)
+            {    
+                const clock_word_str_t word = clock_word_str[(uint32_t)mask_idx];
+                ESP_LOGI(__FUNCTION__, "%s", word.data);
             }
         }
-
-        ESP_ERROR_CHECK(rmt_transmit(state.led_chan, 
-                                     state.led_encoder, 
-                                     state.led_strip_pixels, 
-                                     sizeof(state.led_strip_pixels), 
-                                     &state.tx_config));
-        ESP_ERROR_CHECK(rmt_tx_wait_all_done(state.led_chan, 
-                                             portMAX_DELAY));
-        vTaskDelay(pdMS_TO_TICKS(CLOCKGUSTO_CHASE_SPEED_MS));
-        memset(state.led_strip_pixels, 
-               0, 
-               sizeof(state.led_strip_pixels));
-        ESP_ERROR_CHECK(rmt_transmit(state.led_chan, 
-                                     state.led_encoder, 
-                                     state.led_strip_pixels, 
-                                     sizeof(state.led_strip_pixels), 
-                                     &state.tx_config));
-        ESP_ERROR_CHECK(rmt_tx_wait_all_done(state.led_chan, portMAX_DELAY));
-        vTaskDelay(pdMS_TO_TICKS(CLOCKGUSTO_CHASE_SPEED_MS));
+    }
+   
+    if (state.clock_board.flip == true)
+    {
+        for (int led_idx = 0; 
+             led_idx < CLOCKGUSTO_NUM_LEDS * CLOCKGUSTO_BYTES_PER_LED; 
+             led_idx += CLOCKGUSTO_BYTES_PER_LED)
+        {
+            led_strip_hsv2rgb(0, 0, 0, &red, &green, &blue);
+            state.led_strip_pixels[led_idx + 0] = green;
+            state.led_strip_pixels[led_idx + 1] = blue;
+            state.led_strip_pixels[led_idx + 2] = red;
+        }
     }
 
-    start_rgb += 60;
+    for (int led_idx = 0; led_idx < CLOCKGUSTO_NUM_LEDS; led_idx += 1) 
+    {
+        if (state.clock_board.leds[led_idx].on == true)
+        {
+            hue = led_idx * 360 / CLOCKGUSTO_NUM_LEDS + start_rgb;
+            led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
+            int color_offset = led_idx * CLOCKGUSTO_BYTES_PER_LED; 
+            state.led_strip_pixels[color_offset + 0] = green;
+            state.led_strip_pixels[color_offset + 1] = blue;
+            state.led_strip_pixels[color_offset + 2] = red;
+        }
+    }
+
+    ESP_ERROR_CHECK(rmt_transmit(state.led_chan, 
+                                 state.led_encoder, 
+                                 state.led_strip_pixels, 
+                                 sizeof(state.led_strip_pixels), 
+                                 &state.tx_config));
+
+    ESP_ERROR_CHECK(rmt_tx_wait_all_done(state.led_chan, portMAX_DELAY));
+    vTaskDelay(pdMS_TO_TICKS(20));
+    start_rgb += 1;
 }
 
 void clockgusto_reset()
@@ -341,37 +333,8 @@ void clockgusto_reset()
     {
         state.clock_board.leds[led_idx].on = false;
     }
-}
-
-static void clockgusto_lock_leds() 
-{
-    for (uint16_t led_idx = 0; led_idx < CLOCKGUSTO_NUM_LEDS; ++led_idx)
-    {
-        led_t *led = &state.clock_board.leds[led_idx];
-        led->locked = true;
-    }
-}
-
-static void clockgusto_unlock_leds()
-{
-    for (uint16_t led_idx = 0; led_idx < CLOCKGUSTO_NUM_LEDS; ++led_idx)
-    {
-        state.clock_board.leds[led_idx].on = false;
-    }
-}
-
-static void clockgusto_lock_clock_word(clock_word_t clock_word)
-{    
-    clock_word_boundary_t boundary = state.clock_board.clock_word_boundary_table[clock_word];
-    for (uint16_t led_idx = boundary.index; led_idx < (boundary.index + boundary.size);  ++led_idx)
-    {
-        state.clock_board.leds[led_idx].on = true;
-    }
-}
-
-static void clockgusto_lock_led(uint16_t index)
-{
-    state.clock_board.leds[index].on = true;
+    
+    state.clock_board.flip = false;
 }
 
 static void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t* r, uint32_t* g, uint32_t* b)
@@ -425,15 +388,14 @@ static void clockgusto_set_board_time_mask()
     uint8_t hours = state.clock_board.hours;
     uint8_t minutes = state.clock_board.minutes;
     uint8_t seconds = state.clock_board.seconds;
-    
+    (void)seconds;
+
     if (!(minutes < 15 || (20 <= minutes&& minutes < 25))) 
     {
         hours = (hours + 1) % 24; 
     }
 
-    uint32_t time_mask = state.clock_board.time_mask;
     state.clock_board.time_mask = 0x0;
-
     switch (hours)
     {
         case 0:
@@ -555,7 +517,6 @@ static void clockgusto_set_board_time_mask()
     }
     else if (45 <= minutes && minutes < 50)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_VIERTEL;
         state.clock_board.time_mask |= 1 << CLOCK_WORD_DREIVIERTEL;
     }
     else if (50 <= minutes && minutes < 55)
