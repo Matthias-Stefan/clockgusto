@@ -1,10 +1,14 @@
 /* ========================================================================
    $Project: Clock Gusto $
    $Date: 12.01.2025 $
-  $Revision: $
+   $Revision: $
    $Creator: Matthias Stefan $
    $Version: 2.0.0 $
    ======================================================================== */
+
+/** sudo chmod a+rw /dev/ttyUSB0
+ *  idf.py -p /dev/ttyUSB0 flash -b 115200 
+ *  idf.py -p /dev/ttyUSBO monitor */
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -37,15 +41,21 @@ typedef struct _clockgusto_state_t
     rmt_encoder_handle_t led_encoder;
 } clockgusto_state_t;
 
-static clockgusto_state_t state;
+clockgusto_state_t* state = NULL;
 
 static void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t* r, uint32_t* g, uint32_t* b);
 static void clockgusto_set_board_time_mask();
 
 void app_main(void)
 {
+    state = (clockgusto_state_t *)malloc(sizeof(clockgusto_state_t));
+    if (!state)
+    {
+        ESP_LOGE(__FUNCTION__, "poor allocation. global structure cannot be created.");
+    }
+
     ESP_LOGI(TAG, "Create RMT TX channel");
-    state.led_chan = NULL;
+    state->led_chan = NULL;
     rmt_tx_channel_config_t tx_chan_config = {
         .clk_src = RMT_CLK_SRC_DEFAULT, // select source clock
         .gpio_num = RMT_LED_STRIP_GPIO_NUM,
@@ -53,20 +63,20 @@ void app_main(void)
         .resolution_hz = RMT_LED_STRIP_RESOLUTION_HZ,
         .trans_queue_depth = 4, // set the number of transactions that can be pending in the background
     };
-    ESP_ERROR_CHECK(rmt_new_tx_channel(&tx_chan_config, &state.led_chan));
+    ESP_ERROR_CHECK(rmt_new_tx_channel(&tx_chan_config, &state->led_chan));
 
     ESP_LOGI(TAG, "Install led strip encoder");
-    state.led_encoder = NULL;
+    state->led_encoder = NULL;
     led_strip_encoder_config_t encoder_config = {
         .resolution = RMT_LED_STRIP_RESOLUTION_HZ,
     };
-    ESP_ERROR_CHECK(rmt_new_led_strip_encoder(&encoder_config, &state.led_encoder));
+    ESP_ERROR_CHECK(rmt_new_led_strip_encoder(&encoder_config, &state->led_encoder));
 
     ESP_LOGI(TAG, "Enable RMT TX channel");
-    ESP_ERROR_CHECK(rmt_enable(state.led_chan));
+    ESP_ERROR_CHECK(rmt_enable(state->led_chan));
 
     ESP_LOGI(TAG, "Start LED rainbow chase");
-    state.tx_config = (rmt_transmit_config_t){
+    state->tx_config = (rmt_transmit_config_t){
         .loop_count = 0,
     };
 
@@ -85,32 +95,34 @@ void app_main(void)
     uint8_t seconds = (uint8_t)strtol(compile_time + 6, NULL, 10);
     ESP_ERROR_CHECK(rtc_ds3231_set_time(hours, minutes, seconds));
 #else
-    int8_t hours = 7;
-    int8_t minutes = 13;
+    int8_t hours = 11;
+    int8_t minutes = 10;
     int8_t seconds = 00;
     ESP_ERROR_CHECK(rtc_ds3231_set_time(hours, minutes, seconds));
 #endif
 
-    state.clock_board.hours = hours;
-    state.clock_board.minutes = minutes;
-    state.clock_board.seconds = seconds;
+    state->clock_board.hours = hours;
+    state->clock_board.minutes = minutes;
+    state->clock_board.seconds = seconds;
     ESP_LOGI(TAG, "Start clock");
     while (true) 
     {
-        //ESP_LOGI(TAG, "Update clock");
+        ESP_LOGI(TAG, "Update clock");
         clockgusto_update();
 
-        //ESP_LOGI(TAG, "Show clock");
+        ESP_LOGI(TAG, "Show clock");
         clockgusto_show();
 
         //ESP_LOGI(TAG, "Reset clock");
-        clockgusto_reset();
+        //clockgusto_reset();
+        
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
 
 void clockgusto_startup()
 {
-    clock_board_t* clock_board = &state.clock_board;
+    clock_board_t* clock_board = &state->clock_board;
 
     clock_board->clock_word_boundary_table[CLOCK_WORD_ES] = (clock_word_boundary_t){  
         .index = 0,
@@ -228,7 +240,8 @@ void clockgusto_startup()
 
 void clockgusto_update()
 {
-    clock_board_t* clock_board = &state.clock_board;
+    ESP_LOGI(__FUNCTION__, "invoked");
+    clock_board_t* clock_board = &state->clock_board;
     uint8_t hours, minutes, seconds; 
     rtc_ds3231_get_time(&hours, &minutes, &seconds); 
    
@@ -240,7 +253,6 @@ void clockgusto_update()
         clock_board->seconds = seconds;
     }
 
-    //ESP_LOGI(__FUNCTION__, "Set board time mask");
     clockgusto_set_board_time_mask();
 
     for (uint16_t led_idx = 0; led_idx < CLOCKGUSTO_NUM_LEDS; ++led_idx)
@@ -248,7 +260,7 @@ void clockgusto_update()
         clock_board->leds[led_idx].on = false;
     }
 
-    for (uint8_t mask_idx = 0; mask_idx < CLOCKGUSTO_NUM_LEDS; ++mask_idx)
+    for (uint8_t mask_idx = 0; mask_idx < CLOCK_WORD_COUNT; ++mask_idx)
     {
         uint32_t mask = 0x0 | 1 << mask_idx;
         uint32_t mask_result = mask & clock_board->time_mask;
@@ -274,13 +286,13 @@ void clockgusto_show()
     static uint16_t hue = 0;
     static uint16_t start_rgb = 0;
 
-    if (state.clock_board.flip == true)
+    ESP_LOGI(__FUNCTION__, "prob1");
+    if (state->clock_board.flip == true)
     {
-
         for (uint8_t mask_idx = 0; mask_idx < CLOCK_WORD_COUNT; ++mask_idx)
         {
             uint32_t mask = 0x0 | 1 << mask_idx;
-            uint32_t mask_result = mask & state.clock_board.time_mask;
+            uint32_t mask_result = mask & state->clock_board.time_mask;
 
             if (mask_result > 0)
             {    
@@ -290,51 +302,54 @@ void clockgusto_show()
         }
     }
    
-    if (state.clock_board.flip == true)
+    ESP_LOGI(__FUNCTION__, "prob2");
+    if (state->clock_board.flip == true)
     {
         for (int led_idx = 0; 
              led_idx < CLOCKGUSTO_NUM_LEDS * CLOCKGUSTO_BYTES_PER_LED; 
              led_idx += CLOCKGUSTO_BYTES_PER_LED)
         {
             led_strip_hsv2rgb(0, 0, 0, &red, &green, &blue);
-            state.led_strip_pixels[led_idx + 0] = green;
-            state.led_strip_pixels[led_idx + 1] = blue;
-            state.led_strip_pixels[led_idx + 2] = red;
+            state->led_strip_pixels[led_idx + 0] = green;
+            state->led_strip_pixels[led_idx + 1] = blue;
+            state->led_strip_pixels[led_idx + 2] = red;
         }
     }
 
+    ESP_LOGI(__FUNCTION__, "prob3");
     for (int led_idx = 0; led_idx < CLOCKGUSTO_NUM_LEDS; led_idx += 1) 
     {
-        if (state.clock_board.leds[led_idx].on == true)
+        if (state->clock_board.leds[led_idx].on == true)
         {
             hue = led_idx * 360 / CLOCKGUSTO_NUM_LEDS + start_rgb;
             led_strip_hsv2rgb(hue, 100, 100, &red, &green, &blue);
             int color_offset = led_idx * CLOCKGUSTO_BYTES_PER_LED; 
-            state.led_strip_pixels[color_offset + 0] = green;
-            state.led_strip_pixels[color_offset + 1] = blue;
-            state.led_strip_pixels[color_offset + 2] = red;
+            state->led_strip_pixels[color_offset + 0] = green;
+            state->led_strip_pixels[color_offset + 1] = blue;
+            state->led_strip_pixels[color_offset + 2] = red;
         }
     }
 
-    ESP_ERROR_CHECK(rmt_transmit(state.led_chan, 
-                                 state.led_encoder, 
-                                 state.led_strip_pixels, 
-                                 sizeof(state.led_strip_pixels), 
-                                 &state.tx_config));
+    ESP_LOGI(__FUNCTION__, "prob4");
+    ESP_ERROR_CHECK(rmt_transmit(state->led_chan, 
+                                 state->led_encoder, 
+                                 state->led_strip_pixels, 
+                                 sizeof(state->led_strip_pixels), 
+                                 &state->tx_config));
 
-    ESP_ERROR_CHECK(rmt_tx_wait_all_done(state.led_chan, portMAX_DELAY));
+    ESP_ERROR_CHECK(rmt_tx_wait_all_done(state->led_chan, portMAX_DELAY));
     vTaskDelay(pdMS_TO_TICKS(20));
-    start_rgb += 1;
+    start_rgb = (start_rgb + 1) % 256;
 }
 
 void clockgusto_reset()
 {
     for (uint16_t led_idx = 0; led_idx < CLOCKGUSTO_NUM_LEDS; ++led_idx)
     {
-        state.clock_board.leds[led_idx].on = false;
+        state->clock_board.leds[led_idx].on = false;
     }
     
-    state.clock_board.flip = false;
+    state->clock_board.flip = false;
 }
 
 static void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t* r, uint32_t* g, uint32_t* b)
@@ -385,9 +400,9 @@ static void led_strip_hsv2rgb(uint32_t h, uint32_t s, uint32_t v, uint32_t* r, u
 
 static void clockgusto_set_board_time_mask()
 {
-    uint8_t hours = state.clock_board.hours;
-    uint8_t minutes = state.clock_board.minutes;
-    uint8_t seconds = state.clock_board.seconds;
+    uint8_t hours = state->clock_board.hours;
+    uint8_t minutes = state->clock_board.minutes;
+    uint8_t seconds = state->clock_board.seconds;
     (void)seconds;
 
     if (!(minutes < 15 || (20 <= minutes&& minutes < 25))) 
@@ -395,169 +410,169 @@ static void clockgusto_set_board_time_mask()
         hours = (hours + 1) % 24; 
     }
 
-    state.clock_board.time_mask = 0x0;
+    state->clock_board.time_mask = 0x0;
     switch (hours)
     {
         case 0:
         case 12: 
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_ZWOELF;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_ZWOELF;
         } break;
         case 1:
         case 13:
         {
             if (minutes < 5)
             {
-                state.clock_board.time_mask |= 1 << CLOCK_WORD_EIN;
+                state->clock_board.time_mask |= 1 << CLOCK_WORD_EIN;
             }
             else
             {
-                state.clock_board.time_mask |= 1 << CLOCK_WORD_EINS;
+                state->clock_board.time_mask |= 1 << CLOCK_WORD_EINS;
             }
         } break;
         case 2:
         case 14:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_ZWEI;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_ZWEI;
         } break;
         case 3:
         case 15:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_DREI;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_DREI;
         } break;
         case 4:
         case 16:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_VIER;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_VIER;
         } break;
         case 5:
         case 17:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_2;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_2;
         } break;
         case 6:
         case 18:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_SECHS;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_SECHS;
         } break;
         case 7:
         case 19:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_SIEBEN;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_SIEBEN;
         } break;
         case 8:
         case 20:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_ACHT;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_ACHT;
         } break;
         case 9:
         case 21:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_NEUN;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_NEUN;
         } break;
         case 10:
         case 22:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_ZEHN_2;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_ZEHN_2;
         } break;
         case 11:
         case 23:
         {
-            state.clock_board.time_mask |= 1 << CLOCK_WORD_ELF;
+            state->clock_board.time_mask |= 1 << CLOCK_WORD_ELF;
         } break;
     }
 
     if (0 <= minutes && minutes < 5) 
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_ES;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_IST;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_UHR;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_ES;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_IST;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_UHR;
     }
     else if (5 <= minutes && minutes < 10)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
     }
     else if (10 <= minutes && minutes < 15)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_ZEHN_1;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_ZEHN_1;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
     }
     else if (15 <= minutes && minutes < 20)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_VIERTEL;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_VIERTEL;
     }
     else if (20 <= minutes && minutes < 25)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_ZWANZIG;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_ZWANZIG;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
     }
     else if (25 <= minutes && minutes < 30)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_HALB;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_HALB;
     }
     else if (30 <= minutes && minutes < 35)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_ES;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_IST;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_HALB;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_ES;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_IST;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_HALB;
     }
     else if (35 <= minutes && minutes < 40)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_HALB;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_NACH;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_HALB;
     }
     else if (40 <= minutes && minutes < 45)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_ZWANZIG;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_ZWANZIG;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
     }
     else if (45 <= minutes && minutes < 50)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_DREIVIERTEL;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_DREIVIERTEL;
     }
     else if (50 <= minutes && minutes < 55)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_ZEHN_1;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_ZEHN_1;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
     }
     else // 55 <= minutes && minutes 59
     {
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
-        state.clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_FUENF_1;
+        state->clock_board.time_mask |= 1 << CLOCK_WORD_VOR;
     }    
 
     if (minutes % 5 == 1)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
     }
     else if (minutes % 5 == 2)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_2;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_2;
     }
     else if (minutes % 5 == 3)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_2;
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_3;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_2;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_3;
     }
     else if (minutes % 5 == 4)
     {
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_2;
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_3;
-        state.clock_board.time_mask |= 1 << CLOCK_MINUTE_4;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_1;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_2;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_3;
+        state->clock_board.time_mask |= 1 << CLOCK_MINUTE_4;
     }
     else
     {
-        state.clock_board.time_mask |= 0 << CLOCK_MINUTE_1;
-        state.clock_board.time_mask |= 0 << CLOCK_MINUTE_2;
-        state.clock_board.time_mask |= 0 << CLOCK_MINUTE_3;
-        state.clock_board.time_mask |= 0 << CLOCK_MINUTE_4;
+        state->clock_board.time_mask |= 0 << CLOCK_MINUTE_1;
+        state->clock_board.time_mask |= 0 << CLOCK_MINUTE_2;
+        state->clock_board.time_mask |= 0 << CLOCK_MINUTE_3;
+        state->clock_board.time_mask |= 0 << CLOCK_MINUTE_4;
     }
 }
 

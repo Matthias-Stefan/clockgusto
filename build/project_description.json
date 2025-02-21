@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "clockgusto",
-    "project_version":    "2ffd5c9-dirty",
+    "project_version":    "200ba99-dirty",
     "project_path":       "/home/ms/Documents/clockgusto",
     "idf_path":           "/home/ms/esp/esp-idf",
     "build_dir":          "/home/ms/Documents/clockgusto/build",
